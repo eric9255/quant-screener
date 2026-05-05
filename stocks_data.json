@@ -3,48 +3,48 @@
         "id": "2330",
         "name": "台積電",
         "price": 2250,
-        "fundamental": 70,
-        "chip": 93,
-        "technical": 68
+        "fundamental": 77,
+        "chip": 83,
+        "technical": 69
     },
     {
         "id": "2317",
         "name": "鴻海",
         "price": 230,
-        "fundamental": 71,
-        "chip": 69,
-        "technical": 79
+        "fundamental": 86,
+        "chip": 82,
+        "technical": 68
     },
     {
         "id": "2408",
         "name": "南亞科",
         "price": 95,
-        "fundamental": 93,
-        "chip": 79,
-        "technical": 95
+        "fundamental": 95,
+        "chip": 91,
+        "technical": 87
     },
     {
         "id": "3017",
         "name": "奇鋐",
         "price": 850,
-        "fundamental": 70,
-        "chip": 73,
-        "technical": 92
+        "fundamental": 76,
+        "chip": 95,
+        "technical": 75
     },
     {
         "id": "2888",
         "name": "新光金",
         "price": 14.5,
-        "fundamental": 83,
-        "chip": 90,
-        "technical": 66
+        "fundamental": 73,
+        "chip": 85,
+        "technical": 93
     },
     {
         "id": "3450",
         "name": "聯鈞",
         "price": 215,
-        "fundamental": 88,
-        "chip": 62,
-        "technical": 74
+        "fundamental": 73,
+        "chip": 75,
+        "technical": 69
     }
 ]
