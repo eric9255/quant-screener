@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高盛級量化 AI 選股終端 3.0 (全自動化版)</title>
-    <!-- 引入 Tailwind CSS -->
+    <title>高盛級量化 AI 選股終端 3.0</title>
+    <!-- 引入 Tailwind CSS 打造高階金融終端視覺 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, sans-serif; }
@@ -20,9 +20,8 @@
         <!-- 標題與 API Key 設定區 -->
         <header class="mb-8 border-b border-gray-700 pb-4 flex justify-between items-end">
             <div>
-                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR + GEMINI AI</h1>
-                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 每日自動抓取收盤價 + AI 推理引擎</p>
-                <p id="lastUpdateTime" class="text-xs text-green-400 mt-1">🔄 系統狀態：等待同步最新數據中...</p>
+                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR + GEMINI AI 3.0</h1>
+                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 每日自動更新量化終端</p>
             </div>
             <div class="flex items-center space-x-2">
                 <input type="password" id="geminiApiKey" placeholder="請輸入 Gemini API Key" class="px-3 py-2 bg-gray-800 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-64">
@@ -30,16 +29,14 @@
             </div>
         </header>
 
-        <!-- AI 分析報告顯示區 (預設隱藏) -->
+        <!-- AI 分析報告顯示區 -->
         <div id="aiReportPanel" class="hidden mb-6 p-6 bg-gray-800 rounded-lg border-l-4 border-yellow-500 shadow-2xl relative">
             <button onclick="closeAiPanel()" class="absolute top-2 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
             <h2 class="text-xl font-bold text-white mb-2 flex items-center">
                 <span class="mr-2">🤖 高盛 AI 投資決策報告</span>
                 <span id="aiStockName" class="text-yellow-400"></span>
             </h2>
-            <div id="aiReportContent" class="text-gray-300 leading-relaxed text-sm">
-                <!-- AI 報告將生成於此 -->
-            </div>
+            <div id="aiReportContent" class="text-gray-300 leading-relaxed text-sm"></div>
         </div>
 
         <!-- 數據表格 -->
@@ -56,15 +53,51 @@
                     </tr>
                 </thead>
                 <tbody id="stockTableBody" class="text-sm">
-                    <tr><td colspan="6" class="p-8 text-center text-gray-400"><div class="inline-block loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mr-3"></div> 正在連線讀取今日最新台股數據...</td></tr>
+                    <!-- 載入中的動畫 -->
+                    <tr>
+                        <td colspan="6" class="p-8 text-center text-gray-400">
+                            <div class="flex items-center justify-center">
+                                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mr-3"></div>
+                                正在連線資料庫，讀取最新台股量化數據...
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
     <script>
-        let stocksData =[]; // 準備接收來自 GitHub Actions 的真實數據
+        let stocksData =[];
 
+        // 核心功能：從 GitHub 讀取爬蟲剛剛存檔的 JSON
+        async function loadData() {
+            const tbody = document.getElementById('stockTableBody');
+            try {
+                // 在網址後方加上隨機時間戳記，強迫瀏覽器抓取最新檔案，避免快取問題
+                const cacheBuster = new Date().getTime();
+                const response = await fetch('stocks_data.json?t=' + cacheBuster);
+                
+                if (!response.ok) {
+                    throw new Error("找不到檔案");
+                }
+                
+                stocksData = await response.json();
+                renderTable();
+                
+            } catch (error) {
+                // 如果找不到檔案，顯示您剛才截圖中的錯誤畫面
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="6" class="p-8 text-center text-red-400 font-medium bg-red-900/20">
+                            ⚠️ 找不到 stocks_data.json！請確認 GitHub Actions 的權限已開啟，並點擊「Run workflow」手動執行爬蟲。
+                        </td>
+                    </tr>
+                `;
+            }
+        }
+
+        // 九大因子加權計算邏輯
         function calculateScore(stock) { return (stock.fundamental * 0.2 + stock.chip * 0.4 + stock.technical * 0.4).toFixed(1); }
 
         function renderTable() {
@@ -72,7 +105,7 @@
             tbody.innerHTML = ''; 
 
             if(stocksData.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" class="p-4 text-center text-red-400">尚未讀取到數據。請確認 GitHub Actions 是否已成功生成 stocks_data.json！</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="6" class="p-8 text-center text-gray-400">目前清單中沒有資料。</td></tr>';
                 return;
             }
 
@@ -100,29 +133,7 @@
                 `;
                 tbody.appendChild(tr);
             });
-            
-            // 更新網頁上的時間顯示
-            const now = new Date();
-            document.getElementById('lastUpdateTime').innerText = `🔄 系統狀態：已成功同步今日最新數據 (更新時間: ${now.toLocaleTimeString()})`;
         }
-
-        // 🚀 核心升級：非同步自動抓取 json 檔案
-        async function loadStockData() {
-            try {
-                // 在網址後方加上時間戳記，防止瀏覽器讀取到舊的暫存檔 (Cache)
-                const response = await fetch('stocks_data.json?t=' + new Date().getTime());
-                if (!response.ok) throw new Error("找不到檔案");
-                
-                stocksData = await response.json();
-                renderTable();
-            } catch (error) {
-                console.error("抓取失敗:", error);
-                document.getElementById('stockTableBody').innerHTML = '<tr><td colspan="6" class="p-4 text-center text-red-400">⚠ 找不到 stocks_data.json！請先到 GitHub Actions 點擊「Run workflow」手動執行一次爬蟲機器人。</td></tr>';
-            }
-        }
-
-        // 網頁一打開，就自動去載入數據
-        loadStockData();
 
         function checkApiKey() {
             const key = document.getElementById('geminiApiKey').value;
@@ -134,7 +145,10 @@
 
         async function askGeminiAI(stockJsonStr) {
             const apiKey = document.getElementById('geminiApiKey').value;
-            if(!apiKey) { alert("請先在右上角輸入您的 Gemini API Key！"); return; }
+            if(!apiKey) {
+                alert("請先在右上角輸入您的 Gemini API Key！");
+                return;
+            }
 
             const stock = JSON.parse(stockJsonStr);
             const panel = document.getElementById('aiReportPanel');
@@ -143,17 +157,17 @@
             
             panel.classList.remove('hidden');
             titleName.innerText = `(${stock.id} ${stock.name})`;
-            content.innerHTML = `<div class="flex items-center"><div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mr-3"></div> 高盛 AI 正在深度運算今日盤後數據，請稍候...</div>`;
+            content.innerHTML = '<div class="flex items-center"><div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mr-3"></div> Gemini AI 正在執行高盛級深度分析，請稍候...</div>';
 
-            const prompt = `你現在是高盛證券的台股王牌分析師。
-            請根據今天剛收盤的最新量化數據，為這檔股票寫一份約 100 字以內的精簡操作建議。
+            const prompt = `你現在是高盛證券(Goldman Sachs)的台股王牌分析師。
+            請根據以下量化數據，為這檔股票寫一份約 100 字以內的精簡操作建議。
             - 股票名稱：${stock.name}
             - 本日收盤價：${stock.price}
-            - 基本面分數：${stock.fundamental}/100
-            - 籌碼面分數：${stock.chip}/100
-            - 技術面分數：${stock.technical}/100
+            - 基本面(營收)分數：${stock.fundamental}/100
+            - 籌碼面(外資投信)分數：${stock.chip}/100
+            - 技術面(均線)分數：${stock.technical}/100
             - 量化總分：${stock.totalScore}/100
-            請用繁體中文回答，語氣要專業、犀利。告訴投資人這個分數代表什麼意義，該買進、觀望還是獲利了結。`;
+            請用繁體中文回答，語氣要專業、客觀。告訴投資人這個分數代表什麼意義，以及該買進、觀望還是獲利了結。`;
 
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
@@ -161,18 +175,21 @@
                 const response = await fetch(apiUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ contents: [{ parts:[{ text: prompt }] }] })
+                    body: JSON.stringify({ contents:[{ parts: [{ text: prompt }] }] })
                 });
-
                 const data = await response.json();
-                if(data.error) { content.innerHTML = `<span class="text-red-400">API 錯誤：${data.error.message}</span>`; return; }
+                if(data.error) {
+                    content.innerHTML = `<span class="text-red-400">API 錯誤：${data.error.message}</span>`;
+                    return;
+                }
                 content.innerHTML = data.candidates[0].content.parts[0].text.replace(/\n/g, '<br>');
-
             } catch (error) {
-                content.innerHTML = `<span class="text-red-400">連線失敗，請檢查網路或 API Key 權限。</span>`;
+                content.innerHTML = '<span class="text-red-400">連線失敗，請檢查網路狀態或確認 API Key 是否正確。</span>';
             }
         }
+
+        // 網頁一打開，立刻自動執行 loadData() 抓取最新的收盤價檔案
+        window.onload = loadData;
     </script>
 </body>
-</html>
 </html>
