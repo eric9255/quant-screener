@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高盛量化 AI 終端 12.0 (全功能旗艦版)</title>
+    <title>高盛量化 AI 終端 13.0 (動態雷達通殺旗艦版)</title>
     <!-- 引入 Tailwind CSS 打造高階金融終端視覺 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 引入 SortableJS 實現自由拖曳排序功能 -->
@@ -23,8 +23,8 @@
         <!-- 標題與 API Key 設定區 -->
         <header class="mb-6 border-b border-gray-700 pb-4 flex justify-between items-end">
             <div>
-                <h1 class="text-3xl font-bold goldman-gold tracking-wider">GS QIS TERMINAL 12.0</h1>
-                <p class="text-sm text-gray-400 mt-2">高盛多因子量化矩陣 - 搭載【外資投信籌碼】與【AI 雙備援引擎】</p>
+                <h1 class="text-3xl font-bold goldman-gold tracking-wider">GS QIS TERMINAL 13.0</h1>
+                <p class="text-sm text-gray-400 mt-2">高盛多因子量化矩陣 - 搭載【外資投信籌碼】與【AI 動態探測通殺引擎】</p>
             </div>
             <div class="flex items-center space-x-2">
                 <input type="password" id="geminiApiKey" placeholder="輸入 Gemini API Key" class="px-3 py-2 bg-gray-800 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-48 shadow-inner">
@@ -274,16 +274,17 @@
 
         function closeAiPanel() { document.getElementById('aiReportPanel').classList.add('hidden'); }
         
-        // 🌟 終極備援 AI 引擎：雙模型自動切換技術
+        // 🌟 終極通殺解：主動探測 API 權限與自動選取模型
         async function askGeminiAI(stockJsonStr) {
             const apiKey = document.getElementById('geminiApiKey').value;
             if(!apiKey) { alert("長官，請先輸入您的 Gemini API Key！"); return; }
+            
             const stock = JSON.parse(stockJsonStr);
             const panel = document.getElementById('aiReportPanel');
             const content = document.getElementById('aiReportContent');
             panel.classList.remove('hidden');
             document.getElementById('aiStockName').innerText = `(${stock.id} ${stock.name})`;
-            content.innerHTML = '<span class="text-yellow-400 animate-pulse font-bold tracking-widest">G.S. 量化模型演算中，請稍候...</span>';
+            content.innerHTML = '<span class="text-yellow-400 animate-pulse font-bold tracking-widest">G.S. 系統正在掃描您的 API 可用權限...</span>';
 
             const prompt = `你現在是高盛證券(Goldman Sachs)台股量化自營部的王牌經理人。
             標的：${stock.name} (股價:${stock.price})。
@@ -293,36 +294,50 @@
             3. 真實籌碼面追蹤: ${stock.chipDesc}
             4. 量化總分: ${stock.totalScore}/100。
             請根據這四個真實數據，用繁體中文給出一份「機構級別」的精簡判讀與交易策略（100字以內）。語氣要犀利、專業，一針見血指出外資投信動向與月線支撐。`;
-            
-            // 優先使用 Google 最新版的 1.5-flash-latest 模型
-            const primaryUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
             try {
-                const response = await fetch(primaryUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }] }) });
-                const data = await response.json();
+                // 步驟一：動態查詢 API Key 真實能用的模型清單
+                const listUrl = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
+                const listRes = await fetch(listUrl);
+                const listData = await listRes.json();
                 
-                // 如果主模型發生找不到的錯誤，主動拋出例外進入 catch 區塊
+                if(listData.error) throw new Error("API Key 無效或權限不足：" + listData.error.message);
+
+                // 步驟二：篩選出支援「文字生成」且名字包含「gemini」的模型
+                const validModels = listData.models.filter(m => 
+                    m.supportedGenerationMethods && 
+                    m.supportedGenerationMethods.includes("generateContent") &&
+                    m.name.includes("gemini")
+                );
+
+                if(validModels.length === 0) throw new Error("您的帳號內沒有找到支援文字生成的 Gemini 模型。");
+
+                // 步驟三：優先找速度最快的 flash，沒有就找 pro，都沒有就拿清單第一個
+                let targetModelName = validModels[0].name; 
+                const flashModel = validModels.find(m => m.name.includes("flash"));
+                const proModel = validModels.find(m => m.name.includes("pro"));
+                
+                if(flashModel) targetModelName = flashModel.name;
+                else if(proModel) targetModelName = proModel.name;
+
+                content.innerHTML = `<span class="text-blue-400 animate-pulse font-bold tracking-widest">成功鎖定授權模型[${targetModelName.replace('models/', '')}]，進行矩陣演算中...</span>`;
+
+                // 步驟四：發動最終呼叫
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/${targetModelName}:generateContent?key=${apiKey}`;
+                
+                const response = await fetch(apiUrl, { 
+                    method: 'POST', 
+                    headers: { 'Content-Type': 'application/json' }, 
+                    body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }] }) 
+                });
+                
+                const data = await response.json();
                 if(data.error) throw new Error(data.error.message);
                 
                 content.innerHTML = data.candidates[0].content.parts[0].text.replace(/\n/g, '<br>');
-                
+
             } catch (error) {
-                // 🕵️‍♂️ 觸發備援機制：如果主模型找不到，瞬間切換到最穩定的 gemini-pro
-                if(error.message.includes("is not found") || error.message.includes("not supported")) {
-                     content.innerHTML = '<span class="text-blue-400 animate-pulse font-bold tracking-widest">主模型未授權，系統自動切換至備援引擎 (Gemini-Pro) 演算中...</span>';
-                     try {
-                         const fallbackUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
-                         const fallbackResponse = await fetch(fallbackUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents:[{ parts:[{ text: prompt }] }] }) });
-                         const fallbackData = await fallbackResponse.json();
-                         
-                         if(fallbackData.error) throw new Error(fallbackData.error.message);
-                         content.innerHTML = fallbackData.candidates[0].content.parts[0].text.replace(/\n/g, '<br>');
-                     } catch (fallbackError) {
-                         content.innerHTML = `<span class="text-red-400">雙引擎連線皆失敗：${fallbackError.message}</span>`;
-                     }
-                } else {
-                     content.innerHTML = `<span class="text-red-400">連線失敗：${error.message}</span>`;
-                }
+                content.innerHTML = `<span class="text-red-400">系統中斷：${error.message}</span>`;
             }
         }
 
