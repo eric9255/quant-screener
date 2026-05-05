@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高盛級量化 AI 選股終端 2.0</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        .goldman-gold { color: #bf953f; }
+        .bg-goldman { background-color: #bf953f; }
+        .loader { border-top-color: #bf953f; -webkit-animation: spinner 1.5s linear infinite; animation: spinner 1.5s linear infinite; }
+        @keyframes spinner { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- 標題與 API Key 設定區 -->
+        <header class="mb-8 border-b border-gray-700 pb-4 flex justify-between items-end">
+            <div>
+                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR + GEMINI AI</h1>
+                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 結合量化評分與 AI 推理引擎 (2026版)</p>
+            </div>
+            <div class="flex items-center space-x-2">
+                <input type="password" id="geminiApiKey" placeholder="請輸入 Gemini API Key" class="px-3 py-2 bg-gray-800 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-64">
+                <button onclick="checkApiKey()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm transition">驗證密鑰</button>
+            </div>
+        </header>
+
+        <!-- AI 分析報告顯示區 (預設隱藏) -->
+        <div id="aiReportPanel" class="hidden mb-6 p-6 bg-gray-800 rounded-lg border-l-4 border-yellow-500 shadow-2xl relative">
+            <button onclick="closeAiPanel()" class="absolute top-2 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
+            <h2 class="text-xl font-bold text-white mb-2 flex items-center">
+                <span class="mr-2">🤖 高盛 AI 投資決策報告</span>
+                <span id="aiStockName" class="text-yellow-400"></span>
+            </h2>
+            <div id="aiReportContent" class="text-gray-300 leading-relaxed text-sm">
+                <!-- AI 報告將生成於此 -->
+            </div>
+        </div>
+
+        <!-- 數據表格 -->
+        <div class="overflow-x-auto bg-gray-800 rounded-lg shadow-xl border border-gray-700">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-900 text-gray-300 text-sm uppercase tracking-wide border-b border-gray-700">
+                        <th class="p-4">代號</th>
+                        <th class="p-4">企業名稱</th>
+                        <th class="p-4">收盤價</th>
+                        <th class="p-4">綜合分數</th>
+                        <th class="p-4">系統判定</th>
+                        <th class="p-4 text-center">AI 深度分析</th>
+                    </tr>
+                </thead>
+                <tbody id="stockTableBody" class="text-sm">
+                    <!-- 動態載入 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // 模擬台股數據 (九大因子分數)
+        const stocksData =[
+            { id: '2330', name: '台積電', price: 2250, fundamental: 95, chip: 85, technical: 90 },
+            { id: '2317', name: '鴻海', price: 230, fundamental: 80, chip: 95, technical: 88 },
+            { id: '3017', name: '奇鋐', price: 850, fundamental: 90, chip: 70, technical: 95 },
+            { id: '2888', name: '新光金', price: 14.5, fundamental: 50, chip: 30, technical: 40 },
+            { id: '3450', name: '聯鈞', price: 215, fundamental: 85, chip: 88, technical: 92 }
+        ];
+
+        function calculateScore(stock) { return (stock.fundamental * 0.2 + stock.chip * 0.4 + stock.technical * 0.4).toFixed(1); }
+
+        function renderTable() {
+            const tbody = document.getElementById('stockTableBody');
+            tbody.innerHTML = ''; 
+
+            stocksData.forEach(stock => {
+                const totalScore = calculateScore(stock);
+                let badge = totalScore >= 90 ? '<span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold">強烈買進</span>' :
+                            totalScore >= 80 ? '<span class="px-2 py-1 bg-green-900 text-green-200 rounded text-xs font-bold">偏多佈局</span>' :
+                            '<span class="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs font-bold">觀望</span>';
+
+                // 將資料以 JSON 字串傳給 AI 按鈕
+                const stockJson = JSON.stringify({...stock, totalScore}).replace(/"/g, '&quot;');
+
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-gray-700 hover:bg-gray-750 transition duration-150';
+                tr.innerHTML = `
+                    <td class="p-4 font-bold text-gray-300">${stock.id}</td>
+                    <td class="p-4 font-bold text-white">${stock.name}</td>
+                    <td class="p-4 text-green-400 font-medium">${stock.price}</td>
+                    <td class="p-4 font-bold ${totalScore >= 80 ? 'text-yellow-400' : 'text-gray-400'}">${totalScore}</td>
+                    <td class="p-4">${badge}</td>
+                    <td class="p-4 text-center">
+                        <button onclick="askGeminiAI('${stockJson}')" class="px-3 py-1 bg-blue-600 hover:bg-blue-500 rounded text-white text-xs font-medium transition shadow flex items-center justify-center mx-auto">
+                            ✨ AI 診斷
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        renderTable();
+
+        function checkApiKey() {
+            const key = document.getElementById('geminiApiKey').value;
+            if(key.length > 20) alert("密鑰格式已確認！可以開始呼叫 AI 診斷。");
+            else alert("請輸入有效的 Gemini API Key！");
+        }
+
+        function closeAiPanel() {
+            document.getElementById('aiReportPanel').classList.add('hidden');
+        }
+
+        // 核心邏輯：呼叫 Gemini API
+        async function askGeminiAI(stockJsonStr) {
+            const apiKey = document.getElementById('geminiApiKey').value;
+            if(!apiKey) {
+                alert("請先在右上角輸入您的 Gemini API Key！\n(可至 Google AI Studio 免費申請)");
+                return;
+            }
+
+            const stock = JSON.parse(stockJsonStr);
+            const panel = document.getElementById('aiReportPanel');
+            const content = document.getElementById('aiReportContent');
+            const titleName = document.getElementById('aiStockName');
+            
+            panel.classList.remove('hidden');
+            titleName.innerText = `(${stock.id} ${stock.name})`;
+            content.innerHTML = `<div class="flex items-center"><div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mr-3"></div> Gemini 正在深度分析中，請稍候...</div>`;
+
+            // Prompt Engineering (提示詞工程)：將量化數據轉化為高盛風格的分析
+            const prompt = `你現在是高盛證券(Goldman Sachs)的台股王牌分析師。
+            請根據以下量化數據，為這檔股票寫一份約 100 字以內的精簡操作建議。
+            - 股票名稱：${stock.name}
+            - 目前股價：${stock.price}
+            - 基本面(營收)分數：${stock.fundamental}/100
+            - 籌碼面(外資投信)分數：${stock.chip}/100
+            - 技術面(均線)分數：${stock.technical}/100
+            - 量化總分：${stock.totalScore}/100
+            請用繁體中文回答，語氣要專業、犀利。告訴投資人這個分數代表什麼意義，以及該買進、觀望還是獲利了結。`;
+
+            // 使用 Gemini 1.5 Flash 模型 (速度最快)
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }]
+                    })
+                });
+
+                const data = await response.json();
+                
+                if(data.error) {
+                    content.innerHTML = `<span class="text-red-400">API 錯誤：${data.error.message}</span>`;
+                    return;
+                }
+
+                // 提取 AI 回覆文字
+                const aiReply = data.candidates[0].content.parts[0].text;
+                // 將換行符號轉為 HTML 的 <br>
+                content.innerHTML = aiReply.replace(/\n/g, '<br>');
+
+            } catch (error) {
+                content.innerHTML = `<span class="text-red-400">連線失敗，請檢查網路或 API Key 權限。</span>`;
+            }
+        }
+    </script>
+</body>
+</html>
