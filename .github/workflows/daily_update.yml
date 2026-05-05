@@ -2,25 +2,22 @@ name: 高盛量化終端_每日數據更新
 
 on:
   schedule:
-    # 設定時間為每個交易日 (週一至週五) 
-    # UTC 時間的 06:30，等於台灣時間的 下午 14:30 (台股剛收盤且資料已結算)
     - cron: '30 6 * * 1-5'
   
   workflow_dispatch:
-    # 允許我們手動在畫面上點擊按鈕，隨時測試執行
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 賦予機器人寫入/更新檔案的權限
+      contents: write 
 
     steps:
       - name: 📥 下載目前的儲存庫檔案
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # 🌟 升級為 v4
 
       - name: 🐍 安裝 Python 環境
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # 🌟 升級為 v5
         with:
           python-version: '3.x'
 
