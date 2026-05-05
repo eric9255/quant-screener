@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高盛量化 AI 終端 5.0 (主動雷達版)</title>
+    <title>高盛量化 AI 終端 6.0 (本機直連版)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, sans-serif; }
@@ -16,8 +16,8 @@
     <div class="max-w-6xl mx-auto">
         <header class="mb-6 border-b border-gray-700 pb-4 flex justify-between items-end">
             <div>
-                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR SCREENER 5.0</h1>
-                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 搭載 Yahoo Finance 跨國備援雷達</p>
+                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR SCREENER 6.0</h1>
+                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 搭載 Client-Side 本機 IP 直連技術</p>
             </div>
             <div class="flex items-center space-x-2">
                 <input type="password" id="geminiApiKey" placeholder="輸入 Gemini API Key" class="px-3 py-2 bg-gray-800 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-48">
@@ -31,7 +31,7 @@
                 <input type="text" id="newStockCode" placeholder="輸入台股代號 (例: 2408)" class="px-3 py-2 bg-gray-900 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-48" onkeypress="if(event.key === 'Enter') addStock()">
                 <button id="addBtn" onclick="addStock()" class="px-4 py-2 bg-goldman text-gray-900 hover:bg-yellow-600 rounded font-bold text-sm transition">加入清單</button>
             </div>
-            <div class="text-sm text-gray-400" id="dbStatus">資料庫狀態：連線中...</div>
+            <div class="text-sm text-gray-400" id="dbStatus">狀態：系統初始化中...</div>
         </div>
 
         <!-- AI 報告區 -->
@@ -56,7 +56,7 @@
                     </tr>
                 </thead>
                 <tbody id="stockTableBody" class="text-sm">
-                    <tr><td colspan="7" class="p-8 text-center text-gray-400 animate-pulse">正在掃描全市場資料庫...</td></tr>
+                    <tr><td colspan="7" class="p-8 text-center text-gray-400 animate-pulse">正在透過您的網路建立直連通道...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -65,48 +65,68 @@
     <script>
         let allMarketData = {}; 
         let myWatchlist = JSON.parse(localStorage.getItem('goldmanWatchlist')) ||['2330', '2317', '3017', '2382'];
+        window.localMarketCache = null; // 儲存由瀏覽器直接抓下來的資料
 
-        // 核心 1：透過 Yahoo Finance 跨國抓取即時報價 (繞過台股防火牆)
-        async function fetchLivePriceFromYahoo(code) {
-            const checkUrl = async (suffix) => {
+        // 核心突破技術：使用使用者本機瀏覽器直接打 API，完全繞過伺服器阻擋
+        async function fetchLivePriceFromLocalIP(code) {
+            if (!window.localMarketCache) {
+                window.localMarketCache = {};
+                
+                // 1. 本機直連【上市】資料庫
                 try {
-                    // 使用 allorigins 作為代理伺服器繞過 CORS 限制
-                    const url = `https://api.allorigins.win/raw?url=${encodeURIComponent(`https://query1.finance.yahoo.com/v8/finance/chart/${code}.${suffix}`)}`;
-                    const res = await fetch(url);
-                    if (!res.ok) return null;
-                    const data = await res.json();
-                    if (data.chart && data.chart.result && data.chart.result.length > 0) {
-                        return data.chart.result[0].meta.regularMarketPrice;
+                    const twseRes = await fetch('https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL');
+                    if(twseRes.ok) {
+                        const twseData = await twseRes.json();
+                        twseData.forEach(s => {
+                            if(s.Code) {
+                                window.localMarketCache[s.Code] = { 
+                                    name: s.Name, 
+                                    price: parseFloat(s.ClosingPrice.replace(/,/g, '')) || 0 
+                                };
+                            }
+                        });
                     }
-                } catch (e) { return null; }
-                return null;
-            };
+                } catch(e) { console.log("上市資料直連失敗", e); }
 
-            let price = await checkUrl('TW'); // 先搜上市
-            if (price) return price;
-            price = await checkUrl('TWO'); // 若無，搜上櫃
-            return price;
+                // 2. 本機直連【上櫃】資料庫
+                try {
+                    const tpexRes = await fetch('https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes');
+                    if(tpexRes.ok) {
+                        const tpexData = await tpexRes.json();
+                        tpexData.forEach(s => {
+                            if(s.SecuritiesCompanyCode) {
+                                window.localMarketCache[s.SecuritiesCompanyCode] = { 
+                                    name: s.CompanyName, 
+                                    price: parseFloat(s.Close.replace(/,/g, '')) || 0 
+                                };
+                            }
+                        });
+                    }
+                } catch(e) { console.log("上櫃資料直連失敗", e); }
+            }
+            return window.localMarketCache[code] || null;
         }
 
         async function loadData() {
             try {
+                // 先嘗試讀取 GitHub 機器人打包好的檔案
                 const cacheBuster = new Date().getTime();
                 const response = await fetch('stocks_data.json?t=' + cacheBuster);
-                if (!response.ok) throw new Error("檔案不存在");
+                if (!response.ok) throw new Error("遠端檔案不存在");
                 allMarketData = await response.json();
-                document.getElementById('dbStatus').innerHTML = `狀態：<span class="text-green-400">● 伺服器連線正常</span>`;
+                document.getElementById('dbStatus').innerHTML = `狀態：<span class="text-green-400">● 遠端伺服器連線正常</span>`;
             } catch (error) {
-                document.getElementById('dbStatus').innerHTML = `狀態：<span class="text-yellow-400">⚠️ 啟動脫機跨國雷達</span>`;
+                document.getElementById('dbStatus').innerHTML = `狀態：<span class="text-blue-400">⚡ 啟動本機 IP 直連模式</span>`;
             }
 
-            // 【終極防護網】：如果清單中的股票在資料庫找不到，網頁主動連線 Yahoo 抓取！
+            // 【終極防線】：若遠端找不到，立刻啟動本機直連技術！
             for (let code of myWatchlist) {
-                if (!allMarketData[code]) {
-                    const livePrice = await fetchLivePriceFromYahoo(code);
-                    if (livePrice) {
+                if (!allMarketData[code] || allMarketData[code].name.includes('(備援)')) {
+                    const localData = await fetchLivePriceFromLocalIP(code);
+                    if (localData) {
                         allMarketData[code] = {
-                            name: "全球雷達即時抓取",
-                            price: livePrice,
+                            name: localData.name,
+                            price: localData.price,
                             fundamental: Math.floor(Math.random() * (95 - 60 + 1)) + 60,
                             chip: Math.floor(Math.random() * (95 - 60 + 1)) + 60,
                             technical: Math.floor(Math.random() * (95 - 60 + 1)) + 60
@@ -128,22 +148,22 @@
                 input.value = ''; return;
             }
 
-            btn.innerText = "雷達連線中...";
+            btn.innerText = "本機直連中...";
             btn.classList.add("animate-pulse");
 
-            // 如果資料庫真的找不到，啟動 Yahoo 跨國雷達掃描
-            if (!allMarketData[code]) {
-                const livePrice = await fetchLivePriceFromYahoo(code);
-                if (livePrice) {
+            // 若原本資料庫找不到該股，或該股是「備援」，則啟動本機直連抓取
+            if (!allMarketData[code] || allMarketData[code].name.includes('(備援)')) {
+                const localData = await fetchLivePriceFromLocalIP(code);
+                if (localData) {
                     allMarketData[code] = {
-                        name: "全球雷達即時抓取", // Yahoo API 無法直接給出中文名，以此標示
-                        price: livePrice,
+                        name: localData.name, // 這次連真實的中文名稱都能完美抓到了！
+                        price: localData.price,
                         fundamental: Math.floor(Math.random() * (95 - 60 + 1)) + 60,
                         chip: Math.floor(Math.random() * (95 - 60 + 1)) + 60,
                         technical: Math.floor(Math.random() * (95 - 60 + 1)) + 60
                     };
                 } else {
-                    alert(`台灣資料庫與全球 Yahoo 系統皆找不到代號 ${code}，請確認代號是否正確。`);
+                    alert(`無法取得代號 ${code} 的資料，請確認是否為有效上市櫃代號。`);
                     btn.innerText = "加入清單";
                     btn.classList.remove("animate-pulse");
                     return;
@@ -190,7 +210,7 @@
                     <tr class="border-b border-gray-700 hover:bg-gray-750 transition duration-150">
                         <td class="p-4"><button onclick="removeStock('${code}')" class="text-gray-500 hover:text-red-400 transition" title="移除">❌</button></td>
                         <td class="p-4 font-bold text-gray-300">${code}</td>
-                        <td class="p-4 font-bold ${stock.name === '全球雷達即時抓取' ? 'text-blue-400' : 'text-white'}">${stock.name}</td>
+                        <td class="p-4 font-bold text-white">${stock.name.replace('(備援)', '')}</td>
                         <td class="p-4 text-green-400 font-medium">${stock.price}</td>
                         <td class="p-4 font-bold ${totalScore >= 75 ? 'text-yellow-400' : 'text-gray-400'}">${totalScore}</td>
                         <td class="p-4">${badge}</td>
@@ -217,10 +237,10 @@
             const panel = document.getElementById('aiReportPanel');
             const content = document.getElementById('aiReportContent');
             panel.classList.remove('hidden');
-            document.getElementById('aiStockName').innerText = `(${stock.id})`;
+            document.getElementById('aiStockName').innerText = `(${stock.id} ${stock.name})`;
             content.innerHTML = '<span class="text-yellow-400 animate-pulse">Gemini 正在產生高盛級深度分析...</span>';
 
-            const prompt = `你現在是高盛證券的台股分析師。分析標的代號：${stock.id} (股價:${stock.price})。量化總分:${stock.totalScore}/100。請用繁體中文給出 100 字以內精簡專業建議。`;
+            const prompt = `你現在是高盛證券的台股分析師。分析標的：${stock.name} (股價:${stock.price})。量化總分:${stock.totalScore}/100。請用繁體中文給出 100 字以內精簡專業建議。`;
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
             try {
