@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高盛級量化 AI 選股終端 3.0</title>
-    <!-- 引入 Tailwind CSS 打造高階金融終端視覺 -->
+    <title>高盛量化 AI 終端 4.0 (自選股版)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, sans-serif; }
         .goldman-gold { color: #bf953f; }
         .bg-goldman { background-color: #bf953f; }
-        .loader { border-top-color: #bf953f; -webkit-animation: spinner 1.5s linear infinite; animation: spinner 1.5s linear infinite; }
-        @keyframes spinner { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body class="p-8">
 
     <div class="max-w-6xl mx-auto">
-        <!-- 標題與 API Key 設定區 -->
-        <header class="mb-8 border-b border-gray-700 pb-4 flex justify-between items-end">
+        <header class="mb-6 border-b border-gray-700 pb-4 flex justify-between items-end">
             <div>
-                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR + GEMINI AI 3.0</h1>
-                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 每日自動更新量化終端</p>
+                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR SCREENER 4.0</h1>
+                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 支援動態自選股與 AI 診斷</p>
             </div>
             <div class="flex items-center space-x-2">
-                <input type="password" id="geminiApiKey" placeholder="請輸入 Gemini API Key" class="px-3 py-2 bg-gray-800 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-64">
-                <button onclick="checkApiKey()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm transition">驗證密鑰</button>
+                <input type="password" id="geminiApiKey" placeholder="輸入 Gemini API Key" class="px-3 py-2 bg-gray-800 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-48">
             </div>
         </header>
 
-        <!-- AI 分析報告顯示區 -->
+        <!-- 自選股管理控制台 -->
+        <div class="mb-6 bg-gray-800 p-4 rounded-lg shadow-lg flex justify-between items-center border border-gray-700">
+            <div class="flex items-center space-x-3">
+                <span class="text-gray-300 font-bold">🔍 新增關注標的：</span>
+                <input type="text" id="newStockCode" placeholder="輸入台股代號 (例: 2382)" class="px-3 py-2 bg-gray-900 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-48" onkeypress="if(event.key === 'Enter') addStock()">
+                <button onclick="addStock()" class="px-4 py-2 bg-goldman text-gray-900 hover:bg-yellow-600 rounded font-bold text-sm transition">加入清單</button>
+            </div>
+            <div class="text-sm text-gray-400" id="dbStatus">資料庫狀態：連線中...</div>
+        </div>
+
+        <!-- AI 報告區 -->
         <div id="aiReportPanel" class="hidden mb-6 p-6 bg-gray-800 rounded-lg border-l-4 border-yellow-500 shadow-2xl relative">
             <button onclick="closeAiPanel()" class="absolute top-2 right-4 text-gray-400 hover:text-white text-xl">&times;</button>
-            <h2 class="text-xl font-bold text-white mb-2 flex items-center">
-                <span class="mr-2">🤖 高盛 AI 投資決策報告</span>
-                <span id="aiStockName" class="text-yellow-400"></span>
-            </h2>
-            <div id="aiReportContent" class="text-gray-300 leading-relaxed text-sm"></div>
+            <h2 class="text-xl font-bold text-white mb-2"><span class="mr-2">🤖 高盛 AI 分析報告</span><span id="aiStockName" class="text-yellow-400"></span></h2>
+            <div id="aiReportContent" class="text-gray-300 text-sm leading-relaxed"></div>
         </div>
 
         <!-- 數據表格 -->
         <div class="overflow-x-auto bg-gray-800 rounded-lg shadow-xl border border-gray-700">
             <table class="w-full text-left border-collapse">
                 <thead>
-                    <tr class="bg-gray-900 text-gray-300 text-sm uppercase tracking-wide border-b border-gray-700">
+                    <tr class="bg-gray-900 text-gray-300 text-sm uppercase border-b border-gray-700">
+                        <th class="p-4">操作</th>
                         <th class="p-4">代號</th>
-                        <th class="p-4">企業名稱</th>
+                        <th class="p-4">名稱</th>
                         <th class="p-4">本日收盤價</th>
                         <th class="p-4">量化總分</th>
                         <th class="p-4">系統判定</th>
@@ -53,142 +56,127 @@
                     </tr>
                 </thead>
                 <tbody id="stockTableBody" class="text-sm">
-                    <!-- 載入中的動畫 -->
-                    <tr>
-                        <td colspan="6" class="p-8 text-center text-gray-400">
-                            <div class="flex items-center justify-center">
-                                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mr-3"></div>
-                                正在連線資料庫，讀取最新台股量化數據...
-                            </div>
-                        </td>
-                    </tr>
+                    <tr><td colspan="7" class="p-8 text-center text-gray-400">正在讀取全市場資料庫...</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
 
     <script>
-        let stocksData =[];
+        let allMarketData = {}; // 儲存全市場資料庫
+        // 從瀏覽器 LocalStorage 讀取您的自選股清單 (若無，則給預設值)
+        let myWatchlist = JSON.parse(localStorage.getItem('goldmanWatchlist')) ||['2330', '2317', '3017', '2382'];
 
-        // 核心功能：從 GitHub 讀取爬蟲剛剛存檔的 JSON
         async function loadData() {
-            const tbody = document.getElementById('stockTableBody');
             try {
-                // 在網址後方加上隨機時間戳記，強迫瀏覽器抓取最新檔案，避免快取問題
                 const cacheBuster = new Date().getTime();
                 const response = await fetch('stocks_data.json?t=' + cacheBuster);
+                if (!response.ok) throw new Error("找不到檔案");
                 
-                if (!response.ok) {
-                    throw new Error("找不到檔案");
-                }
-                
-                stocksData = await response.json();
+                allMarketData = await response.json();
+                document.getElementById('dbStatus').innerHTML = `狀態：<span class="text-green-400">● 已載入全台股資料</span>`;
                 renderTable();
-                
             } catch (error) {
-                // 如果找不到檔案，顯示您剛才截圖中的錯誤畫面
-                tbody.innerHTML = `
-                    <tr>
-                        <td colspan="6" class="p-8 text-center text-red-400 font-medium bg-red-900/20">
-                            ⚠️ 找不到 stocks_data.json！請確認 GitHub Actions 的權限已開啟，並點擊「Run workflow」手動執行爬蟲。
-                        </td>
-                    </tr>
-                `;
+                document.getElementById('stockTableBody').innerHTML = `<tr><td colspan="7" class="p-8 text-center text-red-400">⚠️ 找不到資料庫！請確認 GitHub Actions 已執行成功。</td></tr>`;
             }
         }
-
-        // 九大因子加權計算邏輯
-        function calculateScore(stock) { return (stock.fundamental * 0.2 + stock.chip * 0.4 + stock.technical * 0.4).toFixed(1); }
 
         function renderTable() {
             const tbody = document.getElementById('stockTableBody');
             tbody.innerHTML = ''; 
 
-            if(stocksData.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" class="p-8 text-center text-gray-400">目前清單中沒有資料。</td></tr>';
+            if(myWatchlist.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" class="p-8 text-center text-gray-400">您的自選清單目前為空，請在上方輸入代號新增。</td></tr>';
                 return;
             }
 
-            stocksData.forEach(stock => {
-                const totalScore = calculateScore(stock);
-                let badge = totalScore >= 90 ? '<span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold">強烈買進</span>' :
-                            totalScore >= 80 ? '<span class="px-2 py-1 bg-green-900 text-green-200 rounded text-xs font-bold">偏多佈局</span>' :
+            myWatchlist.forEach(code => {
+                const stock = allMarketData[code];
+                if (!stock) {
+                    // 如果資料庫裡找不到這檔股票
+                    tbody.innerHTML += `
+                        <tr class="border-b border-gray-700">
+                            <td class="p-4"><button onclick="removeStock('${code}')" class="text-red-400 hover:text-red-300 font-bold" title="移除">🗑️</button></td>
+                            <td class="p-4 text-gray-500">${code}</td>
+                            <td class="p-4 text-gray-500" colspan="5">無此股票資料 (可能已下市或代號錯誤)</td>
+                        </tr>`;
+                    return;
+                }
+
+                const totalScore = (stock.fundamental * 0.2 + stock.chip * 0.4 + stock.technical * 0.4).toFixed(1);
+                let badge = totalScore >= 85 ? '<span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold">強烈買進</span>' :
+                            totalScore >= 75 ? '<span class="px-2 py-1 bg-green-900 text-green-200 rounded text-xs font-bold">偏多佈局</span>' :
                             '<span class="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs font-bold">觀望</span>';
 
-                const stockJson = JSON.stringify({...stock, totalScore}).replace(/"/g, '&quot;');
+                const stockJsonStr = JSON.stringify({id: code, name: stock.name, price: stock.price, fundamental: stock.fundamental, chip: stock.chip, technical: stock.technical, totalScore: totalScore}).replace(/"/g, '&quot;');
 
-                const tr = document.createElement('tr');
-                tr.className = 'border-b border-gray-700 hover:bg-gray-750 transition duration-150';
-                tr.innerHTML = `
-                    <td class="p-4 font-bold text-gray-300">${stock.id}</td>
-                    <td class="p-4 font-bold text-white">${stock.name}</td>
-                    <td class="p-4 text-green-400 font-medium">${stock.price}</td>
-                    <td class="p-4 font-bold ${totalScore >= 80 ? 'text-yellow-400' : 'text-gray-400'}">${totalScore}</td>
-                    <td class="p-4">${badge}</td>
-                    <td class="p-4 text-center">
-                        <button onclick="askGeminiAI('${stockJson}')" class="px-3 py-1 bg-blue-600 hover:bg-blue-500 rounded text-white text-xs font-medium transition shadow flex items-center justify-center mx-auto">
-                            ✨ AI 診斷
-                        </button>
-                    </td>
+                tbody.innerHTML += `
+                    <tr class="border-b border-gray-700 hover:bg-gray-750 transition duration-150">
+                        <td class="p-4">
+                            <button onclick="removeStock('${code}')" class="text-gray-500 hover:text-red-400 transition" title="從清單移除">❌</button>
+                        </td>
+                        <td class="p-4 font-bold text-gray-300">${code}</td>
+                        <td class="p-4 font-bold text-white">${stock.name}</td>
+                        <td class="p-4 text-green-400 font-medium">${stock.price}</td>
+                        <td class="p-4 font-bold ${totalScore >= 75 ? 'text-yellow-400' : 'text-gray-400'}">${totalScore}</td>
+                        <td class="p-4">${badge}</td>
+                        <td class="p-4 text-center">
+                            <button onclick="askGeminiAI('${stockJsonStr}')" class="px-3 py-1 bg-blue-600 hover:bg-blue-500 rounded text-white text-xs font-medium transition shadow">✨ AI 診斷</button>
+                        </td>
+                    </tr>
                 `;
-                tbody.appendChild(tr);
             });
         }
 
-        function checkApiKey() {
-            const key = document.getElementById('geminiApiKey').value;
-            if(key.length > 20) alert("密鑰格式已確認！可以開始呼叫 AI 診斷。");
-            else alert("請輸入有效的 Gemini API Key！");
+        // --- 新增：網頁端管理自選股邏輯 ---
+        function addStock() {
+            const input = document.getElementById('newStockCode');
+            const code = input.value.trim();
+            if(!code) return;
+            
+            if(myWatchlist.includes(code)) {
+                alert("這檔股票已經在清單中囉！");
+            } else if (!allMarketData[code]) {
+                alert(`資料庫中找不到代號 ${code}，請確認是否輸入正確上市代號。`);
+            } else {
+                myWatchlist.push(code); // 加入清單
+                localStorage.setItem('goldmanWatchlist', JSON.stringify(myWatchlist)); // 存檔到瀏覽器
+                renderTable(); // 重新渲染表格
+            }
+            input.value = ''; // 清空輸入框
         }
 
-        function closeAiPanel() { document.getElementById('aiReportPanel').classList.add('hidden'); }
+        function removeStock(code) {
+            myWatchlist = myWatchlist.filter(item => item !== code); // 過濾掉該代號
+            localStorage.setItem('goldmanWatchlist', JSON.stringify(myWatchlist)); // 存檔到瀏覽器
+            renderTable(); // 重新渲染表格
+        }
 
+        // --- AI 分析邏輯 (與先前相同) ---
+        function closeAiPanel() { document.getElementById('aiReportPanel').classList.add('hidden'); }
         async function askGeminiAI(stockJsonStr) {
             const apiKey = document.getElementById('geminiApiKey').value;
-            if(!apiKey) {
-                alert("請先在右上角輸入您的 Gemini API Key！");
-                return;
-            }
-
+            if(!apiKey) { alert("請先在右上角輸入 Gemini API Key！"); return; }
             const stock = JSON.parse(stockJsonStr);
             const panel = document.getElementById('aiReportPanel');
             const content = document.getElementById('aiReportContent');
-            const titleName = document.getElementById('aiStockName');
-            
             panel.classList.remove('hidden');
-            titleName.innerText = `(${stock.id} ${stock.name})`;
-            content.innerHTML = '<div class="flex items-center"><div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 mr-3"></div> Gemini AI 正在執行高盛級深度分析，請稍候...</div>';
+            document.getElementById('aiStockName').innerText = `(${stock.id} ${stock.name})`;
+            content.innerHTML = '<span class="text-yellow-400 animate-pulse">Gemini 正在產生高盛級深度分析...</span>';
 
-            const prompt = `你現在是高盛證券(Goldman Sachs)的台股王牌分析師。
-            請根據以下量化數據，為這檔股票寫一份約 100 字以內的精簡操作建議。
-            - 股票名稱：${stock.name}
-            - 本日收盤價：${stock.price}
-            - 基本面(營收)分數：${stock.fundamental}/100
-            - 籌碼面(外資投信)分數：${stock.chip}/100
-            - 技術面(均線)分數：${stock.technical}/100
-            - 量化總分：${stock.totalScore}/100
-            請用繁體中文回答，語氣要專業、客觀。告訴投資人這個分數代表什麼意義，以及該買進、觀望還是獲利了結。`;
-
+            const prompt = `你現在是高盛證券的台股分析師。分析標的：${stock.name} (股價:${stock.price})。量化總分:${stock.totalScore}/100。請用繁體中文給出 100 字精簡專業建議。`;
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
             try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ contents:[{ parts: [{ text: prompt }] }] })
-                });
+                const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents:[{ parts: [{ text: prompt }] }] }) });
                 const data = await response.json();
-                if(data.error) {
-                    content.innerHTML = `<span class="text-red-400">API 錯誤：${data.error.message}</span>`;
-                    return;
-                }
+                if(data.error) throw new Error(data.error.message);
                 content.innerHTML = data.candidates[0].content.parts[0].text.replace(/\n/g, '<br>');
             } catch (error) {
-                content.innerHTML = '<span class="text-red-400">連線失敗，請檢查網路狀態或確認 API Key 是否正確。</span>';
+                content.innerHTML = `<span class="text-red-400">連線失敗：${error.message}</span>`;
             }
         }
 
-        // 網頁一打開，立刻自動執行 loadData() 抓取最新的收盤價檔案
         window.onload = loadData;
     </script>
 </body>
