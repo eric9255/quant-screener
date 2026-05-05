@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高盛量化 AI 終端 8.0 (FinMind 終極版)</title>
+    <title>高盛量化 AI 終端 9.0 (自由拖曳排序版)</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🌟 引入全球最強大的拖曳庫 SortableJS -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <style>
         body { background-color: #0f172a; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, sans-serif; }
         .goldman-gold { color: #bf953f; }
         .bg-goldman { background-color: #bf953f; }
+        /* 拖曳時的游標與視覺效果 */
+        .drag-handle { cursor: grab; }
+        .drag-handle:active { cursor: grabbing; }
+        .sortable-ghost { opacity: 0.4; background-color: #334155; } /* 拖曳時留下的影子 */
     </style>
 </head>
 <body class="p-8">
@@ -16,8 +22,8 @@
     <div class="max-w-6xl mx-auto">
         <header class="mb-6 border-b border-gray-700 pb-4 flex justify-between items-end">
             <div>
-                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR SCREENER 8.0</h1>
-                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 搭載台灣 FinMind 本土開源金融引擎</p>
+                <h1 class="text-3xl font-bold goldman-gold tracking-wider">QUANT FACTOR SCREENER 9.0</h1>
+                <p class="text-sm text-gray-400 mt-2">高盛專屬經理人 - 搭載 SortableJS 自由拖曳與 FinMind 本土引擎</p>
             </div>
             <div class="flex items-center space-x-2">
                 <input type="password" id="geminiApiKey" placeholder="輸入 Gemini API Key" class="px-3 py-2 bg-gray-800 border border-gray-600 rounded text-sm text-white focus:outline-none focus:border-yellow-500 w-48">
@@ -46,7 +52,7 @@
             <table class="w-full text-left border-collapse">
                 <thead>
                     <tr class="bg-gray-900 text-gray-300 text-sm uppercase border-b border-gray-700">
-                        <th class="p-4">操作</th>
+                        <th class="p-4 w-24">操作</th> <!-- 留寬一點給兩個按鈕 -->
                         <th class="p-4">代號</th>
                         <th class="p-4">名稱</th>
                         <th class="p-4">本日收盤價</th>
@@ -65,20 +71,15 @@
     <script>
         let allMarketData = {}; 
         let myWatchlist = JSON.parse(localStorage.getItem('goldmanWatchlist')) ||['2330', '2317', '3017', '2382'];
+        let sortableInstance = null; // 儲存拖曳實例
 
-        // 🏆 終極技術：直連台灣本土 FinMind 開源 API (免疫所有阻擋)
         async function fetchFromFinMind(code) {
             try {
                 let stockName = "自選標的";
-                
-                // 1. 取得股票中文名稱
                 const infoRes = await fetch(`https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockInfo&data_id=${code}`);
                 const infoData = await infoRes.json();
-                if (infoData.status === 200 && infoData.data.length > 0) {
-                    stockName = infoData.data[0].stock_name;
-                }
+                if (infoData.status === 200 && infoData.data.length > 0) stockName = infoData.data[0].stock_name;
 
-                // 2. 取得近 10 天的股價，抓出最新一筆收盤價
                 let d = new Date();
                 d.setDate(d.getDate() - 10);
                 let startDate = d.toISOString().split('T')[0];
@@ -87,18 +88,15 @@
                 const priceData = await priceRes.json();
 
                 if (priceData.status === 200 && priceData.data.length > 0) {
-                    let latest = priceData.data[priceData.data.length - 1]; // 取陣列最後一筆 (最新日期)
+                    let latest = priceData.data[priceData.data.length - 1]; 
                     return { name: stockName, price: latest.close };
                 }
-            } catch (e) {
-                console.log("FinMind 引擎抓取失敗:", e);
-            }
+            } catch (e) { console.log("FinMind 抓取失敗:", e); }
             return null;
         }
 
         async function loadData() {
             try {
-                // 先讀取 GitHub 機器人的底層資料 (如果有成功的話)
                 const cacheBuster = new Date().getTime();
                 const response = await fetch('stocks_data.json?t=' + cacheBuster);
                 if (!response.ok) throw new Error("遠端檔案不存在");
@@ -108,7 +106,6 @@
                 document.getElementById('dbStatus').innerHTML = `狀態：<span class="text-blue-400">⚡ 啟動 FinMind 獨立引擎</span>`;
             }
 
-            // 【終極防線】：只要資料庫缺漏，或名稱帶有「(備援)」，一律交給 FinMind 處理！
             for (let code of myWatchlist) {
                 if (!allMarketData[code] || allMarketData[code].name.includes('(備援)')) {
                     const fmData = await fetchFromFinMind(code);
@@ -132,30 +129,18 @@
             const code = input.value.trim();
             if(!code) return;
             
-            if(myWatchlist.includes(code)) {
-                alert("這檔股票已經在清單中囉！");
-                input.value = ''; return;
-            }
+            if(myWatchlist.includes(code)) { alert("這檔股票已經在清單中囉！"); input.value = ''; return; }
 
-            btn.innerText = "FinMind 連線中...";
+            btn.innerText = "連線中...";
             btn.classList.add("animate-pulse");
 
-            // 呼叫終極引擎
             if (!allMarketData[code]) {
                 const fmData = await fetchFromFinMind(code);
                 if (fmData) {
-                    allMarketData[code] = {
-                        name: fmData.name, 
-                        price: fmData.price,
-                        fundamental: Math.floor(Math.random() * (95 - 70 + 1)) + 70,
-                        chip: Math.floor(Math.random() * (95 - 60 + 1)) + 60,
-                        technical: Math.floor(Math.random() * (95 - 60 + 1)) + 60
-                    };
+                    allMarketData[code] = { name: fmData.name, price: fmData.price, fundamental: Math.floor(Math.random() * (95 - 70 + 1)) + 70, chip: Math.floor(Math.random() * (95 - 60 + 1)) + 60, technical: Math.floor(Math.random() * (95 - 60 + 1)) + 60 };
                 } else {
-                    alert(`FinMind 資料庫找不到代號 ${code}，請確認是否為有效上市櫃代號！`);
-                    btn.innerText = "加入清單";
-                    btn.classList.remove("animate-pulse");
-                    return;
+                    alert(`FinMind 找不到代號 ${code}，請確認是否為有效上市櫃代號！`);
+                    btn.innerText = "加入清單"; btn.classList.remove("animate-pulse"); return;
                 }
             }
 
@@ -173,31 +158,26 @@
 
             if(myWatchlist.length === 0) {
                 tbody.innerHTML = '<tr><td colspan="7" class="p-8 text-center text-gray-400">清單目前為空，請輸入代號新增。</td></tr>';
+                if(sortableInstance) sortableInstance.destroy();
                 return;
             }
 
             myWatchlist.forEach(code => {
                 const stock = allMarketData[code];
-                if (!stock) {
-                    tbody.innerHTML += `
-                        <tr class="border-b border-gray-700">
-                            <td class="p-4"><button onclick="removeStock('${code}')" class="text-red-400 hover:text-red-300 font-bold">🗑️</button></td>
-                            <td class="p-4 text-gray-500">${code}</td>
-                            <td class="p-4 text-gray-500" colspan="5">尚未載入即時資料，請重新整理網頁</td>
-                        </tr>`;
-                    return;
-                }
+                if (!stock) return;
 
                 const totalScore = (stock.fundamental * 0.2 + stock.chip * 0.4 + stock.technical * 0.4).toFixed(1);
-                let badge = totalScore >= 85 ? '<span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold">強烈買進</span>' :
-                            totalScore >= 75 ? '<span class="px-2 py-1 bg-green-900 text-green-200 rounded text-xs font-bold">偏多佈局</span>' :
-                            '<span class="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs font-bold">觀望</span>';
+                let badge = totalScore >= 85 ? '<span class="px-2 py-1 bg-red-900 text-red-200 rounded text-xs font-bold">強烈買進</span>' : totalScore >= 75 ? '<span class="px-2 py-1 bg-green-900 text-green-200 rounded text-xs font-bold">偏多佈局</span>' : '<span class="px-2 py-1 bg-gray-700 text-gray-400 rounded text-xs font-bold">觀望</span>';
 
                 const stockJsonStr = JSON.stringify({id: code, name: stock.name, price: stock.price, fundamental: stock.fundamental, chip: stock.chip, technical: stock.technical, totalScore: totalScore}).replace(/"/g, '&quot;');
 
+                // 🌟 新增：在操作欄加入「☰」拖曳把手
                 tbody.innerHTML += `
-                    <tr class="border-b border-gray-700 hover:bg-gray-750 transition duration-150">
-                        <td class="p-4"><button onclick="removeStock('${code}')" class="text-gray-500 hover:text-red-400 transition" title="移除">❌</button></td>
+                    <tr class="border-b border-gray-700 hover:bg-gray-750 transition duration-150 bg-gray-800">
+                        <td class="p-4 flex space-x-3 items-center">
+                            <span class="drag-handle text-gray-400 hover:text-white" title="按住拖曳排序">☰</span>
+                            <button onclick="removeStock('${code}')" class="text-gray-500 hover:text-red-400 transition" title="移除">❌</button>
+                        </td>
                         <td class="p-4 font-bold text-gray-300">${code}</td>
                         <td class="p-4 font-bold text-white">${stock.name.replace('(備援)', '')}</td>
                         <td class="p-4 text-green-400 font-medium">${stock.price}</td>
@@ -208,6 +188,31 @@
                         </td>
                     </tr>
                 `;
+            });
+
+            // 🌟 核心：初始化拖曳排序功能
+            initSortable();
+        }
+
+        // 🌟 初始化 SortableJS
+        function initSortable() {
+            const tbody = document.getElementById('stockTableBody');
+            
+            // 避免重複綁定，先銷毀舊的
+            if (sortableInstance) { sortableInstance.destroy(); }
+
+            sortableInstance = Sortable.create(tbody, {
+                handle: '.drag-handle', // 只有抓著 ☰ 符號時才能拖曳
+                animation: 150,         // 柔和的動畫過渡效果
+                ghostClass: 'sortable-ghost', // 拖曳時原位置的顏色
+                onEnd: function (evt) {
+                    // 當使用者放開滑鼠時，立刻更新 myWatchlist 陣列
+                    const movedItem = myWatchlist.splice(evt.oldIndex, 1)[0]; // 拔出舊位置的股票
+                    myWatchlist.splice(evt.newIndex, 0, movedItem); // 塞入新位置
+                    
+                    // 🌟 將新的排序結果永久存入瀏覽器
+                    localStorage.setItem('goldmanWatchlist', JSON.stringify(myWatchlist));
+                }
             });
         }
 
