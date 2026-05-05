@@ -2,6 +2,7 @@ name: 高盛量化終端_每日數據更新
 
 on:
   schedule:
+    # 每天台股收盤後執行
     - cron: '30 6 * * 1-5'
   
   workflow_dispatch:
@@ -14,20 +15,18 @@ jobs:
 
     steps:
       - name: 📥 下載目前的儲存庫檔案
-        uses: actions/checkout@v4  # 🌟 升級為 v4
+        uses: actions/checkout@v4
 
       - name: 🐍 安裝 Python 環境
-        uses: actions/setup-python@v5  # 🌟 升級為 v5
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
       - name: ⚙️ 執行高盛量化爬蟲腳本
         run: python update_data.py
 
-      - name: 💾 自動 Commit 並更新網頁資料
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "Goldman Quant Bot"
-          git add stocks_data.json
-          git commit -m "🤖 自動更新：台股每日收盤量化數據" || exit 0
-          git push
+      - name: 💾 自動 Commit 並完美上傳數據
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 自動更新：台股每日收盤量化數據"
+          file_pattern: stocks_data.json
