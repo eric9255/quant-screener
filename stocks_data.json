@@ -1,86 +1,7044 @@
 {
+    "00679B": {
+        "name": "元大美債20年",
+        "price": 26.7,
+        "fundamental": 77,
+        "chip": 81,
+        "technical": 72
+    },
+    "00687B": {
+        "name": "國泰20年美債",
+        "price": 27.76,
+        "fundamental": 88,
+        "chip": 67,
+        "technical": 92
+    },
+    "00687C": {
+        "name": "國泰20年美債+櫃U",
+        "price": 9.33,
+        "fundamental": 73,
+        "chip": 91,
+        "technical": 75
+    },
+    "00694B": {
+        "name": "富邦美債1-3",
+        "price": 41.3,
+        "fundamental": 60,
+        "chip": 49,
+        "technical": 81
+    },
+    "00695B": {
+        "name": "富邦美債7-10",
+        "price": 34.98,
+        "fundamental": 94,
+        "chip": 44,
+        "technical": 73
+    },
+    "00696B": {
+        "name": "富邦美債20年",
+        "price": 28.81,
+        "fundamental": 65,
+        "chip": 82,
+        "technical": 73
+    },
+    "00697B": {
+        "name": "元大美債7-10",
+        "price": 35.55,
+        "fundamental": 54,
+        "chip": 68,
+        "technical": 92
+    },
+    "00719B": {
+        "name": "元大美債1-3",
+        "price": 30.75,
+        "fundamental": 76,
+        "chip": 47,
+        "technical": 72
+    },
+    "00720B": {
+        "name": "元大投資級公司債",
+        "price": 32.78,
+        "fundamental": 76,
+        "chip": 66,
+        "technical": 91
+    },
+    "00722B": {
+        "name": "群益投資級電信債",
+        "price": 35.72,
+        "fundamental": 75,
+        "chip": 53,
+        "technical": 71
+    },
+    "00723B": {
+        "name": "群益投資級科技債",
+        "price": 30.55,
+        "fundamental": 87,
+        "chip": 60,
+        "technical": 84
+    },
+    "00724B": {
+        "name": "群益投資級金融債",
+        "price": 33.54,
+        "fundamental": 90,
+        "chip": 72,
+        "technical": 60
+    },
+    "00725B": {
+        "name": "國泰投資級公司債",
+        "price": 34.84,
+        "fundamental": 95,
+        "chip": 61,
+        "technical": 45
+    },
+    "00726B": {
+        "name": "國泰新興投等債",
+        "price": 32.67,
+        "fundamental": 55,
+        "chip": 67,
+        "technical": 89
+    },
+    "00727B": {
+        "name": "國泰優選非投等債",
+        "price": 39.05,
+        "fundamental": 84,
+        "chip": 65,
+        "technical": 81
+    },
+    "00734B": {
+        "name": "台新JPM新興債",
+        "price": 15.69,
+        "fundamental": 60,
+        "chip": 50,
+        "technical": 81
+    },
+    "00740B": {
+        "name": "富邦全球投等債",
+        "price": 38.56,
+        "fundamental": 78,
+        "chip": 72,
+        "technical": 81
+    },
+    "00741B": {
+        "name": "富邦全球非投等債",
+        "price": 37.22,
+        "fundamental": 93,
+        "chip": 90,
+        "technical": 83
+    },
+    "00746B": {
+        "name": "富邦A級公司債",
+        "price": 35.35,
+        "fundamental": 54,
+        "chip": 54,
+        "technical": 57
+    },
+    "00749B": {
+        "name": "凱基新興債10+",
+        "price": 31.58,
+        "fundamental": 83,
+        "chip": 43,
+        "technical": 49
+    },
+    "00750B": {
+        "name": "凱基科技債10+",
+        "price": 32.84,
+        "fundamental": 53,
+        "chip": 44,
+        "technical": 85
+    },
+    "00751B": {
+        "name": "元大AAA至A公司債",
+        "price": 31.54,
+        "fundamental": 72,
+        "chip": 49,
+        "technical": 43
+    },
+    "00754B": {
+        "name": "群益AAA-AA公司債",
+        "price": 33.43,
+        "fundamental": 64,
+        "chip": 42,
+        "technical": 53
+    },
+    "00755B": {
+        "name": "群益投資級公用債",
+        "price": 32.88,
+        "fundamental": 86,
+        "chip": 75,
+        "technical": 42
+    },
+    "00756B": {
+        "name": "群益投等新興公債",
+        "price": 31.69,
+        "fundamental": 80,
+        "chip": 47,
+        "technical": 87
+    },
+    "00758B": {
+        "name": "復華能源債",
+        "price": 51.7,
+        "fundamental": 68,
+        "chip": 82,
+        "technical": 80
+    },
+    "00759B": {
+        "name": "復華製藥債",
+        "price": 54.4,
+        "fundamental": 89,
+        "chip": 44,
+        "technical": 95
+    },
+    "00760B": {
+        "name": "復華新興企業債",
+        "price": 54.1,
+        "fundamental": 68,
+        "chip": 63,
+        "technical": 82
+    },
+    "00761B": {
+        "name": "國泰A級公司債",
+        "price": 34.54,
+        "fundamental": 82,
+        "chip": 87,
+        "technical": 92
+    },
+    "00764B": {
+        "name": "群益25年美債",
+        "price": 27.74,
+        "fundamental": 60,
+        "chip": 67,
+        "technical": 50
+    },
+    "00768B": {
+        "name": "復華20年美債",
+        "price": 50.5,
+        "fundamental": 60,
+        "chip": 54,
+        "technical": 74
+    },
+    "00772B": {
+        "name": "中信高評級公司債",
+        "price": 33.61,
+        "fundamental": 87,
+        "chip": 57,
+        "technical": 50
+    },
+    "00773B": {
+        "name": "中信優先金融債",
+        "price": 35.8,
+        "fundamental": 86,
+        "chip": 73,
+        "technical": 40
+    },
+    "00777B": {
+        "name": "凱基AAA至A公司債",
+        "price": 32.53,
+        "fundamental": 94,
+        "chip": 63,
+        "technical": 45
+    },
+    "00778B": {
+        "name": "凱基金融債20+",
+        "price": 34.43,
+        "fundamental": 94,
+        "chip": 51,
+        "technical": 89
+    },
+    "00779B": {
+        "name": "凱基美債25+",
+        "price": 28.1,
+        "fundamental": 54,
+        "chip": 78,
+        "technical": 63
+    },
+    "00780B": {
+        "name": "國泰A級金融債",
+        "price": 37.41,
+        "fundamental": 67,
+        "chip": 77,
+        "technical": 40
+    },
+    "00781B": {
+        "name": "國泰A級科技債",
+        "price": 28.43,
+        "fundamental": 61,
+        "chip": 54,
+        "technical": 42
+    },
+    "00782B": {
+        "name": "國泰A級公用債",
+        "price": 30.26,
+        "fundamental": 77,
+        "chip": 90,
+        "technical": 89
+    },
+    "00785B": {
+        "name": "富邦金融投等債",
+        "price": 34.77,
+        "fundamental": 54,
+        "chip": 54,
+        "technical": 73
+    },
+    "00786B": {
+        "name": "元大10年IG銀行債",
+        "price": 32.73,
+        "fundamental": 50,
+        "chip": 77,
+        "technical": 62
+    },
+    "00787B": {
+        "name": "元大10年IG醫療債",
+        "price": 32.49,
+        "fundamental": 87,
+        "chip": 60,
+        "technical": 49
+    },
+    "00788B": {
+        "name": "元大10年IG電能債",
+        "price": 29.72,
+        "fundamental": 63,
+        "chip": 87,
+        "technical": 48
+    },
+    "00789B": {
+        "name": "復華公司債A3",
+        "price": 47.97,
+        "fundamental": 76,
+        "chip": 59,
+        "technical": 84
+    },
+    "00791B": {
+        "name": "復華信用債1-5",
+        "price": 56.2,
+        "fundamental": 74,
+        "chip": 77,
+        "technical": 43
+    },
+    "00792B": {
+        "name": "群益A級公司債",
+        "price": 31.68,
+        "fundamental": 66,
+        "chip": 49,
+        "technical": 40
+    },
+    "00793B": {
+        "name": "群益AAA-A醫療債",
+        "price": 30.66,
+        "fundamental": 86,
+        "chip": 58,
+        "technical": 89
+    },
+    "00795B": {
+        "name": "中信美國公債20年",
+        "price": 26.95,
+        "fundamental": 94,
+        "chip": 78,
+        "technical": 58
+    },
+    "00799B": {
+        "name": "國泰A級醫療債",
+        "price": 29.78,
+        "fundamental": 62,
+        "chip": 73,
+        "technical": 53
+    },
+    "00834B": {
+        "name": "第一金金融債10+",
+        "price": 33.92,
+        "fundamental": 54,
+        "chip": 51,
+        "technical": 90
+    },
+    "00836B": {
+        "name": "永豐10年A公司債",
+        "price": 28.78,
+        "fundamental": 52,
+        "chip": 83,
+        "technical": 44
+    },
+    "00840B": {
+        "name": "凱基IG精選15+",
+        "price": 29.88,
+        "fundamental": 60,
+        "chip": 42,
+        "technical": 86
+    },
+    "00841B": {
+        "name": "凱基AAA-AA公司債",
+        "price": 29.0,
+        "fundamental": 59,
+        "chip": 45,
+        "technical": 65
+    },
+    "00842B": {
+        "name": "台新美元銀行債",
+        "price": 30.46,
+        "fundamental": 81,
+        "chip": 68,
+        "technical": 49
+    },
+    "00844B": {
+        "name": "新光15年IG金融債",
+        "price": 31.73,
+        "fundamental": 80,
+        "chip": 62,
+        "technical": 40
+    },
+    "00845B": {
+        "name": "富邦新興投等債",
+        "price": 33.4,
+        "fundamental": 85,
+        "chip": 83,
+        "technical": 74
+    },
+    "00846B": {
+        "name": "富邦歐洲銀行債",
+        "price": 36.01,
+        "fundamental": 92,
+        "chip": 83,
+        "technical": 42
+    },
+    "00847B": {
+        "name": "中信美國市政債",
+        "price": 25.68,
+        "fundamental": 76,
+        "chip": 50,
+        "technical": 46
+    },
+    "00848B": {
+        "name": "中信新興亞洲債",
+        "price": 34.22,
+        "fundamental": 59,
+        "chip": 93,
+        "technical": 63
+    },
+    "00849B": {
+        "name": "中信EM主權債0-5",
+        "price": 36.95,
+        "fundamental": 61,
+        "chip": 46,
+        "technical": 79
+    },
+    "00853B": {
+        "name": "統一美債10年Aa-A",
+        "price": 27.65,
+        "fundamental": 85,
+        "chip": 94,
+        "technical": 43
+    },
+    "00856B": {
+        "name": "永豐1-3年美公債",
+        "price": 37.42,
+        "fundamental": 89,
+        "chip": 45,
+        "technical": 43
+    },
+    "00857B": {
+        "name": "永豐20年美公債",
+        "price": 23.1,
+        "fundamental": 92,
+        "chip": 40,
+        "technical": 82
+    },
+    "00858": {
+        "name": "永豐美國500大",
+        "price": 35.35,
+        "fundamental": 73,
+        "chip": 50,
+        "technical": 80
+    },
+    "00859B": {
+        "name": "群益0-1年美債",
+        "price": 40.74,
+        "fundamental": 75,
+        "chip": 76,
+        "technical": 45
+    },
+    "00860B": {
+        "name": "群益1-5Y投資級債",
+        "price": 37.94,
+        "fundamental": 79,
+        "chip": 47,
+        "technical": 79
+    },
+    "00862B": {
+        "name": "中信投資級公司債",
+        "price": 31.63,
+        "fundamental": 78,
+        "chip": 62,
+        "technical": 67
+    },
+    "00863B": {
+        "name": "中信全球電信債",
+        "price": 32.02,
+        "fundamental": 92,
+        "chip": 81,
+        "technical": 61
+    },
+    "00864B": {
+        "name": "中信美國公債0-1",
+        "price": 46.11,
+        "fundamental": 75,
+        "chip": 80,
+        "technical": 80
+    },
+    "00867B": {
+        "name": "新光A-BBB電信債",
+        "price": 31.32,
+        "fundamental": 84,
+        "chip": 88,
+        "technical": 69
+    },
+    "00870B": {
+        "name": "元大15年EM主權債",
+        "price": 28.33,
+        "fundamental": 92,
+        "chip": 77,
+        "technical": 61
+    },
+    "00877": {
+        "name": "復華中國5G",
+        "price": 38.44,
+        "fundamental": 77,
+        "chip": 66,
+        "technical": 69
+    },
+    "00884B": {
+        "name": "中信低碳新興債",
+        "price": 29.59,
+        "fundamental": 73,
+        "chip": 91,
+        "technical": 95
+    },
+    "00886": {
+        "name": "永豐美國科技",
+        "price": 42.65,
+        "fundamental": 59,
+        "chip": 88,
+        "technical": 90
+    },
+    "00887": {
+        "name": "永豐中國科技50大",
+        "price": 15.84,
+        "fundamental": 65,
+        "chip": 76,
+        "technical": 70
+    },
+    "00888": {
+        "name": "永豐台灣ESG",
+        "price": 30.0,
+        "fundamental": 93,
+        "chip": 77,
+        "technical": 58
+    },
+    "00890B": {
+        "name": "凱基ESG BBB債15+",
+        "price": 32.2,
+        "fundamental": 78,
+        "chip": 90,
+        "technical": 48
+    },
+    "00928": {
+        "name": "中信上櫃ESG 30",
+        "price": 36.96,
+        "fundamental": 56,
+        "chip": 62,
+        "technical": 48
+    },
+    "00931B": {
+        "name": "統一美債20年",
+        "price": 13.38,
+        "fundamental": 73,
+        "chip": 91,
+        "technical": 92
+    },
+    "00933B": {
+        "name": "國泰10Y+金融債",
+        "price": 15.98,
+        "fundamental": 81,
+        "chip": 91,
+        "technical": 73
+    },
+    "00937B": {
+        "name": "群益ESG投等債20+",
+        "price": 14.78,
+        "fundamental": 53,
+        "chip": 64,
+        "technical": 58
+    },
+    "00942B": {
+        "name": "台新美A公司債20+",
+        "price": 14.29,
+        "fundamental": 90,
+        "chip": 94,
+        "technical": 78
+    },
+    "00948B": {
+        "name": "中信優息投資級債",
+        "price": 9.44,
+        "fundamental": 61,
+        "chip": 65,
+        "technical": 89
+    },
+    "00950B": {
+        "name": "凱基A級公司債",
+        "price": 14.01,
+        "fundamental": 52,
+        "chip": 49,
+        "technical": 82
+    },
+    "00955": {
+        "name": "中信日本商社",
+        "price": 15.66,
+        "fundamental": 90,
+        "chip": 60,
+        "technical": 47
+    },
+    "00957B": {
+        "name": "兆豐US優選投等債",
+        "price": 13.4,
+        "fundamental": 83,
+        "chip": 66,
+        "technical": 72
+    },
+    "00958B": {
+        "name": "永豐ESG銀行債15+",
+        "price": 9.25,
+        "fundamental": 74,
+        "chip": 46,
+        "technical": 72
+    },
+    "00959B": {
+        "name": "大華投等美債15Y+",
+        "price": 9.33,
+        "fundamental": 72,
+        "chip": 62,
+        "technical": 66
+    },
+    "00966B": {
+        "name": "統一ESG投等債15+",
+        "price": 13.86,
+        "fundamental": 95,
+        "chip": 56,
+        "technical": 82
+    },
+    "00967B": {
+        "name": "元大優息美債",
+        "price": 9.09,
+        "fundamental": 57,
+        "chip": 66,
+        "technical": 94
+    },
+    "00968B": {
+        "name": "元大優息投等債",
+        "price": 9.24,
+        "fundamental": 91,
+        "chip": 68,
+        "technical": 42
+    },
+    "00969B": {
+        "name": "元大零息超長美債",
+        "price": 8.26,
+        "fundamental": 84,
+        "chip": 74,
+        "technical": 62
+    },
+    "00970B": {
+        "name": "新光BBB投等債20+",
+        "price": 9.35,
+        "fundamental": 84,
+        "chip": 80,
+        "technical": 60
+    },
+    "00980B": {
+        "name": "台新特選IG債10+",
+        "price": 9.44,
+        "fundamental": 89,
+        "chip": 67,
+        "technical": 63
+    },
+    "00980D": {
+        "name": "主動聯博投等入息",
+        "price": 20.36,
+        "fundamental": 51,
+        "chip": 40,
+        "technical": 42
+    },
+    "00980T": {
+        "name": "平衡凱基美國TOP",
+        "price": 11.56,
+        "fundamental": 62,
+        "chip": 63,
+        "technical": 55
+    },
+    "00981B": {
+        "name": "第一金優選非投債",
+        "price": 9.17,
+        "fundamental": 64,
+        "chip": 51,
+        "technical": 70
+    },
+    "00981D": {
+        "name": "主動中信非投等債",
+        "price": 10.31,
+        "fundamental": 73,
+        "chip": 44,
+        "technical": 50
+    },
+    "00982B": {
+        "name": "FT投資級債20+",
+        "price": 9.81,
+        "fundamental": 91,
+        "chip": 83,
+        "technical": 80
+    },
+    "00983B": {
+        "name": "大華優利美公債20",
+        "price": 15.57,
+        "fundamental": 94,
+        "chip": 40,
+        "technical": 84
+    },
+    "00984B": {
+        "name": "大華優利美A債15",
+        "price": 16.28,
+        "fundamental": 83,
+        "chip": 70,
+        "technical": 85
+    },
+    "00985D": {
+        "name": "主動貝萊德優投等",
+        "price": 10.09,
+        "fundamental": 65,
+        "chip": 45,
+        "technical": 64
+    },
+    "00986B": {
+        "name": "FT金融債10+",
+        "price": 9.86,
+        "fundamental": 77,
+        "chip": 79,
+        "technical": 49
+    },
+    "00986D": {
+        "name": "主動復華金融債息",
+        "price": 14.78,
+        "fundamental": 76,
+        "chip": 63,
+        "technical": 88
+    },
+    "00987B": {
+        "name": "野村10+澳洲公債",
+        "price": 15.97,
+        "fundamental": 65,
+        "chip": 91,
+        "technical": 46
+    },
+    "00988B": {
+        "name": "玉山嚴選非投債",
+        "price": 19.86,
+        "fundamental": 82,
+        "chip": 75,
+        "technical": 42
+    },
+    "00989B": {
+        "name": "台新美國非投等債",
+        "price": 9.98,
+        "fundamental": 69,
+        "chip": 85,
+        "technical": 83
+    },
+    "00998A": {
+        "name": "主動復華金融股息",
+        "price": 15.75,
+        "fundamental": 71,
+        "chip": 46,
+        "technical": 89
+    },
+    "1240": {
+        "name": "茂生農經",
+        "price": 59.0,
+        "fundamental": 89,
+        "chip": 53,
+        "technical": 48
+    },
+    "1259": {
+        "name": "安心",
+        "price": 57.5,
+        "fundamental": 84,
+        "chip": 62,
+        "technical": 83
+    },
+    "1264": {
+        "name": "德麥",
+        "price": 271.5,
+        "fundamental": 69,
+        "chip": 56,
+        "technical": 62
+    },
+    "1268": {
+        "name": "漢來美食",
+        "price": 159.5,
+        "fundamental": 62,
+        "chip": 68,
+        "technical": 76
+    },
+    "1294": {
+        "name": "漢田生技",
+        "price": 79.2,
+        "fundamental": 59,
+        "chip": 50,
+        "technical": 46
+    },
+    "1295": {
+        "name": "生合",
+        "price": 53.7,
+        "fundamental": 94,
+        "chip": 66,
+        "technical": 47
+    },
+    "1336": {
+        "name": "台翰",
+        "price": 13.8,
+        "fundamental": 63,
+        "chip": 72,
+        "technical": 41
+    },
+    "1565": {
+        "name": "精華",
+        "price": 100.0,
+        "fundamental": 63,
+        "chip": 95,
+        "technical": 49
+    },
+    "1569": {
+        "name": "濱川",
+        "price": 55.8,
+        "fundamental": 68,
+        "chip": 75,
+        "technical": 55
+    },
+    "1570": {
+        "name": "力肯",
+        "price": 39.95,
+        "fundamental": 74,
+        "chip": 68,
+        "technical": 53
+    },
+    "1580": {
+        "name": "新麥",
+        "price": 123.5,
+        "fundamental": 76,
+        "chip": 43,
+        "technical": 90
+    },
+    "1584": {
+        "name": "精剛",
+        "price": 20.4,
+        "fundamental": 90,
+        "chip": 40,
+        "technical": 80
+    },
+    "1586": {
+        "name": "和勤",
+        "price": 21.65,
+        "fundamental": 65,
+        "chip": 84,
+        "technical": 51
+    },
+    "1591": {
+        "name": "駿吉-KY",
+        "price": 63.6,
+        "fundamental": 53,
+        "chip": 70,
+        "technical": 89
+    },
+    "1593": {
+        "name": "祺驊",
+        "price": 32.5,
+        "fundamental": 75,
+        "chip": 92,
+        "technical": 68
+    },
+    "1595": {
+        "name": "川寶",
+        "price": 94.1,
+        "fundamental": 53,
+        "chip": 64,
+        "technical": 49
+    },
+    "1599": {
+        "name": "宏佳騰",
+        "price": 24.45,
+        "fundamental": 50,
+        "chip": 42,
+        "technical": 78
+    },
+    "1742": {
+        "name": "台蠟",
+        "price": 15.75,
+        "fundamental": 82,
+        "chip": 88,
+        "technical": 60
+    },
+    "1777": {
+        "name": "生泰",
+        "price": 71.1,
+        "fundamental": 89,
+        "chip": 67,
+        "technical": 68
+    },
+    "1781": {
+        "name": "合世",
+        "price": 10.85,
+        "fundamental": 90,
+        "chip": 82,
+        "technical": 60
+    },
+    "1784": {
+        "name": "訊聯",
+        "price": 73.5,
+        "fundamental": 72,
+        "chip": 51,
+        "technical": 83
+    },
+    "1785": {
+        "name": "光洋科",
+        "price": 159.0,
+        "fundamental": 90,
+        "chip": 75,
+        "technical": 50
+    },
+    "1788": {
+        "name": "杏昌",
+        "price": 135.0,
+        "fundamental": 84,
+        "chip": 47,
+        "technical": 73
+    },
+    "1796": {
+        "name": "金穎生技",
+        "price": 37.35,
+        "fundamental": 69,
+        "chip": 83,
+        "technical": 81
+    },
+    "1799": {
+        "name": "易威",
+        "price": 35.85,
+        "fundamental": 84,
+        "chip": 41,
+        "technical": 57
+    },
+    "1813": {
+        "name": "寶利徠",
+        "price": 12.25,
+        "fundamental": 59,
+        "chip": 46,
+        "technical": 66
+    },
+    "1815": {
+        "name": "富喬",
+        "price": 110.5,
+        "fundamental": 54,
+        "chip": 71,
+        "technical": 72
+    },
+    "2035": {
+        "name": "唐榮",
+        "price": 28.35,
+        "fundamental": 64,
+        "chip": 73,
+        "technical": 58
+    },
+    "2061": {
+        "name": "風青",
+        "price": 22.0,
+        "fundamental": 78,
+        "chip": 56,
+        "technical": 74
+    },
+    "2063": {
+        "name": "世鎧",
+        "price": 26.15,
+        "fundamental": 59,
+        "chip": 51,
+        "technical": 88
+    },
+    "2064": {
+        "name": "晉椿",
+        "price": 12.6,
+        "fundamental": 72,
+        "chip": 88,
+        "technical": 72
+    },
+    "2065": {
+        "name": "世豐",
+        "price": 32.35,
+        "fundamental": 66,
+        "chip": 45,
+        "technical": 94
+    },
+    "2066": {
+        "name": "世德",
+        "price": 47.0,
+        "fundamental": 54,
+        "chip": 77,
+        "technical": 40
+    },
+    "2067": {
+        "name": "嘉鋼",
+        "price": 7.24,
+        "fundamental": 80,
+        "chip": 50,
+        "technical": 91
+    },
+    "2070": {
+        "name": "精湛",
+        "price": 69.5,
+        "fundamental": 77,
+        "chip": 62,
+        "technical": 90
+    },
+    "2221": {
+        "name": "大甲",
+        "price": 38.0,
+        "fundamental": 72,
+        "chip": 78,
+        "technical": 80
+    },
+    "2230": {
+        "name": "泰茂",
+        "price": 31.35,
+        "fundamental": 72,
+        "chip": 50,
+        "technical": 40
+    },
+    "2235": {
+        "name": "謚源",
+        "price": 30.3,
+        "fundamental": 83,
+        "chip": 92,
+        "technical": 82
+    },
+    "2596": {
+        "name": "綠意",
+        "price": 29.5,
+        "fundamental": 54,
+        "chip": 40,
+        "technical": 83
+    },
+    "2640": {
+        "name": "大車隊",
+        "price": 166.5,
+        "fundamental": 59,
+        "chip": 57,
+        "technical": 76
+    },
+    "2641": {
+        "name": "正德",
+        "price": 18.0,
+        "fundamental": 54,
+        "chip": 54,
+        "technical": 83
+    },
+    "2643": {
+        "name": "捷迅",
+        "price": 66.9,
+        "fundamental": 83,
+        "chip": 53,
+        "technical": 72
+    },
+    "2718": {
+        "name": "全心投控",
+        "price": 41.2,
+        "fundamental": 86,
+        "chip": 56,
+        "technical": 52
+    },
+    "2719": {
+        "name": "燦星旅",
+        "price": 26.15,
+        "fundamental": 71,
+        "chip": 43,
+        "technical": 61
+    },
+    "2724": {
+        "name": "藝舍-KY",
+        "price": 14.05,
+        "fundamental": 71,
+        "chip": 81,
+        "technical": 89
+    },
+    "2726": {
+        "name": "雅茗-KY",
+        "price": 10.1,
+        "fundamental": 78,
+        "chip": 53,
+        "technical": 70
+    },
+    "2729": {
+        "name": "瓦城",
+        "price": 165.0,
+        "fundamental": 60,
+        "chip": 48,
+        "technical": 57
+    },
+    "2732": {
+        "name": "六角",
+        "price": 65.7,
+        "fundamental": 81,
+        "chip": 95,
+        "technical": 66
+    },
+    "2734": {
+        "name": "易飛網",
+        "price": 15.6,
+        "fundamental": 65,
+        "chip": 40,
+        "technical": 65
+    },
+    "2736": {
+        "name": "富野",
+        "price": 12.45,
+        "fundamental": 71,
+        "chip": 85,
+        "technical": 64
+    },
+    "2740": {
+        "name": "華軒",
+        "price": 38.9,
+        "fundamental": 76,
+        "chip": 65,
+        "technical": 57
+    },
+    "2743": {
+        "name": "山富",
+        "price": 69.6,
+        "fundamental": 88,
+        "chip": 74,
+        "technical": 41
+    },
+    "2745": {
+        "name": "五福",
+        "price": 101.5,
+        "fundamental": 79,
+        "chip": 63,
+        "technical": 47
+    },
+    "2751": {
+        "name": "王座",
+        "price": 54.1,
+        "fundamental": 89,
+        "chip": 62,
+        "technical": 55
+    },
+    "2752": {
+        "name": "豆府",
+        "price": 182.0,
+        "fundamental": 55,
+        "chip": 90,
+        "technical": 89
+    },
+    "2754": {
+        "name": "亞洲藏壽司",
+        "price": 69.0,
+        "fundamental": 55,
+        "chip": 43,
+        "technical": 83
+    },
+    "2755": {
+        "name": "揚秦",
+        "price": 133.0,
+        "fundamental": 85,
+        "chip": 45,
+        "technical": 79
+    },
+    "2756": {
+        "name": "聯發國際",
+        "price": 61.5,
+        "fundamental": 95,
+        "chip": 41,
+        "technical": 62
+    },
+    "2916": {
+        "name": "滿心",
+        "price": 44.75,
+        "fundamental": 54,
+        "chip": 66,
+        "technical": 59
+    },
+    "2926": {
+        "name": "誠品生活",
+        "price": 37.0,
+        "fundamental": 76,
+        "chip": 81,
+        "technical": 55
+    },
+    "2937": {
+        "name": "集雅社",
+        "price": 44.4,
+        "fundamental": 66,
+        "chip": 85,
+        "technical": 69
+    },
+    "2941": {
+        "name": "米斯特",
+        "price": 30.0,
+        "fundamental": 62,
+        "chip": 89,
+        "technical": 89
+    },
+    "2947": {
+        "name": "振宇五金",
+        "price": 78.4,
+        "fundamental": 74,
+        "chip": 88,
+        "technical": 56
+    },
+    "2948": {
+        "name": "寶陞",
+        "price": 38.1,
+        "fundamental": 53,
+        "chip": 53,
+        "technical": 51
+    },
+    "2949": {
+        "name": "欣新網",
+        "price": 53.5,
+        "fundamental": 59,
+        "chip": 44,
+        "technical": 91
+    },
+    "3064": {
+        "name": "泰偉",
+        "price": 20.75,
+        "fundamental": 76,
+        "chip": 70,
+        "technical": 93
+    },
+    "3066": {
+        "name": "李洲",
+        "price": 18.45,
+        "fundamental": 88,
+        "chip": 57,
+        "technical": 51
+    },
+    "3071": {
+        "name": "協禧",
+        "price": 30.9,
+        "fundamental": 78,
+        "chip": 89,
+        "technical": 69
+    },
+    "3073": {
+        "name": "天方能源",
+        "price": 21.1,
+        "fundamental": 70,
+        "chip": 52,
+        "technical": 40
+    },
+    "3078": {
+        "name": "僑威",
+        "price": 57.2,
+        "fundamental": 76,
+        "chip": 58,
+        "technical": 93
+    },
+    "3081": {
+        "name": "聯亞",
+        "price": 2780.0,
+        "fundamental": 64,
+        "chip": 75,
+        "technical": 84
+    },
+    "3083": {
+        "name": "網龍",
+        "price": 26.8,
+        "fundamental": 53,
+        "chip": 65,
+        "technical": 43
+    },
+    "3085": {
+        "name": "新零售",
+        "price": 12.95,
+        "fundamental": 51,
+        "chip": 44,
+        "technical": 77
+    },
+    "3086": {
+        "name": "華義*",
+        "price": 40.05,
+        "fundamental": 56,
+        "chip": 86,
+        "technical": 42
+    },
+    "3088": {
+        "name": "艾訊",
+        "price": 128.0,
+        "fundamental": 70,
+        "chip": 85,
+        "technical": 68
+    },
+    "3093": {
+        "name": "港建*",
+        "price": 59.5,
+        "fundamental": 93,
+        "chip": 81,
+        "technical": 55
+    },
+    "3095": {
+        "name": "及成",
+        "price": 46.6,
+        "fundamental": 58,
+        "chip": 42,
+        "technical": 49
+    },
+    "3105": {
+        "name": "穩懋",
+        "price": 526.0,
+        "fundamental": 78,
+        "chip": 61,
+        "technical": 70
+    },
+    "3114": {
+        "name": "好德",
+        "price": 26.25,
+        "fundamental": 60,
+        "chip": 55,
+        "technical": 69
+    },
+    "3115": {
+        "name": "富榮綱",
+        "price": 9.87,
+        "fundamental": 92,
+        "chip": 71,
+        "technical": 95
+    },
+    "3118": {
+        "name": "進階",
+        "price": 33.65,
+        "fundamental": 67,
+        "chip": 85,
+        "technical": 70
+    },
+    "3122": {
+        "name": "笙泉",
+        "price": 38.5,
+        "fundamental": 65,
+        "chip": 51,
+        "technical": 82
+    },
+    "3128": {
+        "name": "昇銳",
+        "price": 23.45,
+        "fundamental": 76,
+        "chip": 61,
+        "technical": 43
+    },
+    "3131": {
+        "name": "弘塑",
+        "price": 3090.0,
+        "fundamental": 56,
+        "chip": 54,
+        "technical": 80
+    },
+    "3141": {
+        "name": "晶宏",
+        "price": 57.3,
+        "fundamental": 61,
+        "chip": 43,
+        "technical": 76
+    },
+    "3147": {
+        "name": "大綜",
+        "price": 181.0,
+        "fundamental": 79,
+        "chip": 43,
+        "technical": 92
+    },
+    "3152": {
+        "name": "璟德",
+        "price": 175.5,
+        "fundamental": 78,
+        "chip": 86,
+        "technical": 67
+    },
+    "3158": {
+        "name": "嘉實",
+        "price": 88.8,
+        "fundamental": 93,
+        "chip": 67,
+        "technical": 40
+    },
+    "3162": {
+        "name": "精確",
+        "price": 90.5,
+        "fundamental": 51,
+        "chip": 57,
+        "technical": 88
+    },
+    "3163": {
+        "name": "波若威",
+        "price": 1040.0,
+        "fundamental": 86,
+        "chip": 95,
+        "technical": 87
+    },
+    "3169": {
+        "name": "亞信",
+        "price": 116.5,
+        "fundamental": 81,
+        "chip": 73,
+        "technical": 73
+    },
+    "3171": {
+        "name": "炎洲流通",
+        "price": 67.6,
+        "fundamental": 95,
+        "chip": 94,
+        "technical": 90
+    },
+    "3176": {
+        "name": "基亞",
+        "price": 32.6,
+        "fundamental": 74,
+        "chip": 60,
+        "technical": 90
+    },
+    "3178": {
+        "name": "公準",
+        "price": 67.2,
+        "fundamental": 66,
+        "chip": 79,
+        "technical": 58
+    },
+    "3188": {
+        "name": "鑫龍騰",
+        "price": 24.1,
+        "fundamental": 66,
+        "chip": 78,
+        "technical": 72
+    },
+    "3191": {
+        "name": "雲嘉南",
+        "price": 13.65,
+        "fundamental": 58,
+        "chip": 50,
+        "technical": 47
+    },
+    "3205": {
+        "name": "佰研",
+        "price": 56.4,
+        "fundamental": 57,
+        "chip": 89,
+        "technical": 58
+    },
+    "3206": {
+        "name": "志豐",
+        "price": 39.05,
+        "fundamental": 91,
+        "chip": 51,
+        "technical": 63
+    },
+    "3207": {
+        "name": "耀勝",
+        "price": 59.2,
+        "fundamental": 92,
+        "chip": 79,
+        "technical": 42
+    },
+    "3211": {
+        "name": "順達",
+        "price": 403.0,
+        "fundamental": 60,
+        "chip": 89,
+        "technical": 60
+    },
+    "3213": {
+        "name": "茂訊",
+        "price": 116.5,
+        "fundamental": 81,
+        "chip": 47,
+        "technical": 66
+    },
+    "3217": {
+        "name": "優群",
+        "price": 178.0,
+        "fundamental": 72,
+        "chip": 95,
+        "technical": 85
+    },
+    "3218": {
+        "name": "大學光",
+        "price": 135.5,
+        "fundamental": 93,
+        "chip": 45,
+        "technical": 46
+    },
+    "3219": {
+        "name": "倚強科",
+        "price": 75.5,
+        "fundamental": 57,
+        "chip": 72,
+        "technical": 52
+    },
+    "3221": {
+        "name": "台嘉碩",
+        "price": 43.8,
+        "fundamental": 79,
+        "chip": 44,
+        "technical": 72
+    },
+    "3224": {
+        "name": "三顧",
+        "price": 42.25,
+        "fundamental": 90,
+        "chip": 87,
+        "technical": 63
+    },
+    "3226": {
+        "name": "龍鋒",
+        "price": 41.0,
+        "fundamental": 57,
+        "chip": 70,
+        "technical": 93
+    },
+    "3227": {
+        "name": "原相",
+        "price": 231.5,
+        "fundamental": 81,
+        "chip": 60,
+        "technical": 85
+    },
+    "3228": {
+        "name": "金麗科",
+        "price": 241.5,
+        "fundamental": 57,
+        "chip": 46,
+        "technical": 52
+    },
+    "3230": {
+        "name": "錦明",
+        "price": 32.55,
+        "fundamental": 95,
+        "chip": 90,
+        "technical": 48
+    },
+    "3232": {
+        "name": "昱捷",
+        "price": 20.85,
+        "fundamental": 84,
+        "chip": 89,
+        "technical": 49
+    },
+    "3234": {
+        "name": "光環",
+        "price": 97.5,
+        "fundamental": 80,
+        "chip": 46,
+        "technical": 52
+    },
+    "3236": {
+        "name": "千如",
+        "price": 34.6,
+        "fundamental": 86,
+        "chip": 70,
+        "technical": 94
+    },
+    "3252": {
+        "name": "海灣",
+        "price": 19.0,
+        "fundamental": 65,
+        "chip": 88,
+        "technical": 63
+    },
+    "3259": {
+        "name": "鑫創",
+        "price": 17.7,
+        "fundamental": 70,
+        "chip": 85,
+        "technical": 44
+    },
+    "3260": {
+        "name": "威剛",
+        "price": 457.0,
+        "fundamental": 64,
+        "chip": 72,
+        "technical": 72
+    },
+    "3264": {
+        "name": "欣銓",
+        "price": 225.5,
+        "fundamental": 80,
+        "chip": 57,
+        "technical": 89
+    },
+    "3265": {
+        "name": "台星科",
+        "price": 180.5,
+        "fundamental": 57,
+        "chip": 89,
+        "technical": 74
+    },
+    "3268": {
+        "name": "海德威",
+        "price": 18.5,
+        "fundamental": 77,
+        "chip": 64,
+        "technical": 45
+    },
+    "3272": {
+        "name": "東碩",
+        "price": 18.45,
+        "fundamental": 79,
+        "chip": 66,
+        "technical": 66
+    },
+    "3276": {
+        "name": "宇環",
+        "price": 16.5,
+        "fundamental": 90,
+        "chip": 92,
+        "technical": 43
+    },
+    "3284": {
+        "name": "太普高",
+        "price": 17.45,
+        "fundamental": 70,
+        "chip": 70,
+        "technical": 60
+    },
+    "3285": {
+        "name": "微端",
+        "price": 29.0,
+        "fundamental": 74,
+        "chip": 76,
+        "technical": 57
+    },
+    "3287": {
+        "name": "廣寰科",
+        "price": 28.05,
+        "fundamental": 73,
+        "chip": 48,
+        "technical": 85
+    },
+    "3288": {
+        "name": "點晶",
+        "price": 15.1,
+        "fundamental": 65,
+        "chip": 83,
+        "technical": 46
+    },
+    "3289": {
+        "name": "宜特",
+        "price": 181.5,
+        "fundamental": 59,
+        "chip": 64,
+        "technical": 52
+    },
+    "3290": {
+        "name": "東浦",
+        "price": 48.6,
+        "fundamental": 69,
+        "chip": 86,
+        "technical": 80
+    },
+    "3293": {
+        "name": "鈊象",
+        "price": 731.0,
+        "fundamental": 55,
+        "chip": 88,
+        "technical": 91
+    },
+    "3294": {
+        "name": "英濟",
+        "price": 30.7,
+        "fundamental": 56,
+        "chip": 75,
+        "technical": 83
+    },
+    "3297": {
+        "name": "杭特",
+        "price": 32.6,
+        "fundamental": 88,
+        "chip": 88,
+        "technical": 78
+    },
+    "3303": {
+        "name": "岱稜",
+        "price": 52.0,
+        "fundamental": 90,
+        "chip": 81,
+        "technical": 93
+    },
+    "3306": {
+        "name": "鼎天",
+        "price": 46.4,
+        "fundamental": 65,
+        "chip": 91,
+        "technical": 57
+    },
+    "3310": {
+        "name": "佳穎",
+        "price": 69.0,
+        "fundamental": 92,
+        "chip": 70,
+        "technical": 52
+    },
+    "3313": {
+        "name": "斐成",
+        "price": 11.4,
+        "fundamental": 60,
+        "chip": 90,
+        "technical": 92
+    },
+    "3317": {
+        "name": "尼克森",
+        "price": 68.2,
+        "fundamental": 51,
+        "chip": 41,
+        "technical": 60
+    },
+    "3322": {
+        "name": "建舜電",
+        "price": 13.15,
+        "fundamental": 93,
+        "chip": 84,
+        "technical": 50
+    },
+    "3323": {
+        "name": "加百裕",
+        "price": 36.3,
+        "fundamental": 83,
+        "chip": 61,
+        "technical": 80
+    },
+    "3324": {
+        "name": "雙鴻",
+        "price": 1070.0,
+        "fundamental": 54,
+        "chip": 85,
+        "technical": 71
+    },
+    "3325": {
+        "name": "旭品",
+        "price": 12.75,
+        "fundamental": 55,
+        "chip": 66,
+        "technical": 56
+    },
+    "3332": {
+        "name": "幸康",
+        "price": 66.0,
+        "fundamental": 71,
+        "chip": 86,
+        "technical": 40
+    },
+    "3339": {
+        "name": "泰谷",
+        "price": 54.0,
+        "fundamental": 66,
+        "chip": 54,
+        "technical": 58
+    },
+    "3349": {
+        "name": "寶德",
+        "price": 21.15,
+        "fundamental": 92,
+        "chip": 50,
+        "technical": 82
+    },
+    "3354": {
+        "name": "律勝",
+        "price": 35.0,
+        "fundamental": 56,
+        "chip": 51,
+        "technical": 79
+    },
+    "3357": {
+        "name": "臺慶科",
+        "price": 186.5,
+        "fundamental": 50,
+        "chip": 68,
+        "technical": 58
+    },
+    "3360": {
+        "name": "尚立",
+        "price": 14.55,
+        "fundamental": 78,
+        "chip": 81,
+        "technical": 52
+    },
+    "3362": {
+        "name": "先進光",
+        "price": 102.0,
+        "fundamental": 59,
+        "chip": 46,
+        "technical": 44
+    },
+    "3363": {
+        "name": "上詮",
+        "price": 853.0,
+        "fundamental": 64,
+        "chip": 85,
+        "technical": 55
+    },
+    "3372": {
+        "name": "典範",
+        "price": 19.75,
+        "fundamental": 81,
+        "chip": 93,
+        "technical": 55
+    },
+    "3373": {
+        "name": "熱映",
+        "price": 16.85,
+        "fundamental": 59,
+        "chip": 40,
+        "technical": 77
+    },
+    "3374": {
+        "name": "精材",
+        "price": 249.0,
+        "fundamental": 53,
+        "chip": 65,
+        "technical": 51
+    },
+    "3379": {
+        "name": "彬台",
+        "price": 36.6,
+        "fundamental": 63,
+        "chip": 69,
+        "technical": 46
+    },
+    "3388": {
+        "name": "崇越電",
+        "price": 110.0,
+        "fundamental": 80,
+        "chip": 75,
+        "technical": 42
+    },
+    "3390": {
+        "name": "旭軟",
+        "price": 27.75,
+        "fundamental": 89,
+        "chip": 51,
+        "technical": 58
+    },
+    "3402": {
+        "name": "漢科",
+        "price": 139.5,
+        "fundamental": 88,
+        "chip": 88,
+        "technical": 79
+    },
+    "3426": {
+        "name": "台興",
+        "price": 47.7,
+        "fundamental": 85,
+        "chip": 70,
+        "technical": 63
+    },
+    "3430": {
+        "name": "奇鈦科",
+        "price": 168.0,
+        "fundamental": 86,
+        "chip": 81,
+        "technical": 68
+    },
+    "3434": {
+        "name": "哲固",
+        "price": 28.65,
+        "fundamental": 77,
+        "chip": 85,
+        "technical": 43
+    },
+    "3438": {
+        "name": "類比科",
+        "price": 63.9,
+        "fundamental": 64,
+        "chip": 62,
+        "technical": 60
+    },
+    "3441": {
+        "name": "聯一光",
+        "price": 40.55,
+        "fundamental": 74,
+        "chip": 57,
+        "technical": 49
+    },
+    "3444": {
+        "name": "利機",
+        "price": 89.2,
+        "fundamental": 58,
+        "chip": 55,
+        "technical": 42
+    },
+    "3455": {
+        "name": "由田",
+        "price": 286.0,
+        "fundamental": 57,
+        "chip": 47,
+        "technical": 85
+    },
+    "3465": {
+        "name": "進泰電子",
+        "price": 27.9,
+        "fundamental": 60,
+        "chip": 43,
+        "technical": 69
+    },
+    "3466": {
+        "name": "德晉",
+        "price": 39.75,
+        "fundamental": 90,
+        "chip": 57,
+        "technical": 55
+    },
+    "3467": {
+        "name": "台灣精材",
+        "price": 71.4,
+        "fundamental": 83,
+        "chip": 66,
+        "technical": 84
+    },
+    "3479": {
+        "name": "安勤",
+        "price": 97.1,
+        "fundamental": 58,
+        "chip": 92,
+        "technical": 90
+    },
+    "3483": {
+        "name": "力致",
+        "price": 90.9,
+        "fundamental": 76,
+        "chip": 45,
+        "technical": 72
+    },
+    "3484": {
+        "name": "崧騰",
+        "price": 43.8,
+        "fundamental": 51,
+        "chip": 75,
+        "technical": 58
+    },
+    "3485": {
+        "name": "敘豐",
+        "price": 314.5,
+        "fundamental": 92,
+        "chip": 70,
+        "technical": 87
+    },
+    "3489": {
+        "name": "森寶",
+        "price": 22.4,
+        "fundamental": 89,
+        "chip": 64,
+        "technical": 72
+    },
+    "3490": {
+        "name": "單井",
+        "price": 30.75,
+        "fundamental": 58,
+        "chip": 42,
+        "technical": 87
+    },
+    "3491": {
+        "name": "昇達科",
+        "price": 1820.0,
+        "fundamental": 93,
+        "chip": 42,
+        "technical": 52
+    },
+    "3492": {
+        "name": "長盛",
+        "price": 22.9,
+        "fundamental": 52,
+        "chip": 60,
+        "technical": 58
+    },
+    "3498": {
+        "name": "陽程",
+        "price": 102.5,
+        "fundamental": 83,
+        "chip": 67,
+        "technical": 58
+    },
+    "3499": {
+        "name": "環天科",
+        "price": 15.05,
+        "fundamental": 75,
+        "chip": 86,
+        "technical": 54
+    },
+    "3508": {
+        "name": "位速",
+        "price": 21.0,
+        "fundamental": 84,
+        "chip": 58,
+        "technical": 85
+    },
+    "3511": {
+        "name": "矽瑪",
+        "price": 21.5,
+        "fundamental": 50,
+        "chip": 82,
+        "technical": 46
+    },
+    "3512": {
+        "name": "皇龍",
+        "price": 20.35,
+        "fundamental": 93,
+        "chip": 45,
+        "technical": 70
+    },
+    "3516": {
+        "name": "亞帝歐",
+        "price": 21.2,
+        "fundamental": 66,
+        "chip": 51,
+        "technical": 55
+    },
+    "3520": {
+        "name": "華盈",
+        "price": 15.45,
+        "fundamental": 77,
+        "chip": 66,
+        "technical": 49
+    },
+    "3521": {
+        "name": "台鋼建設",
+        "price": 13.25,
+        "fundamental": 53,
+        "chip": 40,
+        "technical": 61
+    },
+    "3522": {
+        "name": "御嵿",
+        "price": 12.55,
+        "fundamental": 61,
+        "chip": 76,
+        "technical": 95
+    },
+    "3523": {
+        "name": "迎輝",
+        "price": 12.4,
+        "fundamental": 52,
+        "chip": 40,
+        "technical": 63
+    },
+    "3526": {
+        "name": "凡甲",
+        "price": 388.0,
+        "fundamental": 50,
+        "chip": 56,
+        "technical": 67
+    },
+    "3527": {
+        "name": "聚積",
+        "price": 64.9,
+        "fundamental": 70,
+        "chip": 76,
+        "technical": 56
+    },
+    "3529": {
+        "name": "力旺",
+        "price": 4460.0,
+        "fundamental": 64,
+        "chip": 94,
+        "technical": 57
+    },
+    "3531": {
+        "name": "先益",
+        "price": 23.05,
+        "fundamental": 95,
+        "chip": 54,
+        "technical": 58
+    },
+    "3537": {
+        "name": "堡達",
+        "price": 48.15,
+        "fundamental": 83,
+        "chip": 40,
+        "technical": 90
+    },
+    "3540": {
+        "name": "曜越",
+        "price": 27.7,
+        "fundamental": 64,
+        "chip": 51,
+        "technical": 45
+    },
+    "3541": {
+        "name": "西柏",
+        "price": 23.05,
+        "fundamental": 74,
+        "chip": 91,
+        "technical": 84
+    },
+    "3546": {
+        "name": "宇峻",
+        "price": 68.0,
+        "fundamental": 79,
+        "chip": 93,
+        "technical": 76
+    },
+    "3548": {
+        "name": "兆利",
+        "price": 100.5,
+        "fundamental": 87,
+        "chip": 77,
+        "technical": 58
+    },
+    "3551": {
+        "name": "世禾",
+        "price": 218.0,
+        "fundamental": 75,
+        "chip": 78,
+        "technical": 53
+    },
+    "3552": {
+        "name": "同致",
+        "price": 55.0,
+        "fundamental": 71,
+        "chip": 58,
+        "technical": 45
+    },
+    "3555": {
+        "name": "博士旺",
+        "price": 218.0,
+        "fundamental": 71,
+        "chip": 75,
+        "technical": 57
+    },
+    "3556": {
+        "name": "禾瑞亞",
+        "price": 54.2,
+        "fundamental": 88,
+        "chip": 85,
+        "technical": 78
+    },
+    "3558": {
+        "name": "神準",
+        "price": 110.5,
+        "fundamental": 73,
+        "chip": 90,
+        "technical": 93
+    },
+    "3564": {
+        "name": "其陽",
+        "price": 42.8,
+        "fundamental": 81,
+        "chip": 51,
+        "technical": 78
+    },
+    "3567": {
+        "name": "逸昌",
+        "price": 29.35,
+        "fundamental": 84,
+        "chip": 59,
+        "technical": 59
+    },
+    "3570": {
+        "name": "大塚",
+        "price": 175.5,
+        "fundamental": 61,
+        "chip": 69,
+        "technical": 52
+    },
+    "3577": {
+        "name": "泓格",
+        "price": 92.1,
+        "fundamental": 93,
+        "chip": 75,
+        "technical": 64
+    },
+    "3580": {
+        "name": "友威科",
+        "price": 97.0,
+        "fundamental": 52,
+        "chip": 72,
+        "technical": 42
+    },
+    "3581": {
+        "name": "博磊",
+        "price": 236.5,
+        "fundamental": 66,
+        "chip": 59,
+        "technical": 78
+    },
+    "3587": {
+        "name": "閎康",
+        "price": 350.5,
+        "fundamental": 76,
+        "chip": 55,
+        "technical": 44
+    },
+    "3594": {
+        "name": "磐儀",
+        "price": 56.0,
+        "fundamental": 63,
+        "chip": 84,
+        "technical": 79
+    },
+    "3597": {
+        "name": "映興",
+        "price": 28.2,
+        "fundamental": 83,
+        "chip": 88,
+        "technical": 43
+    },
+    "3609": {
+        "name": "三一東林",
+        "price": 22.8,
+        "fundamental": 62,
+        "chip": 54,
+        "technical": 79
+    },
+    "3611": {
+        "name": "鼎翰",
+        "price": 191.0,
+        "fundamental": 75,
+        "chip": 54,
+        "technical": 78
+    },
+    "3615": {
+        "name": "安可",
+        "price": 33.5,
+        "fundamental": 64,
+        "chip": 88,
+        "technical": 84
+    },
+    "3623": {
+        "name": "富晶通",
+        "price": 23.1,
+        "fundamental": 66,
+        "chip": 47,
+        "technical": 72
+    },
+    "3624": {
+        "name": "光頡",
+        "price": 63.0,
+        "fundamental": 75,
+        "chip": 86,
+        "technical": 53
+    },
+    "3625": {
+        "name": "西勝",
+        "price": 15.1,
+        "fundamental": 85,
+        "chip": 86,
+        "technical": 55
+    },
+    "3628": {
+        "name": "盈正",
+        "price": 67.4,
+        "fundamental": 76,
+        "chip": 73,
+        "technical": 93
+    },
+    "3629": {
+        "name": "地心引力",
+        "price": 17.95,
+        "fundamental": 54,
+        "chip": 65,
+        "technical": 75
+    },
+    "3630": {
+        "name": "新鉅科",
+        "price": 26.55,
+        "fundamental": 72,
+        "chip": 94,
+        "technical": 59
+    },
+    "3631": {
+        "name": "晟楠",
+        "price": 41.0,
+        "fundamental": 59,
+        "chip": 64,
+        "technical": 59
+    },
+    "3632": {
+        "name": "研勤",
+        "price": 8.35,
+        "fundamental": 50,
+        "chip": 73,
+        "technical": 86
+    },
+    "3646": {
+        "name": "艾恩特",
+        "price": 23.2,
+        "fundamental": 52,
+        "chip": 42,
+        "technical": 95
+    },
+    "3663": {
+        "name": "鑫科",
+        "price": 67.9,
+        "fundamental": 51,
+        "chip": 78,
+        "technical": 75
+    },
+    "3664": {
+        "name": "安瑞-KY",
+        "price": 8.59,
+        "fundamental": 84,
+        "chip": 57,
+        "technical": 76
+    },
+    "3666": {
+        "name": "光耀",
+        "price": 28.15,
+        "fundamental": 74,
+        "chip": 77,
+        "technical": 45
+    },
+    "3672": {
+        "name": "康聯訊",
+        "price": 11.6,
+        "fundamental": 76,
+        "chip": 43,
+        "technical": 79
+    },
+    "3675": {
+        "name": "德微",
+        "price": 248.5,
+        "fundamental": 59,
+        "chip": 48,
+        "technical": 89
+    },
+    "3680": {
+        "name": "家登",
+        "price": 616.0,
+        "fundamental": 76,
+        "chip": 63,
+        "technical": 61
+    },
+    "3684": {
+        "name": "榮昌",
+        "price": 59.0,
+        "fundamental": 52,
+        "chip": 63,
+        "technical": 95
+    },
+    "3685": {
+        "name": "元創精密",
+        "price": 30.0,
+        "fundamental": 82,
+        "chip": 76,
+        "technical": 92
+    },
+    "3687": {
+        "name": "歐買尬",
+        "price": 64.9,
+        "fundamental": 69,
+        "chip": 69,
+        "technical": 76
+    },
+    "3689": {
+        "name": "湧德",
+        "price": 124.5,
+        "fundamental": 52,
+        "chip": 67,
+        "technical": 88
+    },
+    "3691": {
+        "name": "碩禾",
+        "price": 141.0,
+        "fundamental": 85,
+        "chip": 94,
+        "technical": 55
+    },
+    "3693": {
+        "name": "營邦",
+        "price": 582.0,
+        "fundamental": 83,
+        "chip": 75,
+        "technical": 75
+    },
+    "3707": {
+        "name": "漢磊",
+        "price": 74.9,
+        "fundamental": 94,
+        "chip": 92,
+        "technical": 43
+    },
+    "3709": {
+        "name": "鑫聯大投控",
+        "price": 89.1,
+        "fundamental": 69,
+        "chip": 63,
+        "technical": 63
+    },
+    "3710": {
+        "name": "連展投控",
+        "price": 6.01,
+        "fundamental": 95,
+        "chip": 84,
+        "technical": 42
+    },
+    "3713": {
+        "name": "新晶投控",
+        "price": 14.2,
+        "fundamental": 70,
+        "chip": 81,
+        "technical": 60
+    },
+    "4102": {
+        "name": "永日",
+        "price": 17.8,
+        "fundamental": 75,
+        "chip": 75,
+        "technical": 55
+    },
+    "4105": {
+        "name": "東洋",
+        "price": 75.2,
+        "fundamental": 65,
+        "chip": 62,
+        "technical": 87
+    },
+    "4107": {
+        "name": "邦特",
+        "price": 121.0,
+        "fundamental": 93,
+        "chip": 48,
+        "technical": 61
+    },
+    "4109": {
+        "name": "加捷生醫",
+        "price": 11.45,
+        "fundamental": 78,
+        "chip": 77,
+        "technical": 43
+    },
+    "4111": {
+        "name": "濟生",
+        "price": 30.3,
+        "fundamental": 85,
+        "chip": 62,
+        "technical": 94
+    },
+    "4113": {
+        "name": "聯上",
+        "price": 14.75,
+        "fundamental": 52,
+        "chip": 64,
+        "technical": 66
+    },
+    "4114": {
+        "name": "健喬",
+        "price": 31.0,
+        "fundamental": 63,
+        "chip": 66,
+        "technical": 91
+    },
+    "4116": {
+        "name": "明基醫",
+        "price": 38.9,
+        "fundamental": 77,
+        "chip": 54,
+        "technical": 78
+    },
+    "4120": {
+        "name": "友華",
+        "price": 46.5,
+        "fundamental": 88,
+        "chip": 71,
+        "technical": 86
+    },
+    "4121": {
+        "name": "優盛",
+        "price": 14.6,
+        "fundamental": 93,
+        "chip": 46,
+        "technical": 79
+    },
+    "4123": {
+        "name": "晟德",
+        "price": 38.3,
+        "fundamental": 81,
+        "chip": 79,
+        "technical": 65
+    },
+    "4126": {
+        "name": "太醫",
+        "price": 79.6,
+        "fundamental": 65,
+        "chip": 63,
+        "technical": 60
+    },
+    "4127": {
+        "name": "天良",
+        "price": 43.75,
+        "fundamental": 69,
+        "chip": 51,
+        "technical": 45
+    },
+    "4128": {
+        "name": "中天",
+        "price": 15.1,
+        "fundamental": 92,
+        "chip": 72,
+        "technical": 69
+    },
+    "4129": {
+        "name": "聯合",
+        "price": 99.5,
+        "fundamental": 56,
+        "chip": 75,
+        "technical": 76
+    },
+    "4130": {
+        "name": "健亞",
+        "price": 27.65,
+        "fundamental": 77,
+        "chip": 79,
+        "technical": 56
+    },
+    "4131": {
+        "name": "浩泰",
+        "price": 35.3,
+        "fundamental": 59,
+        "chip": 90,
+        "technical": 40
+    },
+    "4138": {
+        "name": "曜亞",
+        "price": 53.0,
+        "fundamental": 50,
+        "chip": 63,
+        "technical": 42
+    },
+    "4139": {
+        "name": "馬光-KY",
+        "price": 23.4,
+        "fundamental": 85,
+        "chip": 85,
+        "technical": 94
+    },
+    "4147": {
+        "name": "中裕",
+        "price": 48.85,
+        "fundamental": 78,
+        "chip": 40,
+        "technical": 78
+    },
+    "4153": {
+        "name": "鈺緯",
+        "price": 30.7,
+        "fundamental": 56,
+        "chip": 56,
+        "technical": 67
+    },
+    "4154": {
+        "name": "樂威科-KY",
+        "price": 11.4,
+        "fundamental": 67,
+        "chip": 56,
+        "technical": 49
+    },
+    "4157": {
+        "name": "太景*-KY",
+        "price": 9.26,
+        "fundamental": 62,
+        "chip": 82,
+        "technical": 84
+    },
+    "4160": {
+        "name": "訊聯基因",
+        "price": 43.2,
+        "fundamental": 73,
+        "chip": 77,
+        "technical": 74
+    },
+    "4161": {
+        "name": "聿新科",
+        "price": 22.95,
+        "fundamental": 77,
+        "chip": 88,
+        "technical": 85
+    },
+    "4162": {
+        "name": "智擎",
+        "price": 56.1,
+        "fundamental": 87,
+        "chip": 77,
+        "technical": 59
+    },
+    "4163": {
+        "name": "鐿鈦",
+        "price": 98.4,
+        "fundamental": 58,
+        "chip": 51,
+        "technical": 62
+    },
+    "4166": {
+        "name": "友霖",
+        "price": 26.7,
+        "fundamental": 85,
+        "chip": 84,
+        "technical": 54
+    },
+    "4167": {
+        "name": "松瑞藥",
+        "price": 19.0,
+        "fundamental": 55,
+        "chip": 71,
+        "technical": 92
+    },
+    "4168": {
+        "name": "醣聯",
+        "price": 22.4,
+        "fundamental": 75,
+        "chip": 72,
+        "technical": 71
+    },
+    "4171": {
+        "name": "瑞基",
+        "price": 18.55,
+        "fundamental": 57,
+        "chip": 71,
+        "technical": 46
+    },
+    "4173": {
+        "name": "久裕",
+        "price": 18.65,
+        "fundamental": 95,
+        "chip": 46,
+        "technical": 73
+    },
+    "4174": {
+        "name": "浩鼎",
+        "price": 33.35,
+        "fundamental": 83,
+        "chip": 86,
+        "technical": 94
+    },
+    "4175": {
+        "name": "杏一",
+        "price": 53.9,
+        "fundamental": 92,
+        "chip": 64,
+        "technical": 75
+    },
+    "4183": {
+        "name": "福永生技",
+        "price": 13.65,
+        "fundamental": 78,
+        "chip": 46,
+        "technical": 52
+    },
+    "4188": {
+        "name": "安克",
+        "price": 11.7,
+        "fundamental": 50,
+        "chip": 95,
+        "technical": 58
+    },
+    "4192": {
+        "name": "杏國",
+        "price": 20.05,
+        "fundamental": 94,
+        "chip": 95,
+        "technical": 71
+    },
+    "4198": {
+        "name": "欣大健康",
+        "price": 37.8,
+        "fundamental": 56,
+        "chip": 54,
+        "technical": 77
+    },
+    "4205": {
+        "name": "中華食",
+        "price": 73.9,
+        "fundamental": 57,
+        "chip": 87,
+        "technical": 55
+    },
+    "4207": {
+        "name": "環泰",
+        "price": 18.5,
+        "fundamental": 63,
+        "chip": 56,
+        "technical": 84
+    },
+    "4303": {
+        "name": "信立",
+        "price": 52.0,
+        "fundamental": 90,
+        "chip": 62,
+        "technical": 70
+    },
+    "4304": {
+        "name": "勝昱",
+        "price": 30.6,
+        "fundamental": 67,
+        "chip": 58,
+        "technical": 54
+    },
+    "4305": {
+        "name": "世坤",
+        "price": 43.65,
+        "fundamental": 78,
+        "chip": 90,
+        "technical": 61
+    },
+    "4401": {
+        "name": "東隆興",
+        "price": 14.0,
+        "fundamental": 85,
+        "chip": 77,
+        "technical": 95
+    },
+    "4402": {
+        "name": "郡都開發",
+        "price": 13.75,
+        "fundamental": 84,
+        "chip": 71,
+        "technical": 49
+    },
+    "4406": {
+        "name": "新昕纖",
+        "price": 9.95,
+        "fundamental": 77,
+        "chip": 90,
+        "technical": 61
+    },
+    "4413": {
+        "name": "飛寶企業",
+        "price": 18.6,
+        "fundamental": 94,
+        "chip": 92,
+        "technical": 80
+    },
+    "4416": {
+        "name": "三圓",
+        "price": 12.45,
+        "fundamental": 71,
+        "chip": 58,
+        "technical": 40
+    },
+    "4417": {
+        "name": "金洲",
+        "price": 46.45,
+        "fundamental": 66,
+        "chip": 90,
+        "technical": 49
+    },
+    "4419": {
+        "name": "皇家美食",
+        "price": 47.8,
+        "fundamental": 77,
+        "chip": 57,
+        "technical": 87
+    },
+    "4420": {
+        "name": "光明",
+        "price": 42.4,
+        "fundamental": 55,
+        "chip": 77,
+        "technical": 70
+    },
+    "4430": {
+        "name": "耀億",
+        "price": 16.85,
+        "fundamental": 75,
+        "chip": 73,
+        "technical": 55
+    },
+    "4432": {
+        "name": "銘旺實",
+        "price": 14.1,
+        "fundamental": 83,
+        "chip": 57,
+        "technical": 60
+    },
+    "4433": {
+        "name": "興采",
+        "price": 20.15,
+        "fundamental": 72,
+        "chip": 40,
+        "technical": 53
+    },
+    "4442": {
+        "name": "竣邦-KY",
+        "price": 54.9,
+        "fundamental": 61,
+        "chip": 59,
+        "technical": 90
+    },
+    "4502": {
+        "name": "健信",
+        "price": 15.65,
+        "fundamental": 56,
+        "chip": 55,
+        "technical": 47
+    },
+    "4503": {
+        "name": "金雨",
+        "price": 47.0,
+        "fundamental": 81,
+        "chip": 61,
+        "technical": 45
+    },
+    "4506": {
+        "name": "崇友",
+        "price": 117.5,
+        "fundamental": 75,
+        "chip": 64,
+        "technical": 77
+    },
+    "4510": {
+        "name": "高鋒",
+        "price": 47.15,
+        "fundamental": 66,
+        "chip": 91,
+        "technical": 42
+    },
+    "4513": {
+        "name": "福裕",
+        "price": 14.75,
+        "fundamental": 55,
+        "chip": 46,
+        "technical": 80
+    },
+    "4523": {
+        "name": "永彰",
+        "price": 30.35,
+        "fundamental": 76,
+        "chip": 49,
+        "technical": 93
+    },
+    "4527": {
+        "name": "方土霖",
+        "price": 43.15,
+        "fundamental": 86,
+        "chip": 61,
+        "technical": 45
+    },
+    "4528": {
+        "name": "江興鍛",
+        "price": 15.95,
+        "fundamental": 71,
+        "chip": 85,
+        "technical": 63
+    },
+    "4529": {
+        "name": "淳紳",
+        "price": 4.5,
+        "fundamental": 73,
+        "chip": 42,
+        "technical": 50
+    },
+    "4530": {
+        "name": "宏易",
+        "price": 25.45,
+        "fundamental": 64,
+        "chip": 58,
+        "technical": 66
+    },
+    "4533": {
+        "name": "協易機",
+        "price": 31.75,
+        "fundamental": 50,
+        "chip": 77,
+        "technical": 59
+    },
+    "4534": {
+        "name": "慶騰",
+        "price": 23.05,
+        "fundamental": 66,
+        "chip": 64,
+        "technical": 68
+    },
+    "4535": {
+        "name": "至興",
+        "price": 27.3,
+        "fundamental": 70,
+        "chip": 68,
+        "technical": 87
+    },
+    "4538": {
+        "name": "大詠城",
+        "price": 18.35,
+        "fundamental": 76,
+        "chip": 84,
+        "technical": 90
+    },
+    "4541": {
+        "name": "晟田",
+        "price": 45.7,
+        "fundamental": 62,
+        "chip": 48,
+        "technical": 59
+    },
+    "4542": {
+        "name": "科嶠",
+        "price": 194.5,
+        "fundamental": 89,
+        "chip": 57,
+        "technical": 67
+    },
+    "4543": {
+        "name": "萬在",
+        "price": 38.0,
+        "fundamental": 83,
+        "chip": 50,
+        "technical": 84
+    },
+    "4549": {
+        "name": "桓達",
+        "price": 101.0,
+        "fundamental": 84,
+        "chip": 50,
+        "technical": 81
+    },
+    "4550": {
+        "name": "長佳",
+        "price": 24.35,
+        "fundamental": 68,
+        "chip": 80,
+        "technical": 51
+    },
+    "4554": {
+        "name": "橙的",
+        "price": 30.5,
+        "fundamental": 58,
+        "chip": 78,
+        "technical": 49
+    },
+    "4556": {
+        "name": "旭然",
+        "price": 45.55,
+        "fundamental": 81,
+        "chip": 57,
+        "technical": 60
+    },
+    "4558": {
+        "name": "寶緯",
+        "price": 20.35,
+        "fundamental": 78,
+        "chip": 78,
+        "technical": 50
+    },
+    "4561": {
+        "name": "健椿",
+        "price": 51.6,
+        "fundamental": 91,
+        "chip": 64,
+        "technical": 80
+    },
+    "4563": {
+        "name": "百德",
+        "price": 50.3,
+        "fundamental": 91,
+        "chip": 59,
+        "technical": 41
+    },
+    "4568": {
+        "name": "科際精密",
+        "price": 40.95,
+        "fundamental": 86,
+        "chip": 43,
+        "technical": 74
+    },
+    "4577": {
+        "name": "達航科技",
+        "price": 139.5,
+        "fundamental": 75,
+        "chip": 85,
+        "technical": 63
+    },
+    "4580": {
+        "name": "捷流閥業",
+        "price": 81.8,
+        "fundamental": 73,
+        "chip": 54,
+        "technical": 42
+    },
+    "4584": {
+        "name": "君帆",
+        "price": 40.15,
+        "fundamental": 75,
+        "chip": 40,
+        "technical": 92
+    },
+    "4609": {
+        "name": "唐鋒",
+        "price": 5.24,
+        "fundamental": 70,
+        "chip": 72,
+        "technical": 81
+    },
+    "4702": {
+        "name": "中美實",
+        "price": 9.87,
+        "fundamental": 89,
+        "chip": 54,
+        "technical": 66
+    },
+    "4706": {
+        "name": "大恭",
+        "price": 30.9,
+        "fundamental": 68,
+        "chip": 51,
+        "technical": 92
+    },
+    "4707": {
+        "name": "磐亞",
+        "price": 16.5,
+        "fundamental": 84,
+        "chip": 71,
+        "technical": 50
+    },
+    "4711": {
+        "name": "永純",
+        "price": 16.6,
+        "fundamental": 83,
+        "chip": 60,
+        "technical": 50
+    },
+    "4714": {
+        "name": "永捷",
+        "price": 14.8,
+        "fundamental": 57,
+        "chip": 83,
+        "technical": 81
+    },
+    "4716": {
+        "name": "大立",
+        "price": 15.05,
+        "fundamental": 73,
+        "chip": 62,
+        "technical": 56
+    },
+    "4721": {
+        "name": "美琪瑪",
+        "price": 95.1,
+        "fundamental": 78,
+        "chip": 94,
+        "technical": 90
+    },
+    "4726": {
+        "name": "永昕",
+        "price": 29.25,
+        "fundamental": 50,
+        "chip": 72,
+        "technical": 53
+    },
+    "4728": {
+        "name": "雙美",
+        "price": 381.0,
+        "fundamental": 69,
+        "chip": 50,
+        "technical": 83
+    },
+    "4729": {
+        "name": "熒茂",
+        "price": 21.0,
+        "fundamental": 55,
+        "chip": 51,
+        "technical": 51
+    },
+    "4735": {
+        "name": "豪展",
+        "price": 30.75,
+        "fundamental": 83,
+        "chip": 68,
+        "technical": 49
+    },
+    "4741": {
+        "name": "泓瀚",
+        "price": 61.6,
+        "fundamental": 85,
+        "chip": 58,
+        "technical": 57
+    },
+    "4743": {
+        "name": "合一",
+        "price": 51.5,
+        "fundamental": 75,
+        "chip": 76,
+        "technical": 92
+    },
+    "4744": {
+        "name": "皇將",
+        "price": 32.7,
+        "fundamental": 62,
+        "chip": 50,
+        "technical": 95
+    },
+    "4745": {
+        "name": "合富-KY",
+        "price": 20.15,
+        "fundamental": 76,
+        "chip": 58,
+        "technical": 76
+    },
+    "4747": {
+        "name": "強生",
+        "price": 54.0,
+        "fundamental": 93,
+        "chip": 77,
+        "technical": 70
+    },
+    "4749": {
+        "name": "新應材",
+        "price": 1175.0,
+        "fundamental": 62,
+        "chip": 46,
+        "technical": 49
+    },
+    "4754": {
+        "name": "國碳科",
+        "price": 37.25,
+        "fundamental": 59,
+        "chip": 47,
+        "technical": 53
+    },
+    "4760": {
+        "name": "勤凱",
+        "price": 279.5,
+        "fundamental": 87,
+        "chip": 41,
+        "technical": 74
+    },
+    "4767": {
+        "name": "誠泰科技",
+        "price": 26.85,
+        "fundamental": 53,
+        "chip": 89,
+        "technical": 68
+    },
+    "4768": {
+        "name": "晶呈科技",
+        "price": 488.5,
+        "fundamental": 62,
+        "chip": 88,
+        "technical": 70
+    },
+    "4772": {
+        "name": "台特化",
+        "price": 317.5,
+        "fundamental": 78,
+        "chip": 44,
+        "technical": 69
+    },
+    "4806": {
+        "name": "桂田文創",
+        "price": 10.95,
+        "fundamental": 93,
+        "chip": 76,
+        "technical": 75
+    },
+    "4903": {
+        "name": "聯光通",
+        "price": 43.3,
+        "fundamental": 74,
+        "chip": 83,
+        "technical": 41
+    },
+    "4905": {
+        "name": "台聯電",
+        "price": 80.7,
+        "fundamental": 56,
+        "chip": 53,
+        "technical": 95
+    },
+    "4907": {
+        "name": "富宇",
+        "price": 39.45,
+        "fundamental": 72,
+        "chip": 87,
+        "technical": 48
+    },
+    "4908": {
+        "name": "前鼎",
+        "price": 227.5,
+        "fundamental": 80,
+        "chip": 70,
+        "technical": 82
+    },
+    "4909": {
+        "name": "新復興",
+        "price": 53.9,
+        "fundamental": 62,
+        "chip": 76,
+        "technical": 87
+    },
+    "4911": {
+        "name": "德英",
+        "price": 34.25,
+        "fundamental": 73,
+        "chip": 76,
+        "technical": 69
+    },
+    "4923": {
+        "name": "力士",
+        "price": 37.4,
+        "fundamental": 80,
+        "chip": 61,
+        "technical": 55
+    },
+    "4924": {
+        "name": "欣厚-KY",
+        "price": 10.35,
+        "fundamental": 73,
+        "chip": 59,
+        "technical": 51
+    },
+    "4931": {
+        "name": "新盛力",
+        "price": 187.0,
+        "fundamental": 69,
+        "chip": 46,
+        "technical": 79
+    },
+    "4933": {
+        "name": "友輝",
+        "price": 69.8,
+        "fundamental": 57,
+        "chip": 71,
+        "technical": 56
+    },
+    "4939": {
+        "name": "亞電",
+        "price": 40.1,
+        "fundamental": 59,
+        "chip": 79,
+        "technical": 82
+    },
+    "4946": {
+        "name": "辣椒",
+        "price": 105.5,
+        "fundamental": 71,
+        "chip": 66,
+        "technical": 89
+    },
+    "4950": {
+        "name": "金耘國際",
+        "price": 16.7,
+        "fundamental": 59,
+        "chip": 70,
+        "technical": 46
+    },
+    "4951": {
+        "name": "精拓科",
+        "price": 121.5,
+        "fundamental": 52,
+        "chip": 50,
+        "technical": 72
+    },
+    "4953": {
+        "name": "緯軟",
+        "price": 118.5,
+        "fundamental": 92,
+        "chip": 75,
+        "technical": 60
+    },
+    "4966": {
+        "name": "譜瑞-KY",
+        "price": 735.0,
+        "fundamental": 84,
+        "chip": 72,
+        "technical": 86
+    },
+    "4971": {
+        "name": "IET-KY",
+        "price": 723.0,
+        "fundamental": 55,
+        "chip": 82,
+        "technical": 93
+    },
+    "4972": {
+        "name": "湯石照明",
+        "price": 16.45,
+        "fundamental": 79,
+        "chip": 95,
+        "technical": 63
+    },
+    "4973": {
+        "name": "廣穎",
+        "price": 109.5,
+        "fundamental": 61,
+        "chip": 79,
+        "technical": 58
+    },
+    "4974": {
+        "name": "亞泰",
+        "price": 74.4,
+        "fundamental": 78,
+        "chip": 50,
+        "technical": 52
+    },
+    "4979": {
+        "name": "華星光",
+        "price": 672.0,
+        "fundamental": 55,
+        "chip": 93,
+        "technical": 89
+    },
+    "4987": {
+        "name": "科誠",
+        "price": 81.5,
+        "fundamental": 56,
+        "chip": 92,
+        "technical": 94
+    },
+    "4991": {
+        "name": "環宇-KY",
+        "price": 686.0,
+        "fundamental": 78,
+        "chip": 43,
+        "technical": 63
+    },
+    "4995": {
+        "name": "晶達",
+        "price": 44.1,
+        "fundamental": 86,
+        "chip": 55,
+        "technical": 79
+    },
+    "5009": {
+        "name": "榮剛",
+        "price": 40.15,
+        "fundamental": 81,
+        "chip": 45,
+        "technical": 68
+    },
+    "5011": {
+        "name": "久陽",
+        "price": 15.4,
+        "fundamental": 61,
+        "chip": 72,
+        "technical": 72
+    },
+    "5013": {
+        "name": "強新",
+        "price": 28.45,
+        "fundamental": 77,
+        "chip": 86,
+        "technical": 51
+    },
+    "5014": {
+        "name": "建錩",
+        "price": 10.35,
+        "fundamental": 55,
+        "chip": 44,
+        "technical": 50
+    },
+    "5015": {
+        "name": "華祺",
+        "price": 22.5,
+        "fundamental": 68,
+        "chip": 69,
+        "technical": 72
+    },
+    "5016": {
+        "name": "松和",
+        "price": 25.3,
+        "fundamental": 80,
+        "chip": 63,
+        "technical": 79
+    },
+    "5201": {
+        "name": "凱衛",
+        "price": 30.55,
+        "fundamental": 50,
+        "chip": 52,
+        "technical": 66
+    },
+    "5202": {
+        "name": "力新",
+        "price": 13.05,
+        "fundamental": 74,
+        "chip": 56,
+        "technical": 84
+    },
+    "5205": {
+        "name": "中茂",
+        "price": 23.2,
+        "fundamental": 94,
+        "chip": 69,
+        "technical": 74
+    },
+    "5206": {
+        "name": "坤悅",
+        "price": 24.5,
+        "fundamental": 81,
+        "chip": 73,
+        "technical": 92
+    },
+    "5209": {
+        "name": "新鼎",
+        "price": 164.5,
+        "fundamental": 95,
+        "chip": 68,
+        "technical": 56
+    },
+    "5210": {
+        "name": "寶碩",
+        "price": 27.8,
+        "fundamental": 69,
+        "chip": 83,
+        "technical": 72
+    },
+    "5211": {
+        "name": "蒙恬",
+        "price": 20.3,
+        "fundamental": 79,
+        "chip": 43,
+        "technical": 78
+    },
+    "5212": {
+        "name": "凌網",
+        "price": 48.0,
+        "fundamental": 54,
+        "chip": 91,
+        "technical": 61
+    },
+    "5213": {
+        "name": "亞昕",
+        "price": 25.85,
+        "fundamental": 76,
+        "chip": 71,
+        "technical": 86
+    },
+    "5220": {
+        "name": "萬達光電",
+        "price": 20.45,
+        "fundamental": 53,
+        "chip": 90,
+        "technical": 43
+    },
+    "5223": {
+        "name": "安力-KY",
+        "price": 24.75,
+        "fundamental": 75,
+        "chip": 41,
+        "technical": 44
+    },
+    "5227": {
+        "name": "立凱-KY",
+        "price": 21.0,
+        "fundamental": 68,
+        "chip": 76,
+        "technical": 60
+    },
+    "5228": {
+        "name": "鈺鎧",
+        "price": 41.7,
+        "fundamental": 63,
+        "chip": 69,
+        "technical": 65
+    },
+    "5230": {
+        "name": "雷笛克光學",
+        "price": 16.45,
+        "fundamental": 88,
+        "chip": 61,
+        "technical": 57
+    },
+    "5236": {
+        "name": "凌陽創新",
+        "price": 168.0,
+        "fundamental": 66,
+        "chip": 81,
+        "technical": 93
+    },
+    "5245": {
+        "name": "智晶",
+        "price": 25.5,
+        "fundamental": 93,
+        "chip": 88,
+        "technical": 44
+    },
+    "5251": {
+        "name": "天鉞電",
+        "price": 28.5,
+        "fundamental": 86,
+        "chip": 67,
+        "technical": 75
+    },
+    "5263": {
+        "name": "智崴",
+        "price": 104.0,
+        "fundamental": 88,
+        "chip": 72,
+        "technical": 91
+    },
+    "5272": {
+        "name": "笙科",
+        "price": 23.45,
+        "fundamental": 90,
+        "chip": 57,
+        "technical": 55
+    },
+    "5274": {
+        "name": "信驊",
+        "price": 17825.0,
+        "fundamental": 91,
+        "chip": 62,
+        "technical": 70
+    },
+    "5276": {
+        "name": "達輝-KY",
+        "price": 19.55,
+        "fundamental": 87,
+        "chip": 92,
+        "technical": 68
+    },
+    "5278": {
+        "name": "尚凡*",
+        "price": 22.6,
+        "fundamental": 51,
+        "chip": 79,
+        "technical": 67
+    },
+    "5287": {
+        "name": "數字",
+        "price": 151.0,
+        "fundamental": 50,
+        "chip": 40,
+        "technical": 63
+    },
+    "5289": {
+        "name": "宜鼎",
+        "price": 1760.0,
+        "fundamental": 73,
+        "chip": 73,
+        "technical": 85
+    },
+    "5291": {
+        "name": "邑昇",
+        "price": 71.5,
+        "fundamental": 68,
+        "chip": 58,
+        "technical": 55
+    },
+    "5299": {
+        "name": "杰力",
+        "price": 98.5,
+        "fundamental": 87,
+        "chip": 45,
+        "technical": 47
+    },
+    "5301": {
+        "name": "寶得利",
+        "price": 7.55,
+        "fundamental": 68,
+        "chip": 73,
+        "technical": 42
+    },
+    "5302": {
+        "name": "太欣",
+        "price": 11.4,
+        "fundamental": 90,
+        "chip": 82,
+        "technical": 73
+    },
+    "5309": {
+        "name": "系統電",
+        "price": 67.4,
+        "fundamental": 91,
+        "chip": 44,
+        "technical": 40
+    },
+    "5310": {
+        "name": "天剛",
+        "price": 26.0,
+        "fundamental": 55,
+        "chip": 81,
+        "technical": 93
+    },
+    "5312": {
+        "name": "寶島科",
+        "price": 97.6,
+        "fundamental": 64,
+        "chip": 43,
+        "technical": 76
+    },
+    "5314": {
+        "name": "世紀*",
+        "price": 72.6,
+        "fundamental": 76,
+        "chip": 59,
+        "technical": 59
+    },
+    "5315": {
+        "name": "光聯",
+        "price": 22.2,
+        "fundamental": 92,
+        "chip": 90,
+        "technical": 43
+    },
+    "5321": {
+        "name": "美而快",
+        "price": 22.35,
+        "fundamental": 86,
+        "chip": 80,
+        "technical": 55
+    },
+    "5324": {
+        "name": "士開",
+        "price": 10.7,
+        "fundamental": 50,
+        "chip": 46,
+        "technical": 43
+    },
+    "5328": {
+        "name": "華容",
+        "price": 28.05,
+        "fundamental": 90,
+        "chip": 89,
+        "technical": 71
+    },
+    "5340": {
+        "name": "建榮",
+        "price": 111.5,
+        "fundamental": 92,
+        "chip": 41,
+        "technical": 74
+    },
+    "5344": {
+        "name": "立衛",
+        "price": 16.65,
+        "fundamental": 95,
+        "chip": 69,
+        "technical": 45
+    },
+    "5345": {
+        "name": "馥鴻",
+        "price": 21.85,
+        "fundamental": 88,
+        "chip": 80,
+        "technical": 40
+    },
+    "5347": {
+        "name": "世界",
+        "price": 174.5,
+        "fundamental": 73,
+        "chip": 69,
+        "technical": 56
+    },
+    "5348": {
+        "name": "正能量智能",
+        "price": 15.0,
+        "fundamental": 86,
+        "chip": 73,
+        "technical": 44
+    },
+    "5351": {
+        "name": "鈺創",
+        "price": 80.1,
+        "fundamental": 72,
+        "chip": 82,
+        "technical": 45
+    },
+    "5353": {
+        "name": "台林",
+        "price": 26.15,
+        "fundamental": 69,
+        "chip": 89,
+        "technical": 72
+    },
+    "5355": {
+        "name": "佳總",
+        "price": 7.0,
+        "fundamental": 71,
+        "chip": 68,
+        "technical": 73
+    },
+    "5356": {
+        "name": "協益",
+        "price": 26.95,
+        "fundamental": 58,
+        "chip": 83,
+        "technical": 89
+    },
+    "5364": {
+        "name": "力麗店",
+        "price": 9.84,
+        "fundamental": 85,
+        "chip": 73,
+        "technical": 41
+    },
+    "5371": {
+        "name": "中光電",
+        "price": 70.5,
+        "fundamental": 79,
+        "chip": 52,
+        "technical": 40
+    },
+    "5381": {
+        "name": "光譜",
+        "price": 23.8,
+        "fundamental": 78,
+        "chip": 46,
+        "technical": 43
+    },
+    "5386": {
+        "name": "青雲",
+        "price": 439.5,
+        "fundamental": 70,
+        "chip": 90,
+        "technical": 82
+    },
+    "5392": {
+        "name": "能率",
+        "price": 42.0,
+        "fundamental": 54,
+        "chip": 76,
+        "technical": 70
+    },
+    "5398": {
+        "name": "慕康生醫",
+        "price": 20.0,
+        "fundamental": 94,
+        "chip": 63,
+        "technical": 71
+    },
+    "5403": {
+        "name": "中菲",
+        "price": 92.6,
+        "fundamental": 89,
+        "chip": 65,
+        "technical": 44
+    },
+    "5410": {
+        "name": "國眾",
+        "price": 37.0,
+        "fundamental": 51,
+        "chip": 76,
+        "technical": 49
+    },
+    "5425": {
+        "name": "台半",
+        "price": 80.3,
+        "fundamental": 88,
+        "chip": 47,
+        "technical": 54
+    },
+    "5426": {
+        "name": "振發",
+        "price": 18.55,
+        "fundamental": 60,
+        "chip": 72,
+        "technical": 75
+    },
+    "5432": {
+        "name": "新門",
+        "price": 152.5,
+        "fundamental": 75,
+        "chip": 85,
+        "technical": 86
+    },
+    "5438": {
+        "name": "東友",
+        "price": 19.4,
+        "fundamental": 68,
+        "chip": 47,
+        "technical": 55
+    },
+    "5439": {
+        "name": "高技",
+        "price": 391.0,
+        "fundamental": 61,
+        "chip": 60,
+        "technical": 68
+    },
+    "5443": {
+        "name": "均豪",
+        "price": 129.5,
+        "fundamental": 68,
+        "chip": 78,
+        "technical": 71
+    },
+    "5450": {
+        "name": "南良",
+        "price": 12.7,
+        "fundamental": 52,
+        "chip": 83,
+        "technical": 44
+    },
+    "5452": {
+        "name": "佶優",
+        "price": 33.6,
+        "fundamental": 84,
+        "chip": 69,
+        "technical": 43
+    },
+    "5455": {
+        "name": "昇益",
+        "price": 24.7,
+        "fundamental": 68,
+        "chip": 85,
+        "technical": 80
+    },
+    "5457": {
+        "name": "宣德",
+        "price": 36.4,
+        "fundamental": 93,
+        "chip": 64,
+        "technical": 90
+    },
+    "5460": {
+        "name": "同協",
+        "price": 14.95,
+        "fundamental": 58,
+        "chip": 69,
+        "technical": 94
+    },
+    "5464": {
+        "name": "霖宏",
+        "price": 57.6,
+        "fundamental": 54,
+        "chip": 75,
+        "technical": 80
+    },
+    "5465": {
+        "name": "富驊",
+        "price": 25.5,
+        "fundamental": 90,
+        "chip": 46,
+        "technical": 49
+    },
+    "5468": {
+        "name": "凱鈺",
+        "price": 18.15,
+        "fundamental": 89,
+        "chip": 64,
+        "technical": 43
+    },
+    "5474": {
+        "name": "聰泰",
+        "price": 164.5,
+        "fundamental": 75,
+        "chip": 81,
+        "technical": 62
+    },
+    "5475": {
+        "name": "德宏",
+        "price": 331.5,
+        "fundamental": 92,
+        "chip": 60,
+        "technical": 65
+    },
+    "5478": {
+        "name": "智冠",
+        "price": 96.3,
+        "fundamental": 93,
+        "chip": 64,
+        "technical": 77
+    },
+    "5481": {
+        "name": "新華",
+        "price": 20.6,
+        "fundamental": 67,
+        "chip": 44,
+        "technical": 48
+    },
+    "5483": {
+        "name": "中美晶",
+        "price": 163.5,
+        "fundamental": 95,
+        "chip": 62,
+        "technical": 54
+    },
+    "5487": {
+        "name": "通泰",
+        "price": 27.8,
+        "fundamental": 70,
+        "chip": 75,
+        "technical": 86
+    },
+    "5488": {
+        "name": "松普",
+        "price": 10.4,
+        "fundamental": 83,
+        "chip": 81,
+        "technical": 60
+    },
+    "5489": {
+        "name": "彩富",
+        "price": 40.05,
+        "fundamental": 67,
+        "chip": 47,
+        "technical": 47
+    },
+    "5490": {
+        "name": "同亨",
+        "price": 28.55,
+        "fundamental": 55,
+        "chip": 91,
+        "technical": 66
+    },
+    "5493": {
+        "name": "三聯",
+        "price": 86.6,
+        "fundamental": 81,
+        "chip": 56,
+        "technical": 74
+    },
+    "5498": {
+        "name": "凱崴",
+        "price": 69.1,
+        "fundamental": 85,
+        "chip": 68,
+        "technical": 73
+    },
+    "5508": {
+        "name": "永信建",
+        "price": 49.75,
+        "fundamental": 69,
+        "chip": 64,
+        "technical": 68
+    },
+    "5511": {
+        "name": "德昌",
+        "price": 69.8,
+        "fundamental": 61,
+        "chip": 55,
+        "technical": 61
+    },
+    "5512": {
+        "name": "力麒",
+        "price": 6.92,
+        "fundamental": 60,
+        "chip": 53,
+        "technical": 75
+    },
+    "5514": {
+        "name": "三豐",
+        "price": 15.2,
+        "fundamental": 89,
+        "chip": 44,
+        "technical": 58
+    },
+    "5516": {
+        "name": "雙喜",
+        "price": 10.9,
+        "fundamental": 94,
+        "chip": 40,
+        "technical": 48
+    },
+    "5520": {
+        "name": "力泰",
+        "price": 81.1,
+        "fundamental": 79,
+        "chip": 75,
+        "technical": 52
+    },
+    "5523": {
+        "name": "豐謙",
+        "price": 30.35,
+        "fundamental": 89,
+        "chip": 92,
+        "technical": 88
+    },
+    "5529": {
+        "name": "鉅陞",
+        "price": 21.9,
+        "fundamental": 59,
+        "chip": 43,
+        "technical": 61
+    },
+    "5530": {
+        "name": "龍巖",
+        "price": 45.1,
+        "fundamental": 54,
+        "chip": 42,
+        "technical": 51
+    },
+    "5536": {
+        "name": "聖暉*",
+        "price": 896.0,
+        "fundamental": 56,
+        "chip": 95,
+        "technical": 50
+    },
+    "5543": {
+        "name": "桓鼎-KY",
+        "price": 29.5,
+        "fundamental": 90,
+        "chip": 44,
+        "technical": 76
+    },
+    "5547": {
+        "name": "久舜",
+        "price": 21.85,
+        "fundamental": 85,
+        "chip": 48,
+        "technical": 49
+    },
+    "5548": {
+        "name": "安倉",
+        "price": 23.5,
+        "fundamental": 71,
+        "chip": 90,
+        "technical": 79
+    },
+    "5601": {
+        "name": "台聯櫃",
+        "price": 35.3,
+        "fundamental": 73,
+        "chip": 81,
+        "technical": 63
+    },
+    "5603": {
+        "name": "陸海",
+        "price": 15.85,
+        "fundamental": 69,
+        "chip": 79,
+        "technical": 95
+    },
+    "5604": {
+        "name": "中連",
+        "price": 31.4,
+        "fundamental": 57,
+        "chip": 95,
+        "technical": 45
+    },
+    "5609": {
+        "name": "中菲行",
+        "price": 79.6,
+        "fundamental": 81,
+        "chip": 45,
+        "technical": 91
+    },
+    "5701": {
+        "name": "劍湖山",
+        "price": 3.41,
+        "fundamental": 62,
+        "chip": 51,
+        "technical": 66
+    },
+    "5703": {
+        "name": "亞都",
+        "price": 13.9,
+        "fundamental": 88,
+        "chip": 46,
+        "technical": 87
+    },
+    "5704": {
+        "name": "老爺知",
+        "price": 21.45,
+        "fundamental": 61,
+        "chip": 82,
+        "technical": 43
+    },
+    "5864": {
+        "name": "致和證",
+        "price": 36.7,
+        "fundamental": 86,
+        "chip": 92,
+        "technical": 52
+    },
+    "5878": {
+        "name": "台名",
+        "price": 40.65,
+        "fundamental": 67,
+        "chip": 46,
+        "technical": 72
+    },
+    "5902": {
+        "name": "德記",
+        "price": 38.2,
+        "fundamental": 73,
+        "chip": 52,
+        "technical": 95
+    },
+    "5903": {
+        "name": "全家",
+        "price": 189.5,
+        "fundamental": 95,
+        "chip": 71,
+        "technical": 67
+    },
+    "5904": {
+        "name": "寶雅",
+        "price": 577.0,
+        "fundamental": 64,
+        "chip": 55,
+        "technical": 86
+    },
+    "5905": {
+        "name": "南仁湖",
+        "price": 8.79,
+        "fundamental": 64,
+        "chip": 55,
+        "technical": 83
+    },
+    "6015": {
+        "name": "宏遠證",
+        "price": 16.9,
+        "fundamental": 58,
+        "chip": 74,
+        "technical": 66
+    },
+    "6016": {
+        "name": "康和證",
+        "price": 24.05,
+        "fundamental": 95,
+        "chip": 84,
+        "technical": 64
+    },
+    "6020": {
+        "name": "大展證",
+        "price": 23.45,
+        "fundamental": 83,
+        "chip": 51,
+        "technical": 76
+    },
+    "6021": {
+        "name": "美好證",
+        "price": 35.4,
+        "fundamental": 68,
+        "chip": 58,
+        "technical": 76
+    },
+    "6023": {
+        "name": "元大期",
+        "price": 99.5,
+        "fundamental": 56,
+        "chip": 63,
+        "technical": 89
+    },
+    "6026": {
+        "name": "福邦證",
+        "price": 16.6,
+        "fundamental": 67,
+        "chip": 90,
+        "technical": 75
+    },
+    "6028": {
+        "name": "公勝保經",
+        "price": 81.9,
+        "fundamental": 89,
+        "chip": 43,
+        "technical": 93
+    },
+    "6101": {
+        "name": "寬魚國際",
+        "price": 38.7,
+        "fundamental": 80,
+        "chip": 43,
+        "technical": 87
+    },
+    "6103": {
+        "name": "合邦",
+        "price": 40.0,
+        "fundamental": 91,
+        "chip": 93,
+        "technical": 59
+    },
+    "6104": {
+        "name": "創惟",
+        "price": 103.0,
+        "fundamental": 64,
+        "chip": 59,
+        "technical": 49
+    },
+    "6109": {
+        "name": "亞元",
+        "price": 12.5,
+        "fundamental": 82,
+        "chip": 43,
+        "technical": 81
+    },
+    "6111": {
+        "name": "光聚晶電",
+        "price": 47.85,
+        "fundamental": 89,
+        "chip": 60,
+        "technical": 51
+    },
+    "6113": {
+        "name": "亞矽",
+        "price": 24.5,
+        "fundamental": 95,
+        "chip": 73,
+        "technical": 68
+    },
+    "6114": {
+        "name": "久威",
+        "price": 31.6,
+        "fundamental": 75,
+        "chip": 62,
+        "technical": 71
+    },
+    "6118": {
+        "name": "建達",
+        "price": 17.25,
+        "fundamental": 88,
+        "chip": 50,
+        "technical": 49
+    },
+    "6121": {
+        "name": "新普",
+        "price": 394.0,
+        "fundamental": 90,
+        "chip": 76,
+        "technical": 62
+    },
+    "6122": {
+        "name": "擎邦",
+        "price": 48.95,
+        "fundamental": 52,
+        "chip": 40,
+        "technical": 54
+    },
+    "6123": {
+        "name": "上奇",
+        "price": 45.55,
+        "fundamental": 94,
+        "chip": 67,
+        "technical": 44
+    },
+    "6124": {
+        "name": "業強",
+        "price": 30.7,
+        "fundamental": 93,
+        "chip": 48,
+        "technical": 47
+    },
+    "6125": {
+        "name": "廣運",
+        "price": 59.7,
+        "fundamental": 88,
+        "chip": 47,
+        "technical": 90
+    },
+    "6126": {
+        "name": "信音",
+        "price": 33.0,
+        "fundamental": 69,
+        "chip": 94,
+        "technical": 47
+    },
+    "6127": {
+        "name": "九豪",
+        "price": 47.5,
+        "fundamental": 80,
+        "chip": 93,
+        "technical": 56
+    },
+    "6129": {
+        "name": "普誠",
+        "price": 16.4,
+        "fundamental": 83,
+        "chip": 43,
+        "technical": 43
+    },
+    "6130": {
+        "name": "上亞科技",
+        "price": 23.65,
+        "fundamental": 55,
+        "chip": 71,
+        "technical": 59
+    },
+    "6134": {
+        "name": "萬旭",
+        "price": 33.55,
+        "fundamental": 79,
+        "chip": 49,
+        "technical": 63
+    },
+    "6138": {
+        "name": "茂達",
+        "price": 285.0,
+        "fundamental": 85,
+        "chip": 66,
+        "technical": 55
+    },
+    "6140": {
+        "name": "訊達",
+        "price": 21.6,
+        "fundamental": 62,
+        "chip": 88,
+        "technical": 92
+    },
+    "6143": {
+        "name": "振曜",
+        "price": 97.6,
+        "fundamental": 60,
+        "chip": 88,
+        "technical": 71
+    },
+    "6144": {
+        "name": "得利影",
+        "price": 15.0,
+        "fundamental": 51,
+        "chip": 91,
+        "technical": 50
+    },
+    "6146": {
+        "name": "耕興",
+        "price": 213.5,
+        "fundamental": 51,
+        "chip": 72,
+        "technical": 63
+    },
+    "6147": {
+        "name": "頎邦",
+        "price": 196.5,
+        "fundamental": 61,
+        "chip": 62,
+        "technical": 76
+    },
+    "6148": {
+        "name": "驊宏資",
+        "price": 30.2,
+        "fundamental": 80,
+        "chip": 54,
+        "technical": 47
+    },
+    "6150": {
+        "name": "撼訊",
+        "price": 66.8,
+        "fundamental": 66,
+        "chip": 69,
+        "technical": 76
+    },
+    "6151": {
+        "name": "晉倫",
+        "price": 39.0,
+        "fundamental": 73,
+        "chip": 72,
+        "technical": 52
+    },
+    "6154": {
+        "name": "順發",
+        "price": 12.8,
+        "fundamental": 54,
+        "chip": 57,
+        "technical": 56
+    },
+    "6156": {
+        "name": "松上",
+        "price": 19.65,
+        "fundamental": 60,
+        "chip": 80,
+        "technical": 46
+    },
+    "6158": {
+        "name": "禾昌",
+        "price": 18.35,
+        "fundamental": 64,
+        "chip": 42,
+        "technical": 81
+    },
+    "6160": {
+        "name": "欣技",
+        "price": 16.1,
+        "fundamental": 58,
+        "chip": 82,
+        "technical": 70
+    },
+    "6161": {
+        "name": "捷波",
+        "price": 44.7,
+        "fundamental": 73,
+        "chip": 91,
+        "technical": 68
+    },
+    "6163": {
+        "name": "華電網",
+        "price": 60.4,
+        "fundamental": 54,
+        "chip": 53,
+        "technical": 69
+    },
+    "6167": {
+        "name": "久正",
+        "price": 12.0,
+        "fundamental": 53,
+        "chip": 56,
+        "technical": 63
+    },
+    "6169": {
+        "name": "昱泉",
+        "price": 16.3,
+        "fundamental": 81,
+        "chip": 74,
+        "technical": 92
+    },
+    "6170": {
+        "name": "統振",
+        "price": 51.0,
+        "fundamental": 94,
+        "chip": 89,
+        "technical": 82
+    },
+    "6173": {
+        "name": "信昌電",
+        "price": 134.0,
+        "fundamental": 62,
+        "chip": 44,
+        "technical": 60
+    },
+    "6174": {
+        "name": "安碁",
+        "price": 41.5,
+        "fundamental": 88,
+        "chip": 95,
+        "technical": 65
+    },
+    "6175": {
+        "name": "立敦",
+        "price": 68.6,
+        "fundamental": 75,
+        "chip": 65,
+        "technical": 76
+    },
+    "6179": {
+        "name": "亞通",
+        "price": 24.7,
+        "fundamental": 77,
+        "chip": 63,
+        "technical": 61
+    },
+    "6180": {
+        "name": "橘子",
+        "price": 39.4,
+        "fundamental": 59,
+        "chip": 42,
+        "technical": 63
+    },
+    "6182": {
+        "name": "合晶",
+        "price": 58.6,
+        "fundamental": 80,
+        "chip": 77,
+        "technical": 47
+    },
+    "6185": {
+        "name": "幃翔",
+        "price": 13.95,
+        "fundamental": 82,
+        "chip": 86,
+        "technical": 87
+    },
+    "6186": {
+        "name": "新潤",
+        "price": 39.65,
+        "fundamental": 92,
+        "chip": 70,
+        "technical": 75
+    },
+    "6187": {
+        "name": "萬潤",
+        "price": 1110.0,
+        "fundamental": 95,
+        "chip": 66,
+        "technical": 75
+    },
+    "6188": {
+        "name": "廣明",
+        "price": 84.8,
+        "fundamental": 66,
+        "chip": 61,
+        "technical": 41
+    },
+    "6190": {
+        "name": "萬泰科",
+        "price": 80.9,
+        "fundamental": 87,
+        "chip": 61,
+        "technical": 86
+    },
+    "6194": {
+        "name": "育富",
+        "price": 32.25,
+        "fundamental": 56,
+        "chip": 84,
+        "technical": 95
+    },
+    "6195": {
+        "name": "詩肯",
+        "price": 23.5,
+        "fundamental": 74,
+        "chip": 52,
+        "technical": 58
+    },
+    "6198": {
+        "name": "瑞築",
+        "price": 21.7,
+        "fundamental": 68,
+        "chip": 62,
+        "technical": 44
+    },
+    "6199": {
+        "name": "天品",
+        "price": 100.5,
+        "fundamental": 53,
+        "chip": 81,
+        "technical": 60
+    },
+    "006201": {
+        "name": "元大富櫃50",
+        "price": 47.71,
+        "fundamental": 61,
+        "chip": 50,
+        "technical": 64
+    },
+    "6203": {
+        "name": "海韻電",
+        "price": 74.7,
+        "fundamental": 50,
+        "chip": 79,
+        "technical": 55
+    },
+    "6204": {
+        "name": "艾華",
+        "price": 73.0,
+        "fundamental": 77,
+        "chip": 59,
+        "technical": 55
+    },
+    "6207": {
+        "name": "雷科",
+        "price": 68.3,
+        "fundamental": 87,
+        "chip": 65,
+        "technical": 70
+    },
+    "6208": {
+        "name": "日揚",
+        "price": 78.7,
+        "fundamental": 78,
+        "chip": 93,
+        "technical": 81
+    },
+    "6210": {
+        "name": "慶生",
+        "price": 20.45,
+        "fundamental": 61,
+        "chip": 88,
+        "technical": 58
+    },
+    "6212": {
+        "name": "理銘",
+        "price": 30.0,
+        "fundamental": 79,
+        "chip": 83,
+        "technical": 81
+    },
+    "6217": {
+        "name": "中探針",
+        "price": 282.0,
+        "fundamental": 75,
+        "chip": 91,
+        "technical": 93
+    },
+    "6218": {
+        "name": "豪勉",
+        "price": 37.3,
+        "fundamental": 92,
+        "chip": 45,
+        "technical": 58
+    },
+    "6219": {
+        "name": "富旺",
+        "price": 12.9,
+        "fundamental": 58,
+        "chip": 45,
+        "technical": 56
+    },
+    "6220": {
+        "name": "岳豐",
+        "price": 30.0,
+        "fundamental": 78,
+        "chip": 49,
+        "technical": 51
+    },
+    "6221": {
+        "name": "晉泰",
+        "price": 24.4,
+        "fundamental": 57,
+        "chip": 61,
+        "technical": 50
+    },
+    "6222": {
+        "name": "立軒",
+        "price": 22.9,
+        "fundamental": 95,
+        "chip": 85,
+        "technical": 72
+    },
+    "6223": {
+        "name": "旺矽",
+        "price": 4985.0,
+        "fundamental": 77,
+        "chip": 76,
+        "technical": 80
+    },
+    "6227": {
+        "name": "茂綸",
+        "price": 103.0,
+        "fundamental": 50,
+        "chip": 49,
+        "technical": 68
+    },
+    "6228": {
+        "name": "全譜",
+        "price": 22.1,
+        "fundamental": 54,
+        "chip": 93,
+        "technical": 49
+    },
+    "6229": {
+        "name": "研通",
+        "price": 29.35,
+        "fundamental": 72,
+        "chip": 79,
+        "technical": 44
+    },
+    "6231": {
+        "name": "系微",
+        "price": 316.0,
+        "fundamental": 51,
+        "chip": 58,
+        "technical": 75
+    },
+    "6233": {
+        "name": "旺玖",
+        "price": 26.5,
+        "fundamental": 83,
+        "chip": 53,
+        "technical": 53
+    },
+    "6234": {
+        "name": "高僑",
+        "price": 54.0,
+        "fundamental": 72,
+        "chip": 57,
+        "technical": 73
+    },
+    "6237": {
+        "name": "驊訊",
+        "price": 45.5,
+        "fundamental": 86,
+        "chip": 75,
+        "technical": 52
+    },
+    "6240": {
+        "name": "松崗",
+        "price": 18.5,
+        "fundamental": 80,
+        "chip": 56,
+        "technical": 73
+    },
+    "6241": {
+        "name": "易通展",
+        "price": 8.68,
+        "fundamental": 71,
+        "chip": 83,
+        "technical": 77
+    },
+    "6242": {
+        "name": "立康",
+        "price": 37.7,
+        "fundamental": 88,
+        "chip": 83,
+        "technical": 41
+    },
+    "6244": {
+        "name": "茂迪",
+        "price": 29.9,
+        "fundamental": 88,
+        "chip": 78,
+        "technical": 57
+    },
+    "6245": {
+        "name": "立端",
+        "price": 81.3,
+        "fundamental": 86,
+        "chip": 69,
+        "technical": 86
+    },
+    "6246": {
+        "name": "臺龍",
+        "price": 16.9,
+        "fundamental": 95,
+        "chip": 42,
+        "technical": 62
+    },
+    "6248": {
+        "name": "沛波",
+        "price": 19.3,
+        "fundamental": 75,
+        "chip": 87,
+        "technical": 93
+    },
+    "6259": {
+        "name": "百徽",
+        "price": 24.8,
+        "fundamental": 59,
+        "chip": 73,
+        "technical": 81
+    },
+    "6261": {
+        "name": "久元",
+        "price": 121.0,
+        "fundamental": 82,
+        "chip": 40,
+        "technical": 72
+    },
+    "6263": {
+        "name": "普萊德",
+        "price": 168.0,
+        "fundamental": 67,
+        "chip": 58,
+        "technical": 65
+    },
+    "6264": {
+        "name": "富裔",
+        "price": 6.11,
+        "fundamental": 50,
+        "chip": 79,
+        "technical": 69
+    },
+    "6265": {
+        "name": "方土昶",
+        "price": 45.4,
+        "fundamental": 84,
+        "chip": 60,
+        "technical": 64
+    },
+    "6266": {
+        "name": "泰詠",
+        "price": 27.55,
+        "fundamental": 90,
+        "chip": 53,
+        "technical": 58
+    },
+    "6270": {
+        "name": "倍微",
+        "price": 27.3,
+        "fundamental": 85,
+        "chip": 69,
+        "technical": 48
+    },
+    "6274": {
+        "name": "台燿",
+        "price": 1455.0,
+        "fundamental": 95,
+        "chip": 93,
+        "technical": 67
+    },
+    "6275": {
+        "name": "元山",
+        "price": 50.4,
+        "fundamental": 79,
+        "chip": 59,
+        "technical": 95
+    },
+    "6276": {
+        "name": "安鈦克",
+        "price": 30.5,
+        "fundamental": 58,
+        "chip": 53,
+        "technical": 58
+    },
+    "6279": {
+        "name": "胡連",
+        "price": 120.5,
+        "fundamental": 92,
+        "chip": 72,
+        "technical": 88
+    },
+    "6284": {
+        "name": "佳邦",
+        "price": 82.0,
+        "fundamental": 66,
+        "chip": 77,
+        "technical": 53
+    },
+    "6290": {
+        "name": "良維",
+        "price": 275.5,
+        "fundamental": 60,
+        "chip": 53,
+        "technical": 70
+    },
+    "6291": {
+        "name": "沛亨",
+        "price": 471.5,
+        "fundamental": 84,
+        "chip": 74,
+        "technical": 87
+    },
+    "6292": {
+        "name": "迅德",
+        "price": 55.8,
+        "fundamental": 81,
+        "chip": 56,
+        "technical": 66
+    },
+    "6294": {
+        "name": "智基",
+        "price": 31.95,
+        "fundamental": 94,
+        "chip": 55,
+        "technical": 73
+    },
+    "6411": {
+        "name": "晶焱",
+        "price": 82.4,
+        "fundamental": 67,
+        "chip": 66,
+        "technical": 84
+    },
+    "6417": {
+        "name": "韋僑",
+        "price": 138.5,
+        "fundamental": 54,
+        "chip": 81,
+        "technical": 59
+    },
+    "6418": {
+        "name": "詠昇",
+        "price": 31.3,
+        "fundamental": 61,
+        "chip": 43,
+        "technical": 84
+    },
+    "6419": {
+        "name": "京晨科",
+        "price": 137.0,
+        "fundamental": 56,
+        "chip": 68,
+        "technical": 57
+    },
+    "6423": {
+        "name": "億而得",
+        "price": 119.0,
+        "fundamental": 54,
+        "chip": 41,
+        "technical": 89
+    },
+    "6425": {
+        "name": "易發",
+        "price": 88.0,
+        "fundamental": 94,
+        "chip": 44,
+        "technical": 57
+    },
+    "6432": {
+        "name": "今展科",
+        "price": 48.6,
+        "fundamental": 52,
+        "chip": 89,
+        "technical": 44
+    },
+    "6435": {
+        "name": "大中",
+        "price": 231.5,
+        "fundamental": 52,
+        "chip": 43,
+        "technical": 82
+    },
+    "6441": {
+        "name": "廣錠",
+        "price": 27.55,
+        "fundamental": 89,
+        "chip": 61,
+        "technical": 88
+    },
+    "6461": {
+        "name": "益得",
+        "price": 16.8,
+        "fundamental": 52,
+        "chip": 87,
+        "technical": 46
+    },
+    "6462": {
+        "name": "神盾",
+        "price": 129.5,
+        "fundamental": 74,
+        "chip": 70,
+        "technical": 72
+    },
+    "6465": {
+        "name": "威潤",
+        "price": 45.6,
+        "fundamental": 75,
+        "chip": 95,
+        "technical": 82
+    },
+    "6469": {
+        "name": "大樹",
+        "price": 73.5,
+        "fundamental": 85,
+        "chip": 81,
+        "technical": 53
+    },
+    "6470": {
+        "name": "宇智",
+        "price": 47.15,
+        "fundamental": 63,
+        "chip": 83,
+        "technical": 87
+    },
+    "6474": {
+        "name": "華豫寧",
+        "price": 38.5,
+        "fundamental": 67,
+        "chip": 84,
+        "technical": 60
+    },
+    "6482": {
+        "name": "弘煜科",
+        "price": 29.25,
+        "fundamental": 64,
+        "chip": 73,
+        "technical": 53
+    },
+    "6485": {
+        "name": "點序",
+        "price": 84.2,
+        "fundamental": 81,
+        "chip": 86,
+        "technical": 50
+    },
+    "6486": {
+        "name": "互動",
+        "price": 83.3,
+        "fundamental": 59,
+        "chip": 83,
+        "technical": 72
+    },
+    "6488": {
+        "name": "環球晶",
+        "price": 835.0,
+        "fundamental": 90,
+        "chip": 91,
+        "technical": 92
+    },
+    "6492": {
+        "name": "生華科",
+        "price": 50.3,
+        "fundamental": 70,
+        "chip": 72,
+        "technical": 65
+    },
+    "6494": {
+        "name": "九齊",
+        "price": 58.5,
+        "fundamental": 74,
+        "chip": 49,
+        "technical": 44
+    },
+    "6496": {
+        "name": "科懋",
+        "price": 24.6,
+        "fundamental": 89,
+        "chip": 94,
+        "technical": 45
+    },
+    "6498": {
+        "name": "久禾光",
+        "price": 97.4,
+        "fundamental": 95,
+        "chip": 71,
+        "technical": 79
+    },
+    "6499": {
+        "name": "益安",
+        "price": 83.7,
+        "fundamental": 51,
+        "chip": 51,
+        "technical": 65
+    },
+    "6506": {
+        "name": "雙邦",
+        "price": 18.05,
+        "fundamental": 83,
+        "chip": 41,
+        "technical": 60
+    },
+    "6508": {
+        "name": "惠光",
+        "price": 24.45,
+        "fundamental": 76,
+        "chip": 54,
+        "technical": 93
+    },
+    "6509": {
+        "name": "聚和",
+        "price": 43.7,
+        "fundamental": 50,
+        "chip": 41,
+        "technical": 48
+    },
+    "6510": {
+        "name": "精測",
+        "price": 3790.0,
+        "fundamental": 71,
+        "chip": 72,
+        "technical": 89
+    },
+    "6512": {
+        "name": "啟發電",
+        "price": 19.2,
+        "fundamental": 80,
+        "chip": 87,
+        "technical": 75
+    },
+    "6516": {
+        "name": "勤崴國際",
+        "price": 58.6,
+        "fundamental": 91,
+        "chip": 41,
+        "technical": 72
+    },
+    "6517": {
+        "name": "保勝光學",
+        "price": 57.0,
+        "fundamental": 89,
+        "chip": 81,
+        "technical": 50
+    },
+    "6523": {
+        "name": "達爾膚",
+        "price": 99.1,
+        "fundamental": 91,
+        "chip": 68,
+        "technical": 74
+    },
+    "6527": {
+        "name": "明達醫",
+        "price": 68.6,
+        "fundamental": 78,
+        "chip": 44,
+        "technical": 80
+    },
+    "6530": {
+        "name": "創威",
+        "price": 110.5,
+        "fundamental": 80,
+        "chip": 69,
+        "technical": 75
+    },
+    "6532": {
+        "name": "瑞耘",
+        "price": 107.5,
+        "fundamental": 53,
+        "chip": 82,
+        "technical": 84
+    },
+    "6535": {
+        "name": "順藥",
+        "price": 133.0,
+        "fundamental": 86,
+        "chip": 44,
+        "technical": 85
+    },
+    "6538": {
+        "name": "倉和",
+        "price": 78.4,
+        "fundamental": 53,
+        "chip": 60,
+        "technical": 77
+    },
+    "6542": {
+        "name": "隆中",
+        "price": 47.2,
+        "fundamental": 95,
+        "chip": 93,
+        "technical": 85
+    },
+    "6546": {
+        "name": "正基",
+        "price": 68.8,
+        "fundamental": 54,
+        "chip": 59,
+        "technical": 69
+    },
+    "6547": {
+        "name": "高端疫苗",
+        "price": 48.9,
+        "fundamental": 64,
+        "chip": 88,
+        "technical": 83
+    },
+    "6548": {
+        "name": "長科*",
+        "price": 53.7,
+        "fundamental": 55,
+        "chip": 51,
+        "technical": 65
+    },
+    "6556": {
+        "name": "勝品",
+        "price": 70.1,
+        "fundamental": 54,
+        "chip": 57,
+        "technical": 70
+    },
+    "6560": {
+        "name": "欣普羅",
+        "price": 39.35,
+        "fundamental": 86,
+        "chip": 51,
+        "technical": 56
+    },
+    "6561": {
+        "name": "是方",
+        "price": 353.0,
+        "fundamental": 84,
+        "chip": 81,
+        "technical": 48
+    },
+    "6568": {
+        "name": "宏觀",
+        "price": 226.0,
+        "fundamental": 69,
+        "chip": 45,
+        "technical": 78
+    },
+    "6569": {
+        "name": "醫揚",
+        "price": 99.6,
+        "fundamental": 54,
+        "chip": 43,
+        "technical": 56
+    },
+    "6570": {
+        "name": "維田",
+        "price": 44.9,
+        "fundamental": 80,
+        "chip": 51,
+        "technical": 43
+    },
+    "6574": {
+        "name": "霈方",
+        "price": 119.5,
+        "fundamental": 65,
+        "chip": 91,
+        "technical": 64
+    },
+    "6576": {
+        "name": "逸達",
+        "price": 80.1,
+        "fundamental": 93,
+        "chip": 87,
+        "technical": 77
+    },
+    "6577": {
+        "name": "勁豐",
+        "price": 80.8,
+        "fundamental": 57,
+        "chip": 75,
+        "technical": 77
+    },
+    "6578": {
+        "name": "達邦蛋白",
+        "price": 14.75,
+        "fundamental": 52,
+        "chip": 64,
+        "technical": 45
+    },
+    "6584": {
+        "name": "南俊國際",
+        "price": 687.0,
+        "fundamental": 54,
+        "chip": 42,
+        "technical": 63
+    },
+    "6588": {
+        "name": "東典光電",
+        "price": 145.0,
+        "fundamental": 81,
+        "chip": 61,
+        "technical": 69
+    },
+    "6590": {
+        "name": "普鴻",
+        "price": 69.4,
+        "fundamental": 68,
+        "chip": 60,
+        "technical": 85
+    },
+    "6593": {
+        "name": "台灣銘板",
+        "price": 35.15,
+        "fundamental": 84,
+        "chip": 83,
+        "technical": 80
+    },
+    "6596": {
+        "name": "寬宏藝術",
+        "price": 104.0,
+        "fundamental": 95,
+        "chip": 63,
+        "technical": 70
+    },
+    "6597": {
+        "name": "立誠",
+        "price": 75.0,
+        "fundamental": 60,
+        "chip": 89,
+        "technical": 61
+    },
+    "6603": {
+        "name": "富強鑫",
+        "price": 23.9,
+        "fundamental": 84,
+        "chip": 74,
+        "technical": 48
+    },
+    "6609": {
+        "name": "瀧澤科",
+        "price": 43.3,
+        "fundamental": 75,
+        "chip": 47,
+        "technical": 86
+    },
+    "6612": {
+        "name": "奈米醫材",
+        "price": 67.8,
+        "fundamental": 61,
+        "chip": 59,
+        "technical": 69
+    },
+    "6613": {
+        "name": "朋億*",
+        "price": 240.5,
+        "fundamental": 58,
+        "chip": 60,
+        "technical": 43
+    },
+    "6615": {
+        "name": "慧智",
+        "price": 32.35,
+        "fundamental": 75,
+        "chip": 49,
+        "technical": 58
+    },
+    "6616": {
+        "name": "特昇-KY",
+        "price": 9.97,
+        "fundamental": 66,
+        "chip": 65,
+        "technical": 43
+    },
+    "6617": {
+        "name": "共信-KY",
+        "price": 63.4,
+        "fundamental": 75,
+        "chip": 53,
+        "technical": 88
+    },
+    "6620": {
+        "name": "漢達",
+        "price": 70.2,
+        "fundamental": 83,
+        "chip": 81,
+        "technical": 43
+    },
+    "6624": {
+        "name": "萬年清",
+        "price": 48.65,
+        "fundamental": 70,
+        "chip": 82,
+        "technical": 85
+    },
+    "6629": {
+        "name": "泰金-KY",
+        "price": 121.0,
+        "fundamental": 54,
+        "chip": 59,
+        "technical": 71
+    },
+    "6637": {
+        "name": "醫影",
+        "price": 70.9,
+        "fundamental": 77,
+        "chip": 53,
+        "technical": 83
+    },
+    "6640": {
+        "name": "均華",
+        "price": 1405.0,
+        "fundamental": 89,
+        "chip": 75,
+        "technical": 76
+    },
+    "6642": {
+        "name": "富致",
+        "price": 64.3,
+        "fundamental": 75,
+        "chip": 47,
+        "technical": 44
+    },
+    "6643": {
+        "name": "M31",
+        "price": 683.0,
+        "fundamental": 93,
+        "chip": 83,
+        "technical": 60
+    },
+    "6649": {
+        "name": "台生材",
+        "price": 39.75,
+        "fundamental": 51,
+        "chip": 68,
+        "technical": 58
+    },
+    "6651": {
+        "name": "全宇昕",
+        "price": 133.5,
+        "fundamental": 65,
+        "chip": 69,
+        "technical": 59
+    },
+    "6654": {
+        "name": "天正國際",
+        "price": 90.9,
+        "fundamental": 91,
+        "chip": 48,
+        "technical": 62
+    },
+    "6661": {
+        "name": "威健生技",
+        "price": 17.5,
+        "fundamental": 58,
+        "chip": 42,
+        "technical": 52
+    },
+    "6662": {
+        "name": "樂斯科",
+        "price": 30.45,
+        "fundamental": 52,
+        "chip": 92,
+        "technical": 91
+    },
+    "6664": {
+        "name": "群翊",
+        "price": 439.5,
+        "fundamental": 88,
+        "chip": 70,
+        "technical": 66
+    },
+    "6667": {
+        "name": "信紘科",
+        "price": 262.5,
+        "fundamental": 91,
+        "chip": 87,
+        "technical": 87
+    },
+    "6679": {
+        "name": "鈺太",
+        "price": 327.0,
+        "fundamental": 54,
+        "chip": 63,
+        "technical": 95
+    },
+    "6680": {
+        "name": "鑫創電子",
+        "price": 54.0,
+        "fundamental": 59,
+        "chip": 43,
+        "technical": 50
+    },
+    "6683": {
+        "name": "雍智科技",
+        "price": 2270.0,
+        "fundamental": 79,
+        "chip": 69,
+        "technical": 49
+    },
+    "6684": {
+        "name": "安格",
+        "price": 48.5,
+        "fundamental": 59,
+        "chip": 88,
+        "technical": 59
+    },
+    "6690": {
+        "name": "安碁資訊",
+        "price": 168.0,
+        "fundamental": 87,
+        "chip": 51,
+        "technical": 51
+    },
+    "6692": {
+        "name": "進能服",
+        "price": 31.3,
+        "fundamental": 81,
+        "chip": 71,
+        "technical": 79
+    },
+    "6693": {
+        "name": "廣閎科",
+        "price": 156.0,
+        "fundamental": 55,
+        "chip": 65,
+        "technical": 49
+    },
+    "6697": {
+        "name": "東捷資訊",
+        "price": 41.2,
+        "fundamental": 80,
+        "chip": 49,
+        "technical": 86
+    },
+    "6703": {
+        "name": "軒郁",
+        "price": 119.5,
+        "fundamental": 50,
+        "chip": 82,
+        "technical": 89
+    },
+    "6708": {
+        "name": "天擎",
+        "price": 42.8,
+        "fundamental": 92,
+        "chip": 52,
+        "technical": 52
+    },
+    "6712": {
+        "name": "長聖",
+        "price": 138.5,
+        "fundamental": 93,
+        "chip": 66,
+        "technical": 42
+    },
+    "6716": {
+        "name": "應廣",
+        "price": 104.0,
+        "fundamental": 66,
+        "chip": 73,
+        "technical": 72
+    },
+    "6720": {
+        "name": "久昌",
+        "price": 163.5,
+        "fundamental": 94,
+        "chip": 84,
+        "technical": 86
+    },
+    "6721": {
+        "name": "信實",
+        "price": 57.5,
+        "fundamental": 71,
+        "chip": 59,
+        "technical": 82
+    },
+    "6725": {
+        "name": "矽科宏晟",
+        "price": 324.0,
+        "fundamental": 87,
+        "chip": 73,
+        "technical": 80
+    },
+    "6727": {
+        "name": "亞泰金屬",
+        "price": 495.0,
+        "fundamental": 70,
+        "chip": 92,
+        "technical": 61
+    },
+    "6728": {
+        "name": "上洋",
+        "price": 114.5,
+        "fundamental": 74,
+        "chip": 41,
+        "technical": 48
+    },
+    "6730": {
+        "name": "常廣",
+        "price": 37.5,
+        "fundamental": 75,
+        "chip": 84,
+        "technical": 63
+    },
+    "6732": {
+        "name": "昇佳電子",
+        "price": 167.0,
+        "fundamental": 75,
+        "chip": 41,
+        "technical": 40
+    },
+    "6733": {
+        "name": "博晟生醫",
+        "price": 28.0,
+        "fundamental": 57,
+        "chip": 71,
+        "technical": 66
+    },
+    "6735": {
+        "name": "美達科技",
+        "price": 125.0,
+        "fundamental": 76,
+        "chip": 78,
+        "technical": 81
+    },
+    "6739": {
+        "name": "竹陞科技",
+        "price": 1440.0,
+        "fundamental": 73,
+        "chip": 72,
+        "technical": 69
+    },
+    "6741": {
+        "name": "91APP*-KY",
+        "price": 65.9,
+        "fundamental": 88,
+        "chip": 49,
+        "technical": 85
+    },
+    "6751": {
+        "name": "智聯服務",
+        "price": 49.4,
+        "fundamental": 68,
+        "chip": 44,
+        "technical": 65
+    },
+    "6752": {
+        "name": "叡揚",
+        "price": 103.0,
+        "fundamental": 75,
+        "chip": 62,
+        "technical": 48
+    },
+    "6761": {
+        "name": "穩得",
+        "price": 210.0,
+        "fundamental": 86,
+        "chip": 85,
+        "technical": 62
+    },
+    "6762": {
+        "name": "達亞",
+        "price": 144.0,
+        "fundamental": 76,
+        "chip": 74,
+        "technical": 57
+    },
+    "6763": {
+        "name": "綠界科技*",
+        "price": 47.05,
+        "fundamental": 95,
+        "chip": 72,
+        "technical": 75
+    },
+    "6767": {
+        "name": "台微醫",
+        "price": 27.0,
+        "fundamental": 54,
+        "chip": 65,
+        "technical": 51
+    },
+    "6785": {
+        "name": "昱展新藥",
+        "price": 134.5,
+        "fundamental": 68,
+        "chip": 95,
+        "technical": 68
+    },
+    "6788": {
+        "name": "華景電",
+        "price": 467.5,
+        "fundamental": 50,
+        "chip": 87,
+        "technical": 58
+    },
+    "6791": {
+        "name": "虎門科技",
+        "price": 122.0,
+        "fundamental": 95,
+        "chip": 93,
+        "technical": 88
+    },
+    "6803": {
+        "name": "崑鼎",
+        "price": 287.0,
+        "fundamental": 60,
+        "chip": 64,
+        "technical": 40
+    },
+    "6804": {
+        "name": "明係",
+        "price": 15.05,
+        "fundamental": 61,
+        "chip": 49,
+        "technical": 75
+    },
+    "6811": {
+        "name": "宏碁資訊",
+        "price": 212.5,
+        "fundamental": 93,
+        "chip": 81,
+        "technical": 50
+    },
+    "6821": {
+        "name": "聯寶",
+        "price": 50.0,
+        "fundamental": 63,
+        "chip": 51,
+        "technical": 91
+    },
+    "6823": {
+        "name": "濾能",
+        "price": 88.8,
+        "fundamental": 73,
+        "chip": 52,
+        "technical": 84
+    },
+    "6829": {
+        "name": "千附精密",
+        "price": 225.5,
+        "fundamental": 70,
+        "chip": 70,
+        "technical": 64
+    },
+    "6840": {
+        "name": "東研信超",
+        "price": 66.0,
+        "fundamental": 53,
+        "chip": 52,
+        "technical": 54
+    },
+    "6841": {
+        "name": "長佳智能",
+        "price": 60.4,
+        "fundamental": 82,
+        "chip": 40,
+        "technical": 49
+    },
+    "6843": {
+        "name": "進典",
+        "price": 46.05,
+        "fundamental": 93,
+        "chip": 88,
+        "technical": 62
+    },
+    "6844": {
+        "name": "諾貝兒",
+        "price": 64.9,
+        "fundamental": 61,
+        "chip": 89,
+        "technical": 41
+    },
+    "6846": {
+        "name": "綠茵",
+        "price": 70.2,
+        "fundamental": 52,
+        "chip": 89,
+        "technical": 55
+    },
+    "6855": {
+        "name": "數泓科",
+        "price": 105.0,
+        "fundamental": 79,
+        "chip": 85,
+        "technical": 55
+    },
+    "6856": {
+        "name": "鑫傳",
+        "price": 51.0,
+        "fundamental": 58,
+        "chip": 46,
+        "technical": 93
+    },
+    "6859": {
+        "name": "伯特光",
+        "price": 117.5,
+        "fundamental": 79,
+        "chip": 58,
+        "technical": 64
+    },
+    "6865": {
+        "name": "偉康科技",
+        "price": 35.3,
+        "fundamental": 61,
+        "chip": 61,
+        "technical": 75
+    },
+    "6870": {
+        "name": "騰雲",
+        "price": 190.0,
+        "fundamental": 89,
+        "chip": 62,
+        "technical": 45
+    },
+    "6872": {
+        "name": "浩宇生醫",
+        "price": 18.0,
+        "fundamental": 94,
+        "chip": 40,
+        "technical": 64
+    },
+    "6874": {
+        "name": "倍力",
+        "price": 85.0,
+        "fundamental": 51,
+        "chip": 44,
+        "technical": 41
+    },
+    "6875": {
+        "name": "國邑*",
+        "price": 34.25,
+        "fundamental": 92,
+        "chip": 95,
+        "technical": 46
+    },
+    "6877": {
+        "name": "鏵友益",
+        "price": 163.0,
+        "fundamental": 91,
+        "chip": 51,
+        "technical": 66
+    },
+    "6881": {
+        "name": "潤德",
+        "price": 272.5,
+        "fundamental": 68,
+        "chip": 79,
+        "technical": 69
+    },
+    "6884": {
+        "name": "海柏特",
+        "price": 33.9,
+        "fundamental": 73,
+        "chip": 53,
+        "technical": 48
+    },
+    "6894": {
+        "name": "衛司特",
+        "price": 339.5,
+        "fundamental": 75,
+        "chip": 56,
+        "technical": 42
+    },
+    "6895": {
+        "name": "宏碩系統",
+        "price": 164.5,
+        "fundamental": 62,
+        "chip": 93,
+        "technical": 63
+    },
+    "6899": {
+        "name": "創為精密",
+        "price": 54.0,
+        "fundamental": 55,
+        "chip": 90,
+        "technical": 94
+    },
+    "6903": {
+        "name": "巨漢",
+        "price": 405.0,
+        "fundamental": 65,
+        "chip": 91,
+        "technical": 87
+    },
+    "6904": {
+        "name": "伯鑫",
+        "price": 116.0,
+        "fundamental": 69,
+        "chip": 43,
+        "technical": 70
+    },
+    "6907": {
+        "name": "雅特力-KY",
+        "price": 133.0,
+        "fundamental": 50,
+        "chip": 71,
+        "technical": 86
+    },
+    "6910": {
+        "name": "德鴻",
+        "price": 28.4,
+        "fundamental": 88,
+        "chip": 95,
+        "technical": 87
+    },
+    "6913": {
+        "name": "鴻呈",
+        "price": 130.5,
+        "fundamental": 87,
+        "chip": 47,
+        "technical": 69
+    },
+    "6922": {
+        "name": "宸曜",
+        "price": 179.0,
+        "fundamental": 79,
+        "chip": 65,
+        "technical": 48
+    },
+    "6925": {
+        "name": "意藍",
+        "price": 63.9,
+        "fundamental": 93,
+        "chip": 68,
+        "technical": 79
+    },
+    "6929": {
+        "name": "佑全",
+        "price": 24.8,
+        "fundamental": 84,
+        "chip": 90,
+        "technical": 80
+    },
+    "6953": {
+        "name": "家碩",
+        "price": 281.0,
+        "fundamental": 93,
+        "chip": 75,
+        "technical": 55
+    },
+    "6961": {
+        "name": "旅天下",
+        "price": 60.0,
+        "fundamental": 61,
+        "chip": 51,
+        "technical": 44
+    },
+    "6967": {
+        "name": "汎瑋材料",
+        "price": 76.0,
+        "fundamental": 93,
+        "chip": 78,
+        "technical": 74
+    },
+    "6968": {
+        "name": "萬達寵物",
+        "price": 44.3,
+        "fundamental": 64,
+        "chip": 40,
+        "technical": 55
+    },
+    "6971": {
+        "name": "惠民實業",
+        "price": 28.85,
+        "fundamental": 77,
+        "chip": 54,
+        "technical": 47
+    },
+    "6982": {
+        "name": "大井泵浦",
+        "price": 53.1,
+        "fundamental": 59,
+        "chip": 60,
+        "technical": 88
+    },
+    "6996": {
+        "name": "力領科技",
+        "price": 183.0,
+        "fundamental": 56,
+        "chip": 71,
+        "technical": 69
+    },
+    "6997": {
+        "name": "博弘",
+        "price": 75.1,
+        "fundamental": 53,
+        "chip": 53,
+        "technical": 54
+    },
+    "7402": {
+        "name": "邑錡",
+        "price": 114.5,
+        "fundamental": 87,
+        "chip": 75,
+        "technical": 67
+    },
+    "7547": {
+        "name": "碩網",
+        "price": 71.2,
+        "fundamental": 72,
+        "chip": 57,
+        "technical": 89
+    },
+    "7556": {
+        "name": "意德士",
+        "price": 270.0,
+        "fundamental": 92,
+        "chip": 90,
+        "technical": 65
+    },
+    "7584": {
+        "name": "樂意",
+        "price": 32.8,
+        "fundamental": 64,
+        "chip": 69,
+        "technical": 52
+    },
+    "7642": {
+        "name": "昶瑞機電",
+        "price": 72.0,
+        "fundamental": 51,
+        "chip": 70,
+        "technical": 72
+    },
+    "7703": {
+        "name": "銳澤",
+        "price": 210.5,
+        "fundamental": 78,
+        "chip": 63,
+        "technical": 78
+    },
+    "7704": {
+        "name": "明遠精密",
+        "price": 58.3,
+        "fundamental": 85,
+        "chip": 47,
+        "technical": 45
+    },
+    "7708": {
+        "name": "全家餐飲",
+        "price": 92.2,
+        "fundamental": 74,
+        "chip": 59,
+        "technical": 49
+    },
+    "7709": {
+        "name": "榮田",
+        "price": 82.8,
+        "fundamental": 94,
+        "chip": 41,
+        "technical": 79
+    },
+    "7712": {
+        "name": "博盛半導體",
+        "price": 147.5,
+        "fundamental": 93,
+        "chip": 91,
+        "technical": 43
+    },
+    "7714": {
+        "name": "創泓科技",
+        "price": 129.5,
+        "fundamental": 55,
+        "chip": 63,
+        "technical": 61
+    },
+    "7715": {
+        "name": "裕山",
+        "price": 28.5,
+        "fundamental": 88,
+        "chip": 87,
+        "technical": 67
+    },
+    "7716": {
+        "name": "昱臺國際",
+        "price": 25.1,
+        "fundamental": 77,
+        "chip": 47,
+        "technical": 70
+    },
+    "7717": {
+        "name": "萊德光電-KY",
+        "price": 676.0,
+        "fundamental": 82,
+        "chip": 74,
+        "technical": 72
+    },
+    "7718": {
+        "name": "友鋮",
+        "price": 47.8,
+        "fundamental": 85,
+        "chip": 49,
+        "technical": 93
+    },
+    "7723": {
+        "name": "築間",
+        "price": 27.65,
+        "fundamental": 70,
+        "chip": 82,
+        "technical": 41
+    },
+    "7728": {
+        "name": "光焱科技",
+        "price": 781.0,
+        "fundamental": 88,
+        "chip": 84,
+        "technical": 94
+    },
+    "7734": {
+        "name": "印能科技",
+        "price": 3800.0,
+        "fundamental": 58,
+        "chip": 67,
+        "technical": 86
+    },
+    "7738": {
+        "name": "東聯互動",
+        "price": 178.5,
+        "fundamental": 69,
+        "chip": 57,
+        "technical": 83
+    },
+    "7743": {
+        "name": "金利食安",
+        "price": 20.0,
+        "fundamental": 73,
+        "chip": 59,
+        "technical": 80
+    },
+    "7744": {
+        "name": "崴寶",
+        "price": 553.0,
+        "fundamental": 54,
+        "chip": 85,
+        "technical": 84
+    },
+    "7747": {
+        "name": "昕奇雲端",
+        "price": 131.0,
+        "fundamental": 94,
+        "chip": 73,
+        "technical": 90
+    },
+    "7751": {
+        "name": "竑騰",
+        "price": 1750.0,
+        "fundamental": 92,
+        "chip": 89,
+        "technical": 51
+    },
+    "7753": {
+        "name": "星亞",
+        "price": 42.6,
+        "fundamental": 63,
+        "chip": 51,
+        "technical": 82
+    },
+    "7757": {
+        "name": "金色三麥",
+        "price": 104.5,
+        "fundamental": 53,
+        "chip": 79,
+        "technical": 87
+    },
+    "7767": {
+        "name": "仁大資訊",
+        "price": 44.2,
+        "fundamental": 82,
+        "chip": 71,
+        "technical": 41
+    },
+    "7770": {
+        "name": "君曜",
+        "price": 47.5,
+        "fundamental": 70,
+        "chip": 89,
+        "technical": 53
+    },
+    "7772": {
+        "name": "耀穎",
+        "price": 186.5,
+        "fundamental": 74,
+        "chip": 77,
+        "technical": 76
+    },
+    "7777": {
+        "name": "能率亞洲",
+        "price": 28.75,
+        "fundamental": 89,
+        "chip": 90,
+        "technical": 80
+    },
+    "7782": {
+        "name": "光速火箭",
+        "price": 27.05,
+        "fundamental": 68,
+        "chip": 92,
+        "technical": 71
+    },
+    "7792": {
+        "name": "安葆",
+        "price": 316.0,
+        "fundamental": 61,
+        "chip": 70,
+        "technical": 86
+    },
+    "7794": {
+        "name": "宏碁智新",
+        "price": 30.6,
+        "fundamental": 83,
+        "chip": 67,
+        "technical": 94
+    },
+    "7805": {
+        "name": "威聯通",
+        "price": 732.0,
+        "fundamental": 76,
+        "chip": 45,
+        "technical": 76
+    },
+    "7810": {
+        "name": "捷創科技",
+        "price": 233.0,
+        "fundamental": 64,
+        "chip": 91,
+        "technical": 47
+    },
+    "7811": {
+        "name": "民盛",
+        "price": 80.9,
+        "fundamental": 77,
+        "chip": 76,
+        "technical": 43
+    },
+    "7820": {
+        "name": "立盈",
+        "price": 150.0,
+        "fundamental": 59,
+        "chip": 41,
+        "technical": 72
+    },
+    "7828": {
+        "name": "創新服務",
+        "price": 1225.0,
+        "fundamental": 73,
+        "chip": 89,
+        "technical": 54
+    },
+    "7842": {
+        "name": "天能綠電",
+        "price": 125.5,
+        "fundamental": 76,
+        "chip": 51,
+        "technical": 71
+    },
+    "8024": {
+        "name": "佑華",
+        "price": 12.3,
+        "fundamental": 53,
+        "chip": 59,
+        "technical": 55
+    },
+    "8027": {
+        "name": "鈦昇",
+        "price": 223.0,
+        "fundamental": 75,
+        "chip": 52,
+        "technical": 92
+    },
+    "8032": {
+        "name": "光菱",
+        "price": 41.95,
+        "fundamental": 61,
+        "chip": 76,
+        "technical": 71
+    },
+    "8034": {
+        "name": "榮群",
+        "price": 25.4,
+        "fundamental": 68,
+        "chip": 59,
+        "technical": 83
+    },
+    "8038": {
+        "name": "長園科",
+        "price": 42.85,
+        "fundamental": 73,
+        "chip": 42,
+        "technical": 50
+    },
+    "8040": {
+        "name": "九暘",
+        "price": 78.0,
+        "fundamental": 70,
+        "chip": 85,
+        "technical": 79
+    },
+    "8042": {
+        "name": "金山電",
+        "price": 88.9,
+        "fundamental": 81,
+        "chip": 41,
+        "technical": 72
+    },
+    "8043": {
+        "name": "蜜望實",
+        "price": 84.7,
+        "fundamental": 67,
+        "chip": 51,
+        "technical": 53
+    },
+    "8044": {
+        "name": "網家",
+        "price": 24.3,
+        "fundamental": 95,
+        "chip": 93,
+        "technical": 45
+    },
+    "8047": {
+        "name": "星雲",
+        "price": 53.6,
+        "fundamental": 58,
+        "chip": 94,
+        "technical": 60
+    },
+    "8048": {
+        "name": "德勝",
+        "price": 61.8,
+        "fundamental": 91,
+        "chip": 52,
+        "technical": 81
+    },
+    "8049": {
+        "name": "晶采",
+        "price": 25.65,
+        "fundamental": 80,
+        "chip": 70,
+        "technical": 60
+    },
+    "8050": {
+        "name": "廣積",
+        "price": 47.6,
+        "fundamental": 55,
+        "chip": 62,
+        "technical": 55
+    },
+    "8054": {
+        "name": "安國",
+        "price": 103.5,
+        "fundamental": 78,
+        "chip": 47,
+        "technical": 65
+    },
+    "8059": {
+        "name": "凱碩",
+        "price": 20.85,
+        "fundamental": 74,
+        "chip": 74,
+        "technical": 44
+    },
+    "8064": {
+        "name": "東捷",
+        "price": 113.5,
+        "fundamental": 91,
+        "chip": 56,
+        "technical": 73
+    },
+    "8066": {
+        "name": "來思達",
+        "price": 16.85,
+        "fundamental": 79,
+        "chip": 52,
+        "technical": 49
+    },
+    "8067": {
+        "name": "志旭",
+        "price": 12.45,
+        "fundamental": 75,
+        "chip": 93,
+        "technical": 93
+    },
+    "8068": {
+        "name": "全達",
+        "price": 23.5,
+        "fundamental": 85,
+        "chip": 63,
+        "technical": 51
+    },
+    "8069": {
+        "name": "元太",
+        "price": 178.0,
+        "fundamental": 77,
+        "chip": 68,
+        "technical": 91
+    },
+    "8071": {
+        "name": "能率網通",
+        "price": 16.8,
+        "fundamental": 53,
+        "chip": 78,
+        "technical": 79
+    },
+    "8074": {
+        "name": "鉅橡",
+        "price": 83.0,
+        "fundamental": 91,
+        "chip": 61,
+        "technical": 83
+    },
+    "8076": {
+        "name": "伍豐",
+        "price": 24.65,
+        "fundamental": 77,
+        "chip": 72,
+        "technical": 48
+    },
+    "8077": {
+        "name": "洛碁",
+        "price": 40.0,
+        "fundamental": 81,
+        "chip": 62,
+        "technical": 68
+    },
+    "8080": {
+        "name": "泰霖",
+        "price": 28.7,
+        "fundamental": 95,
+        "chip": 65,
+        "technical": 75
+    },
+    "8083": {
+        "name": "瑞穎",
+        "price": 174.5,
+        "fundamental": 82,
+        "chip": 87,
+        "technical": 74
+    },
+    "8084": {
+        "name": "巨虹",
+        "price": 44.7,
+        "fundamental": 56,
+        "chip": 53,
+        "technical": 79
+    },
+    "8085": {
+        "name": "福華",
+        "price": 12.15,
+        "fundamental": 58,
+        "chip": 61,
+        "technical": 62
+    },
+    "8086": {
+        "name": "宏捷科",
+        "price": 162.0,
+        "fundamental": 50,
+        "chip": 44,
+        "technical": 44
+    },
+    "8087": {
+        "name": "麗升能源",
+        "price": 34.0,
+        "fundamental": 82,
+        "chip": 51,
+        "technical": 55
+    },
+    "8088": {
+        "name": "品安",
+        "price": 56.7,
+        "fundamental": 57,
+        "chip": 79,
+        "technical": 64
+    },
+    "8089": {
+        "name": "康全電訊",
+        "price": 21.1,
+        "fundamental": 53,
+        "chip": 47,
+        "technical": 40
+    },
+    "8091": {
+        "name": "翔名",
+        "price": 200.0,
+        "fundamental": 73,
+        "chip": 67,
+        "technical": 95
+    },
+    "8092": {
+        "name": "建暐",
+        "price": 17.95,
+        "fundamental": 73,
+        "chip": 49,
+        "technical": 65
+    },
+    "8093": {
+        "name": "保銳",
+        "price": 19.25,
+        "fundamental": 71,
+        "chip": 88,
+        "technical": 66
+    },
+    "8096": {
+        "name": "擎亞",
+        "price": 98.3,
+        "fundamental": 62,
+        "chip": 81,
+        "technical": 41
+    },
+    "8097": {
+        "name": "常珵",
+        "price": 51.9,
+        "fundamental": 75,
+        "chip": 40,
+        "technical": 79
+    },
+    "8099": {
+        "name": "大世科",
+        "price": 61.0,
+        "fundamental": 68,
+        "chip": 68,
+        "technical": 60
+    },
+    "8102": {
+        "name": "傑霖科技",
+        "price": 68.1,
+        "fundamental": 91,
+        "chip": 92,
+        "technical": 74
+    },
+    "8107": {
+        "name": "大億金茂",
+        "price": 11.5,
+        "fundamental": 56,
+        "chip": 45,
+        "technical": 67
+    },
+    "8109": {
+        "name": "博大",
+        "price": 118.0,
+        "fundamental": 76,
+        "chip": 53,
+        "technical": 47
+    },
+    "8111": {
+        "name": "立碁",
+        "price": 66.2,
+        "fundamental": 84,
+        "chip": 65,
+        "technical": 89
+    },
+    "8121": {
+        "name": "越峰",
+        "price": 33.85,
+        "fundamental": 74,
+        "chip": 66,
+        "technical": 79
+    },
+    "8147": {
+        "name": "正淩",
+        "price": 169.5,
+        "fundamental": 54,
+        "chip": 80,
+        "technical": 78
+    },
+    "8155": {
+        "name": "博智",
+        "price": 420.0,
+        "fundamental": 65,
+        "chip": 90,
+        "technical": 50
+    },
+    "8171": {
+        "name": "天宇",
+        "price": 24.05,
+        "fundamental": 85,
+        "chip": 69,
+        "technical": 54
+    },
+    "8176": {
+        "name": "智捷",
+        "price": 10.25,
+        "fundamental": 91,
+        "chip": 61,
+        "technical": 85
+    },
+    "8182": {
+        "name": "加高",
+        "price": 37.4,
+        "fundamental": 67,
+        "chip": 58,
+        "technical": 40
+    },
+    "8183": {
+        "name": "精星",
+        "price": 31.7,
+        "fundamental": 72,
+        "chip": 71,
+        "technical": 46
+    },
+    "8227": {
+        "name": "巨有科技",
+        "price": 226.0,
+        "fundamental": 74,
+        "chip": 93,
+        "technical": 80
+    },
+    "8234": {
+        "name": "新漢",
+        "price": 71.2,
+        "fundamental": 90,
+        "chip": 75,
+        "technical": 87
+    },
+    "8240": {
+        "name": "華宏",
+        "price": 70.2,
+        "fundamental": 86,
+        "chip": 74,
+        "technical": 80
+    },
+    "8255": {
+        "name": "朋程",
+        "price": 149.0,
+        "fundamental": 67,
+        "chip": 80,
+        "technical": 42
+    },
+    "8272": {
+        "name": "全景軟體",
+        "price": 78.0,
+        "fundamental": 86,
+        "chip": 94,
+        "technical": 45
+    },
+    "8277": {
+        "name": "商丞",
+        "price": 7.05,
+        "fundamental": 93,
+        "chip": 95,
+        "technical": 48
+    },
+    "8279": {
+        "name": "生展",
+        "price": 98.2,
+        "fundamental": 95,
+        "chip": 74,
+        "technical": 75
+    },
+    "8284": {
+        "name": "三竹",
+        "price": 64.1,
+        "fundamental": 54,
+        "chip": 45,
+        "technical": 41
+    },
+    "8289": {
+        "name": "泰藝",
+        "price": 49.95,
+        "fundamental": 61,
+        "chip": 68,
+        "technical": 57
+    },
+    "8291": {
+        "name": "尚茂",
+        "price": 38.9,
+        "fundamental": 60,
+        "chip": 77,
+        "technical": 85
+    },
+    "8299": {
+        "name": "群聯",
+        "price": 2670.0,
+        "fundamental": 69,
+        "chip": 84,
+        "technical": 73
+    },
+    "8342": {
+        "name": "益張",
+        "price": 88.0,
+        "fundamental": 80,
+        "chip": 56,
+        "technical": 74
+    },
+    "8349": {
+        "name": "恒耀",
+        "price": 42.4,
+        "fundamental": 69,
+        "chip": 62,
+        "technical": 58
+    },
+    "8349A": {
+        "name": "恒耀甲特",
+        "price": 47.4,
+        "fundamental": 83,
+        "chip": 74,
+        "technical": 51
+    },
+    "8354": {
+        "name": "冠好",
+        "price": 15.85,
+        "fundamental": 83,
+        "chip": 63,
+        "technical": 42
+    },
+    "8358": {
+        "name": "金居",
+        "price": 462.0,
+        "fundamental": 63,
+        "chip": 72,
+        "technical": 70
+    },
+    "8383": {
+        "name": "千附",
+        "price": 56.0,
+        "fundamental": 81,
+        "chip": 88,
+        "technical": 40
+    },
+    "8390": {
+        "name": "金益鼎",
+        "price": 103.5,
+        "fundamental": 92,
+        "chip": 82,
+        "technical": 78
+    },
+    "8401": {
+        "name": "白紗科",
+        "price": 24.2,
+        "fundamental": 56,
+        "chip": 82,
+        "technical": 80
+    },
+    "8403": {
+        "name": "盛弘",
+        "price": 20.35,
+        "fundamental": 63,
+        "chip": 57,
+        "technical": 93
+    },
+    "8409": {
+        "name": "商之器",
+        "price": 19.6,
+        "fundamental": 71,
+        "chip": 92,
+        "technical": 85
+    },
+    "8410": {
+        "name": "森田",
+        "price": 36.65,
+        "fundamental": 61,
+        "chip": 81,
+        "technical": 85
+    },
+    "8415": {
+        "name": "大國鋼",
+        "price": 34.55,
+        "fundamental": 58,
+        "chip": 45,
+        "technical": 54
+    },
+    "8416": {
+        "name": "實威",
+        "price": 175.0,
+        "fundamental": 80,
+        "chip": 42,
+        "technical": 67
+    },
+    "8421": {
+        "name": "旭源",
+        "price": 13.75,
+        "fundamental": 67,
+        "chip": 72,
+        "technical": 73
+    },
+    "8423": {
+        "name": "保綠-KY",
+        "price": 18.0,
+        "fundamental": 69,
+        "chip": 76,
+        "technical": 45
+    },
+    "8424": {
+        "name": "惠普",
+        "price": 74.0,
+        "fundamental": 75,
+        "chip": 50,
+        "technical": 51
+    },
+    "8426": {
+        "name": "紅木-KY",
+        "price": 22.6,
+        "fundamental": 87,
+        "chip": 77,
+        "technical": 58
+    },
+    "8431": {
+        "name": "匯鑽科",
+        "price": 60.9,
+        "fundamental": 92,
+        "chip": 44,
+        "technical": 49
+    },
+    "8432": {
+        "name": "東生華",
+        "price": 49.6,
+        "fundamental": 63,
+        "chip": 78,
+        "technical": 94
+    },
+    "8433": {
+        "name": "弘帆",
+        "price": 54.5,
+        "fundamental": 56,
+        "chip": 71,
+        "technical": 89
+    },
+    "8435": {
+        "name": "鉅邁",
+        "price": 55.7,
+        "fundamental": 91,
+        "chip": 44,
+        "technical": 75
+    },
+    "8436": {
+        "name": "大江",
+        "price": 120.5,
+        "fundamental": 70,
+        "chip": 56,
+        "technical": 60
+    },
+    "8437": {
+        "name": "大地-KY",
+        "price": 11.55,
+        "fundamental": 54,
+        "chip": 52,
+        "technical": 49
+    },
+    "8440": {
+        "name": "綠電",
+        "price": 20.7,
+        "fundamental": 84,
+        "chip": 55,
+        "technical": 75
+    },
+    "8444": {
+        "name": "綠河-KY",
+        "price": 7.15,
+        "fundamental": 72,
+        "chip": 70,
+        "technical": 85
+    },
+    "8446": {
+        "name": "華研",
+        "price": 84.2,
+        "fundamental": 68,
+        "chip": 70,
+        "technical": 71
+    },
+    "8450": {
+        "name": "霹靂",
+        "price": 16.0,
+        "fundamental": 71,
+        "chip": 58,
+        "technical": 90
+    },
+    "8455": {
+        "name": "大拓-KY",
+        "price": 27.95,
+        "fundamental": 92,
+        "chip": 92,
+        "technical": 66
+    },
+    "8472": {
+        "name": "夠麻吉",
+        "price": 69.8,
+        "fundamental": 76,
+        "chip": 52,
+        "technical": 95
+    },
+    "8477": {
+        "name": "創業家",
+        "price": 15.0,
+        "fundamental": 62,
+        "chip": 77,
+        "technical": 57
+    },
+    "8489": {
+        "name": "三貝德",
+        "price": 25.0,
+        "fundamental": 94,
+        "chip": 68,
+        "technical": 54
+    },
+    "8905": {
+        "name": "裕國",
+        "price": 33.0,
+        "fundamental": 70,
+        "chip": 79,
+        "technical": 95
+    },
+    "8906": {
+        "name": "花王",
+        "price": 25.0,
+        "fundamental": 93,
+        "chip": 91,
+        "technical": 70
+    },
+    "8908": {
+        "name": "欣雄",
+        "price": 38.8,
+        "fundamental": 78,
+        "chip": 67,
+        "technical": 73
+    },
+    "8916": {
+        "name": "光隆",
+        "price": 47.3,
+        "fundamental": 60,
+        "chip": 48,
+        "technical": 45
+    },
+    "8917": {
+        "name": "欣泰",
+        "price": 52.7,
+        "fundamental": 57,
+        "chip": 74,
+        "technical": 94
+    },
+    "8924": {
+        "name": "大田",
+        "price": 64.0,
+        "fundamental": 55,
+        "chip": 41,
+        "technical": 50
+    },
+    "8927": {
+        "name": "北基",
+        "price": 20.0,
+        "fundamental": 58,
+        "chip": 41,
+        "technical": 78
+    },
+    "8928": {
+        "name": "鉅明",
+        "price": 21.3,
+        "fundamental": 68,
+        "chip": 63,
+        "technical": 85
+    },
+    "8929": {
+        "name": "富堡",
+        "price": 14.35,
+        "fundamental": 52,
+        "chip": 56,
+        "technical": 92
+    },
+    "8930": {
+        "name": "青鋼",
+        "price": 28.9,
+        "fundamental": 63,
+        "chip": 61,
+        "technical": 94
+    },
+    "8931": {
+        "name": "大汽電",
+        "price": 41.6,
+        "fundamental": 60,
+        "chip": 75,
+        "technical": 43
+    },
+    "8932": {
+        "name": "智通*",
+        "price": 92.5,
+        "fundamental": 84,
+        "chip": 70,
+        "technical": 77
+    },
+    "8933": {
+        "name": "愛地雅",
+        "price": 5.82,
+        "fundamental": 62,
+        "chip": 84,
+        "technical": 56
+    },
+    "8935": {
+        "name": "邦泰",
+        "price": 18.1,
+        "fundamental": 68,
+        "chip": 95,
+        "technical": 90
+    },
+    "8936": {
+        "name": "國統",
+        "price": 50.6,
+        "fundamental": 54,
+        "chip": 50,
+        "technical": 76
+    },
+    "8937": {
+        "name": "合騏*",
+        "price": 34.5,
+        "fundamental": 69,
+        "chip": 48,
+        "technical": 71
+    },
+    "8938": {
+        "name": "明安",
+        "price": 55.3,
+        "fundamental": 85,
+        "chip": 45,
+        "technical": 90
+    },
+    "8941": {
+        "name": "關中",
+        "price": 44.5,
+        "fundamental": 88,
+        "chip": 74,
+        "technical": 83
+    },
+    "8942": {
+        "name": "森鉅",
+        "price": 45.4,
+        "fundamental": 61,
+        "chip": 79,
+        "technical": 59
+    },
+    "009806": {
+        "name": "台新標普500",
+        "price": 12.9,
+        "fundamental": 59,
+        "chip": 42,
+        "technical": 78
+    },
+    "009807": {
+        "name": "台新標普科技精選",
+        "price": 15.55,
+        "fundamental": 80,
+        "chip": 94,
+        "technical": 74
+    },
+    "009814": {
+        "name": "富邦標普500",
+        "price": 10.77,
+        "fundamental": 94,
+        "chip": 86,
+        "technical": 40
+    },
+    "009815": {
+        "name": "大華美國MAG7+",
+        "price": 11.25,
+        "fundamental": 83,
+        "chip": 65,
+        "technical": 42
+    },
+    "9949": {
+        "name": "琉園",
+        "price": 24.0,
+        "fundamental": 79,
+        "chip": 53,
+        "technical": 42
+    },
+    "9950": {
+        "name": "萬國通",
+        "price": 10.7,
+        "fundamental": 79,
+        "chip": 79,
+        "technical": 51
+    },
+    "9951": {
+        "name": "皇田",
+        "price": 54.0,
+        "fundamental": 90,
+        "chip": 64,
+        "technical": 72
+    },
+    "9960": {
+        "name": "邁達康",
+        "price": 34.95,
+        "fundamental": 89,
+        "chip": 42,
+        "technical": 86
+    },
+    "9962": {
+        "name": "有益",
+        "price": 9.61,
+        "fundamental": 92,
+        "chip": 95,
+        "technical": 80
+    },
+    "020025": {
+        "name": "統一亞洲半導體N",
+        "price": 36.8,
+        "fundamental": 50,
+        "chip": 95,
+        "technical": 46
+    },
+    "020027": {
+        "name": "元大上櫃ESG成長N",
+        "price": 11.22,
+        "fundamental": 67,
+        "chip": 80,
+        "technical": 73
+    },
+    "020033": {
+        "name": "統一恒生科期N",
+        "price": 4.03,
+        "fundamental": 73,
+        "chip": 55,
+        "technical": 48
+    },
+    "020035": {
+        "name": "元大上櫃ESG高息N",
+        "price": 14.56,
+        "fundamental": 62,
+        "chip": 92,
+        "technical": 53
+    },
+    "020040": {
+        "name": "元大上櫃ESG龍頭N",
+        "price": 11.28,
+        "fundamental": 50,
+        "chip": 59,
+        "technical": 70
+    },
+    "020041": {
+        "name": "兆豐半導體氣候N",
+        "price": 19.21,
+        "fundamental": 83,
+        "chip": 88,
+        "technical": 69
+    },
     "2330": {
         "name": "台積電(備援)",
         "price": 2250,
         "fundamental": 71,
-        "chip": 68,
-        "technical": 80
+        "chip": 86,
+        "technical": 94
     },
     "2317": {
         "name": "鴻海(備援)",
         "price": 230,
-        "fundamental": 74,
-        "chip": 69,
+        "fundamental": 93,
+        "chip": 67,
         "technical": 78
     },
     "2454": {
         "name": "聯發科(備援)",
         "price": 1200,
-        "fundamental": 91,
-        "chip": 76,
-        "technical": 71
+        "fundamental": 87,
+        "chip": 78,
+        "technical": 61
     },
     "2382": {
         "name": "廣達(備援)",
         "price": 320,
-        "fundamental": 84,
-        "chip": 80,
-        "technical": 71
+        "fundamental": 79,
+        "chip": 61,
+        "technical": 77
     },
     "3017": {
         "name": "奇鋐(備援)",
         "price": 850,
-        "fundamental": 80,
-        "chip": 64,
-        "technical": 92
+        "fundamental": 71,
+        "chip": 67,
+        "technical": 86
     },
     "3450": {
         "name": "聯鈞(備援)",
         "price": 215,
-        "fundamental": 79,
-        "chip": 89,
-        "technical": 69
+        "fundamental": 84,
+        "chip": 78,
+        "technical": 78
     },
     "2603": {
         "name": "長榮(備援)",
         "price": 180,
-        "fundamental": 83,
-        "chip": 68,
-        "technical": 61
+        "fundamental": 77,
+        "chip": 69,
+        "technical": 69
     },
     "2303": {
         "name": "聯電(備援)",
         "price": 55,
-        "fundamental": 74,
-        "chip": 83,
-        "technical": 66
-    },
-    "8069": {
-        "name": "元太(備援)",
-        "price": 250,
-        "fundamental": 80,
-        "chip": 86,
-        "technical": 78
-    },
-    "3293": {
-        "name": "鈊象(備援)",
-        "price": 1050,
-        "fundamental": 76,
-        "chip": 69,
-        "technical": 76
-    },
-    "3105": {
-        "name": "穩懋(備援)",
-        "price": 150,
-        "fundamental": 75,
-        "chip": 75,
-        "technical": 70
-    },
-    "6223": {
-        "name": "旺矽(備援)",
-        "price": 350,
-        "fundamental": 83,
-        "chip": 74,
-        "technical": 69
+        "fundamental": 70,
+        "chip": 66,
+        "technical": 62
     }
 }
