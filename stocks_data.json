@@ -2,85 +2,85 @@
     "2330": {
         "name": "台積電(備援)",
         "price": 2250,
-        "fundamental": 77,
-        "chip": 68,
-        "technical": 83
+        "fundamental": 90,
+        "chip": 90,
+        "technical": 78
     },
     "2317": {
         "name": "鴻海(備援)",
         "price": 230,
-        "fundamental": 95,
-        "chip": 71,
-        "technical": 84
+        "fundamental": 87,
+        "chip": 69,
+        "technical": 67
     },
     "2454": {
         "name": "聯發科(備援)",
         "price": 1200,
-        "fundamental": 74,
-        "chip": 60,
+        "fundamental": 71,
+        "chip": 61,
         "technical": 89
     },
     "2382": {
         "name": "廣達(備援)",
         "price": 320,
-        "fundamental": 89,
-        "chip": 95,
-        "technical": 79
+        "fundamental": 85,
+        "chip": 63,
+        "technical": 89
     },
     "3017": {
         "name": "奇鋐(備援)",
         "price": 850,
-        "fundamental": 74,
-        "chip": 69,
-        "technical": 93
+        "fundamental": 89,
+        "chip": 78,
+        "technical": 82
     },
     "3450": {
         "name": "聯鈞(備援)",
         "price": 215,
-        "fundamental": 71,
-        "chip": 64,
-        "technical": 62
+        "fundamental": 92,
+        "chip": 72,
+        "technical": 88
     },
     "2603": {
         "name": "長榮(備援)",
         "price": 180,
-        "fundamental": 73,
-        "chip": 60,
-        "technical": 60
+        "fundamental": 72,
+        "chip": 84,
+        "technical": 84
     },
     "2303": {
         "name": "聯電(備援)",
         "price": 55,
-        "fundamental": 88,
-        "chip": 69,
-        "technical": 83
+        "fundamental": 82,
+        "chip": 74,
+        "technical": 60
     },
     "8069": {
         "name": "元太(備援)",
         "price": 250,
-        "fundamental": 81,
-        "chip": 76,
-        "technical": 75
+        "fundamental": 90,
+        "chip": 79,
+        "technical": 74
     },
     "3293": {
         "name": "鈊象(備援)",
         "price": 1050,
-        "fundamental": 74,
-        "chip": 87,
-        "technical": 95
+        "fundamental": 90,
+        "chip": 95,
+        "technical": 83
     },
     "3105": {
         "name": "穩懋(備援)",
         "price": 150,
-        "fundamental": 90,
-        "chip": 70,
+        "fundamental": 70,
+        "chip": 68,
         "technical": 92
     },
     "6223": {
         "name": "旺矽(備援)",
         "price": 350,
-        "fundamental": 83,
-        "chip": 74,
-        "technical": 64
+        "fundamental": 80,
+        "chip": 94,
+        "technical": 77
     }
 }
